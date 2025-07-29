@@ -1,0 +1,362 @@
+[
+    {
+      "name": "Elon Musk",
+      "username": "@elonmusk",
+      "field": "科技",
+      "description": "任务: 领导特斯拉、SpaceX、xAI，挑战人类极限，殖民火星，普及AI | 经典言论: 我宁愿把不可能变成可能，也不愿接受现状 | 推文风格: 像火箭发射般大胆，充满对AI、太空和未来的狂热愿景，夹杂幽默和挑衅，点燃无数人的梦想和争议"
+    },
+    {
+      "name": "Paul Graham",
+      "username": "@paulg",
+      "field": "创业",
+      "description": "任务: 通过Y Combinator孵化无数初创公司，分享创业哲学，拆解复杂问题 | 经典言论: 创业不是填空题，而是选对问题 | 推文风格: 像写代码般清晰，如手术刀剖析创业痛点，总能让人想打开笔记本把想法变成现实"
+    },
+    {
+      "name": "Naval Ravikant",
+      "username": "@naval",
+      "field": "创业",
+      "description": "任务: 传播杠杆化思维，教人用知识和代码构建财富与自由 | 经典言论: 财富是你能支配的时间 | 推文风格: 哲学家般的精炼金句，每条推文都像微型操作系统，教你用最少努力撬动最大价值"
+    },
+    {
+      "name": "Shaan Puri",
+      "username": "@shaanvp",
+      "field": "创业",
+      "description": "任务: 通过播客和项目分享创业点子，点燃社群的行动火焰 | 经典言论: 别等完美，v0.1上线然后迭代 | 推文风格: 像朋友聊天般活泼，充满实用点子和‘现在就干’的能量，总能让人想立刻启动一个项目"
+    },
+    {
+      "name": "Marc Andreessen",
+      "username": "@pmarca",
+      "field": "创投",
+      "description": "任务: 通过A16z投资颠覆性科技，预测Web3和AI的未来 | 经典言论: 软件正在吞噬世界 | 推文风格: 像科技预言家，充满对趋势的犀利洞见，夹杂批判，催你思考互联网的下一幕"
+    },
+    {
+      "name": "Chamath Palihapitiya",
+      "username": "@chamath",
+      "field": "创投",
+      "description": "任务: 通过Social Capital投资改变世界的企业，重塑社会经济规则 | 经典言论: 杠杆是现代的魔法 | 推文风格: 战略家口吻，混合资本洞见和社会评论，像蓝图让你想重新设计游戏规则"
+    },
+    {
+      "name": "Cathie Wood",
+      "username": "@Cathie_D_Wood",
+      "field": "投资",
+      "description": "任务: 通过ARK Invest押注AI、区块链等颠覆性技术，预见未来经济 | 经典言论: 创新是经济的引擎 | 推文风格: 数据驱动，像投资地图，指引你穿越AI和区块链的未来"
+    },
+    {
+      "name": "Jack Dorsey",
+      "username": "@jack",
+      "field": "科技",
+      "description": "任务: 通过Block推动比特币和去中心化金融，简化全球支付 | 经典言论: 比特币是自由的货币 | 推文风格: 极简如代码注释，聚焦去中心化和比特币，像禅师般点拨金融的未来"
+    },
+    {
+      "name": "Balaji Srinivasan",
+      "username": "@balajis",
+      "field": "科技",
+      "description": "任务: 预测去中心化社会趋势，推动Web3生态发展 | 经典言论: 未来国家是数字网络 | 推文风格: 像科幻小说家，充满对Web3和社会的预言，催你为未来写一行代码"
+    },
+    {
+      "name": "Sam Altman",
+      "username": "@sama",
+      "field": "AI",
+      "description": "任务: 通过OpenAI探索AI与人类的未来，平衡技术与伦理 | 经典言论: AI是最重要的事情 | 推文风格: 深思熟虑，如哲学笔记，探讨AI的潜力与风险，让你想为未来调试代码"
+    },
+    {
+      "name": "Patrick Collison",
+      "username": "@patrickc",
+      "field": "科技",
+      "description": "任务: 通过Stripe优化全球支付系统，支持创业者规模化 | 经典言论: 好的基础设施让创业变简单 | 推文风格: 低调实用，如工程师日志，分享支付和创业的微妙洞见"
+    },
+    {
+      "name": "Reid Hoffman",
+      "username": "@reidhoffman",
+      "field": "创投",
+      "description": "任务: 通过Greylock投资网络效应企业，分享商业战略 | 经典言论: 网络效应是护城河 | 推文风格: 战略家口吻，如商业蓝图，教你如何连接点与点，构建商业帝国"
+    },
+    {
+      "name": "Chris Dixon",
+      "username": "@cdixon",
+      "field": "创投",
+      "description": "任务: 通过A16z推动Web3生态，倡导去中心化互联网 | 经典言论: Web3让用户拥有互联网 | 推文风格: 技术驱动，如区块链白皮书，拆解Web3的每一块乐高"
+    },
+    {
+      "name": "Ben Horowitz",
+      "username": "@bhorowitz",
+      "field": "创投",
+      "description": "任务: 指导创业者，分享硬核管理和文化建设经验 | 经典言论: 创业是面对现实的残酷 | 推文风格: 硬核实用，如创业教案，教你在混乱中建立秩序"
+    },
+    {
+      "name": "Jessica Lessin",
+      "username": "@jessicalessin",
+      "field": "科技媒体",
+      "description": "任务: 通过The Information揭露科技行业真相，驱动深度讨论 | 经典言论: 真相比头条重要 | 推文风格: 调查记者口吻，如手术刀，剖开科技行业的内核"
+    },
+    {
+      "name": "Emad Mustak",
+      "username": "@EMostaque",
+      "field": "AI",
+      "description": "任务: 通过Stability AI推动开源AI，降低创造门槛 | 经典言论: AI是每个人的画笔 | 推文风格: 热情如火焰，分享AI进展，催你fork代码加入创造革命"
+    },
+    {
+      "name": "Daniella Amodei",
+      "username": "@daniamodei",
+      "field": "AI",
+      "description": "任务: 通过Anthropic开发安全AI，关注技术伦理 | 经典言论: AI需要责任感 | 推文风格: 冷静如科学家，探讨AI安全与伦理，催你为负责任的未来编码"
+    },
+    {
+      "name": "Laura Shin",
+      "username": "@laurashin",
+      "field": "加密媒体",
+      "description": "任务: 通过《Unchained》普及Web3知识，报道区块链动态 | 经典言论: 真相藏在区块链细节里 | 推文风格: 分析型如探照灯，深入Web3生态，点亮去中心化的每一个角落"
+    },
+    {
+      "name": "Jason Calacanis",
+      "username": "@Jason",
+      "field": "创投",
+      "description": "任务: 通过播客和投资连接创业者，催化早期项目 | 经典言论: 创业者只需开始 | 推文风格: 活泼如创业派对，分享故事和机会，催你立刻投身创业浪潮"
+    },
+    {
+      "name": "Anita Posch",
+      "username": "@AnitaPosch",
+      "field": "比特币",
+      "description": "任务: 通过教育和播客推广比特币，赋能金融自由 | 经典言论: 比特币是自由的起点 | 推文风格: 热情教育型，如布道，激励你学习加密并拥抱去中心化"
+    },
+    {
+      "name": "Barack Obama",
+      "username": "@BarackObama",
+      "field": "政治",
+      "description": "任务: 倡导社会正义和气候行动，激励全球进步主义 | 经典言论: 改变需要我们行动 | 推文风格: 如灯塔般鼓舞，聚焦社会议题，点燃希望与行动的火花"
+    },
+    {
+      "name": "Donald Trump",
+      "username": "@realDonaldTrump",
+      "field": "政治",
+      "description": "任务: 动员支持者，推动保守派议程，引发全球热议 | 经典言论: 让美国再次伟大！ | 推文风格: 争议性如雷霆，直击热点，催人站队或开干"
+    },
+    {
+      "name": "Kamala Harris",
+      "username": "@KamalaHarris",
+      "field": "政治",
+      "description": "任务: 推动种族和经济正义，塑造进步派政策 | 经典言论: 平等是必须执行的承诺 | 推文风格: 政策导向如蓝图，强调公平，催你为正义发声"
+    },
+    {
+      "name": "Bernie Sanders",
+      "username": "@BernieSanders",
+      "field": "政治",
+      "description": "任务: 倡导全民医疗和经济公平，推动系统变革 | 经典言论: 财富集中不是民主 | 推文风格: 批判型如战鼓，揭露不公，催你为系统重构而战"
+    },
+    {
+      "name": "Alexandria Ocasio-Cortez",
+      "username": "@AOC",
+      "field": "政治",
+      "description": "任务: 推动绿色新政和社会正义，点燃草根运动 | 经典言论: 不行动就是选择现状 | 推文风格: 激情如篝火，动员青年，催你加入社会变革的派对"
+    },
+    {
+      "name": "Justin Trudeau",
+      "username": "@JustinTrudeau",
+      "field": "政治",
+      "description": "任务: 推动包容性政策，强化加拿大国际角色 | 经典言论: 多样性是我们的力量 | 推文风格: 温和如春风，强调团结与外交，连接全球愿景"
+    },
+    {
+      "name": "Emmanuel Macron",
+      "username": "@EmmanuelMacron",
+      "field": "政治",
+      "description": "任务: 推动欧洲一体化，应对气候和地缘挑战 | 经典言论: 欧洲是我们共同的代码 | 推文风格: 战略型如棋盘，布局全球视野，催你思考大格局"
+    },
+    {
+      "name": "Narendra Modi",
+      "username": "@narendramodi",
+      "field": "政治",
+      "description": "任务: 推动印度经济崛起和全球影响力 | 经典言论: 印度永不停止前进 | 推文风格: 激励型如号角，点燃民族热情，催你为宏大目标开干"
+    },
+    {
+      "name": "Elizabeth Warren",
+      "username": "@ewarren",
+      "field": "政治",
+      "description": "任务: 改革金融系统，保护消费者权益 | 经典言论: 规则为所有人而设 | 推文风格: 分析型如探针，聚焦经济公平，催你为正义调试规则"
+    },
+    {
+      "name": "Ted Cruz",
+      "username": "@tedcruz",
+      "field": "政治",
+      "description": "任务: 推动保守派和加密货币政策，捍卫自由市场 | 经典言论: 自由是创新的基石 | 推文风格: 对抗型如利剑，强调自由，催你为市场开战"
+    },
+    {
+      "name": "Volodymyr Zelenskyy",
+      "username": "@ZelenskyyUa",
+      "field": "政治",
+      "description": "任务: 领导乌克兰抗击侵略，争取国际支持 | 经典言论: 我们保卫的是自由 | 推文风格: 激情如战鼓，动员全球，催你为信念而战"
+    },
+    {
+      "name": "Jacinda Ardern",
+      "username": "@jacindaardern",
+      "field": "政治",
+      "description": "任务: 推动社会包容和气候政策，分享领导力洞见 | 经典言论: 领导力是用同理心连接 | 推文风格: 温和如暖流，聚焦包容，连接人心与未来"
+    },
+    {
+      "name": "Pete Buttigieg",
+      "username": "@PeteButtigieg",
+      "field": "政治",
+      "description": "任务: 推动基础设施和进步政策，规划美国未来 | 经典言论: 未来是我们建出来的 | 推文风格: 理性如蓝图，强调未来规划，催你为明天奠基"
+    },
+    {
+      "name": "Greta Thunberg",
+      "username": "@GretaThunberg",
+      "field": "环保",
+      "description": "任务: 动员全球青年，推动气候行动 | 经典言论: 我们的家在燃烧 | 推文风格: 直白如警钟，紧急呼吁行动，催你为地球而战"
+    },
+    {
+      "name": "Cory Booker",
+      "username": "@CoryBooker",
+      "field": "政治",
+      "description": "任务: 倡导种族正义和社会平等，推动政策改革 | 经典言论: 爱与正义是改变的起点 | 推文风格: 情感化如诗，聚焦社会议题，催你为平等发声"
+    },
+    {
+      "name": "Nikki Haley",
+      "username": "@NikkiHaley",
+      "field": "政治",
+      "description": "任务: 推动保守派外交政策，分享全球战略洞见 | 经典言论: 强硬外交是和平基石 | 推文风格: 战略型如棋局，聚焦全球事务，催你思考国际格局"
+    },
+    {
+      "name": "Kevin Rudd",
+      "username": "@MrKRudd",
+      "field": "政治",
+      "description": "任务: 分析亚太地缘政治，分享外交战略洞见 | 经典言论: 外交是平衡的艺术 | 推文风格: 分析型如智库报告，聚焦外交洞见，催你思考全球平衡"
+    },
+    {
+      "name": "Tulsi Gabbard",
+      "username": "@TulsiGabbard",
+      "field": "政治",
+      "description": "任务: 挑战传统政治，推动独立改革 | 经典言论: 真相是变革的第一步 | 推文风格: 独立如孤狼，充满争议性，挑战现状，催你重新思考规则"
+    },
+    {
+      "name": "Keir Starmer",
+      "username": "@Keir_Starmer",
+      "field": "政治",
+      "description": "任务: 领导英国工党，推动社会平等和经济改革 | 经典言论: 公平是繁荣的基石 | 推文风格: 稳健如基石，政策导向，催你为社会公平奠基"
+    },
+    {
+      "name": "Sanna Marin",
+      "username": "@MarinSanna",
+      "field": "政治",
+      "description": "任务: 推动性别平等和气候政策，强化全球领导力 | 经典言论: 平等是必须实现的现实 | 推文风格: 进步如晨光，包容全球视野，催你为平等未来努力"
+    },
+    {
+      "name": "Ray Dalio",
+      "username": "@Ray_Dalio",
+      "field": "金融",
+      "description": "任务: 通过桥水基金分享宏观经济洞见，预测市场趋势 | 经典言论: 经济周期如市场代码 | 推文风格: 分析型如经济地图，深入宏观趋势，催你读懂市场的节奏"
+    },
+    {
+      "name": "Janet Yellen",
+      "username": "@JanetYellen",
+      "field": "金融",
+      "description": "任务: 制定美国经济政策，稳定全球金融市场 | 经典言论: 经济稳定是繁荣根基 | 推文风格: 权威如政策白皮书，稳健聚焦经济，催你关注全球稳定"
+    },
+    {
+      "name": "Jamie Dimon",
+      "username": "@jpmdimon",
+      "field": "金融",
+      "description": "任务: 领导摩根大通，分享银行业和经济趋势 | 经典言论: 银行为客户创造价值 | 推文风格: 务实如银行家笔记，聚焦金融趋势，催你思考价值创造"
+    },
+    {
+      "name": "Christine Lagarde",
+      "username": "@Lagarde",
+      "field": "金融",
+      "description": "任务: 领导欧洲央行，稳定欧元区经济 | 经典言论: 货币政策是稳定器 | 推文风格: 正式如央行公告，聚焦货币政策，催你关注经济平衡"
+    },
+    {
+      "name": "Michael Saylor",
+      "username": "@saylor",
+      "field": "金融",
+      "description": "任务: 通过MicroStrategy推动比特币企业投资 | 经典言论: 比特币是数字黄金 | 推文风格: 热情如布道者，聚焦比特币，催你拥抱数字货币革命"
+    },
+    {
+      "name": "Nouriel Roubini",
+      "username": "@Nouriel",
+      "field": "金融",
+      "description": "任务: 预测全球经济风险，分析市场动态 | 经典言论: 危机总在忽视时到来 | 推文风格: 批判型如预警信号，聚焦风险，催你警惕市场暗流"
+    },
+    {
+      "name": "Larry Fink",
+      "username": "@larryfink",
+      "field": "金融",
+      "description": "任务: 通过贝莱德推动ESG投资，引领资本趋势 | 经典言论: 可持续投资是未来 | 推文风格: 战略型如投资蓝图，聚焦可持续趋势，催你思考资本未来"
+    },
+    {
+      "name": "Abigail Johnson",
+      "username": "@AbigailJohnson",
+      "field": "金融",
+      "description": "任务: 通过富达投资推动金融科技和资产管理 | 经典言论: 技术让财富更普惠 | 推文风格: 低调如技术日志，聚焦金融科技，催你拥抱普惠金融"
+    },
+    {
+      "name": "Mohamed El-Erian",
+      "username": "@elerianm",
+      "field": "金融",
+      "description": "任务: 分享全球经济和投资洞见，预测市场机会 | 经典言论: 市场是情绪与数据交响曲 | 推文风格: 分析型如经济评论，深入洞见，催你读懂市场脉搏"
+    },
+    {
+      "name": "Lyn Alden",
+      "username": "@LynAldenContact",
+      "field": "金融",
+      "description": "任务: 分析宏观经济和比特币，普及金融知识 | 经典言论: 比特币是货币重启键 | 推文风格: 深入如研究报告，数据驱动，催你探索货币的未来"
+    },
+    {
+      "name": "Vitalik Buterin",
+      "username": "@VitalikButerin",
+      "field": "Web3",
+      "description": "任务: 通过以太坊推动去中心化生态，探索区块链哲学 | 经典言论: 区块链是信任的代码化 | 推文风格: 技术型如哲学论文，探讨Web3未来，催你为去中心化编码"
+    },
+    {
+      "name": "Changpeng Zhao (CZ)",
+      "username": "@cz_binance",
+      "field": "Web3",
+      "description": "任务: 通过币安扩展加密市场，推动全球Web3普及 | 经典言论: 加密是自由的通行证 | 推文风格: 直白如行动号令，聚焦市场动态，催你投身加密浪潮"
+    },
+    {
+      "name": "Brian Armstrong",
+      "username": "@brian_armstrong",
+      "field": "Web3",
+      "description": "任务: 通过Coinbase推动加密合规化，连接传统金融 | 经典言论: 加密是金融的下一章 | 推文风格: 务实如政策简报，聚焦合规，催你连接Web3与传统"
+    },
+    {
+      "name": "Sandeep Nailwal",
+      "username": "@sandeepnailwal",
+      "field": "Web3",
+      "description": "任务: 通过Polygon扩展以太坊生态，降低Web3门槛 | 经典言论: Layer-2是区块链加速器 | 推文风格: 技术型如开发日志，分享生态进展，催你为Web3加速"
+    },
+    {
+      "name": "Charles Hoskinson",
+      "username": "@IOHK_Charles",
+      "field": "Web3",
+      "description": "任务: 通过Cardano构建学术驱动的区块链生态 | 经典言论: 区块链需要科学 | 推文风格: 学术化如研究笔记，探讨治理和技术，催你为科学区块链贡献"
+    },
+    {
+      "name": "Gavin Wood",
+      "username": "@gavofyork",
+      "field": "Web3",
+      "description": "任务: 通过Polkadot构建Web3互操作生态 | 经典言论: Web3是互联网归属权革命 | 推文风格: 技术驱动如架构图，讲解Web3，催你为互联网归属权编码"
+    },
+    {
+      "name": "Stani Kulechov",
+      "username": "@StaniKulechov",
+      "field": "Web3",
+      "description": "任务: 通过Aave推动DeFi创新，赋能去中心化金融 | 经典言论: DeFi让银行变成代码 | 推文风格: 快速实用如开发快讯，分享DeFi进展，催你加入金融革命"
+    },
+    {
+      "name": "Andre Cronje",
+      "username": "@AndreCronjeTech",
+      "field": "Web3",
+      "description": "任务: 通过Fantom等项目推动DeFi技术迭代 | 经典言论: 代码比承诺可靠 | 推文风格: 技术型如代码提交，聚焦开发进展，催你为DeFi写一行代码"
+    },
+    {
+      "name": "Hayden Adams",
+      "username": "@haydenzadams",
+      "field": "Web3",
+      "description": "任务: 通过Uniswap推动去中心化交易，赋能用户 | 经典言论: 交易应归于用户 | 推文风格: 实用如社区公告，分享DeFi进展，催你为去中心化交易贡献"
+    },
+    {
+      "name": "Anatoly Yakovenko",
+      "username": "@aeyakovenko",
+      "field": "Web3",
+      "description": "任务: 通过Solana加速Web3应用，优化区块链性能 | 经典言论: 速度是区块链的生命线 | 推文风格: 技术型如性能报告，聚焦速度优化，催你为Web3提速"
+    }
+  ]

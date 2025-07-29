@@ -1,103 +1,86 @@
-import Image from "next/image";
+"use client";
+
+import { Footer } from "@/components/footer";
+import { LandingNavbar } from "@/components/navbar/landingNavbar";
+import { YoumindCard } from "@/components/card/youmindCard";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+ 
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [twitterHandle, setTwitterHandle] = useState("");
+  const router = useRouter();
+ 
+  const handleStartAnalysis = () => {
+    if (twitterHandle.trim()) {
+      const cleanHandle = twitterHandle.replace(/^@/, "");
+      router.push(`/twitter/${cleanHandle}`);
+    }
+  };
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      handleStartAnalysis();
+    }
+  };
+
+  return (
+    <div className="min-h-screen flex flex-col">
+     
+      <div className="fixed top-0 left-0 right-0 z-50">
+        <LandingNavbar />
+      </div>
+
+     
+      <div className="flex-1 flex flex-col">
+       
+        <div className="flex flex-col items-center justify-center px-4 mt-20 sm:mt-28 w-full mx-auto">
+          <h1 className="text-[24px] sm:text-[48px] font-bold text-center max-w-[1150px]">
+            YouMind is the reimagined AI writing tool that can help anyone start
+            creating. Capture ideas, gather materials, write drafts, and turn them
+            into polished articles, podcasts, videos, and more.
+          </h1>
+
+          <p className="text-[16px] sm:text-xl text-gray-600 mt-8 leading-relaxed text-center max-w-[900px]">
+            Based on your unique way of expressing yourself, AI will match you
+            with public figures who share a similar sense of taste. Discover the
+            "celebrity souls" that resonate with your inner style.
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        <div className="flex flex-col items-center justify-center px-4 max-w-[680px] mt-20 w-full mx-auto">
+          <h2 className="text-[22px] md:text-[24px] font-medium text-center">
+            Different on the outside, kindred in spirit.
+          </h2>
+
+          <div className="flex flex-row items-center justify-center gap-2 w-full mt-8 font-medium h-16">
+            <input 
+              type="text" 
+              placeholder="Enter your twitter handle @username" 
+              className="text-[16px] p-2 rounded-md border border-black w-full h-full px-4 py-2" 
+              value={twitterHandle}
+              onChange={(e) => setTwitterHandle(e.target.value)}
+              onKeyDown={handleKeyDown}
+            />
+            <button 
+              className="bg-black text-white px-4 py-2 rounded-md min-w-[120px] h-full text-[16px] font-medium hover:bg-gray-800 transition-colors"
+              onClick={handleStartAnalysis}
+            >
+              开始匹配
+            </button>
+          </div>
+
+          <div className="flex flex-col items-center justify-center mt-12 w-full">
+            <YoumindCard />
+          </div>
+        </div>
+
+        <div className="w-full border-t border-gray-300 mt-8"></div>
+       
+        <div className="flex-1 flex items-center justify-center">
+          <Footer />
+        </div>
+      </div>
     </div>
   );
 }
