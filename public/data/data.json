@@ -1,362 +1,2782 @@
 [
-    {
-      "name": "Elon Musk",
-      "username": "@elonmusk",
-      "field": "科技",
-      "description": "任务: 领导特斯拉、SpaceX、xAI，挑战人类极限，殖民火星，普及AI | 经典言论: 我宁愿把不可能变成可能，也不愿接受现状 | 推文风格: 像火箭发射般大胆，充满对AI、太空和未来的狂热愿景，夹杂幽默和挑衅，点燃无数人的梦想和争议"
-    },
-    {
-      "name": "Paul Graham",
-      "username": "@paulg",
-      "field": "创业",
-      "description": "任务: 通过Y Combinator孵化无数初创公司，分享创业哲学，拆解复杂问题 | 经典言论: 创业不是填空题，而是选对问题 | 推文风格: 像写代码般清晰，如手术刀剖析创业痛点，总能让人想打开笔记本把想法变成现实"
-    },
-    {
-      "name": "Naval Ravikant",
-      "username": "@naval",
-      "field": "创业",
-      "description": "任务: 传播杠杆化思维，教人用知识和代码构建财富与自由 | 经典言论: 财富是你能支配的时间 | 推文风格: 哲学家般的精炼金句，每条推文都像微型操作系统，教你用最少努力撬动最大价值"
-    },
-    {
-      "name": "Shaan Puri",
-      "username": "@shaanvp",
-      "field": "创业",
-      "description": "任务: 通过播客和项目分享创业点子，点燃社群的行动火焰 | 经典言论: 别等完美，v0.1上线然后迭代 | 推文风格: 像朋友聊天般活泼，充满实用点子和‘现在就干’的能量，总能让人想立刻启动一个项目"
-    },
-    {
-      "name": "Marc Andreessen",
-      "username": "@pmarca",
-      "field": "创投",
-      "description": "任务: 通过A16z投资颠覆性科技，预测Web3和AI的未来 | 经典言论: 软件正在吞噬世界 | 推文风格: 像科技预言家，充满对趋势的犀利洞见，夹杂批判，催你思考互联网的下一幕"
-    },
-    {
-      "name": "Chamath Palihapitiya",
-      "username": "@chamath",
-      "field": "创投",
-      "description": "任务: 通过Social Capital投资改变世界的企业，重塑社会经济规则 | 经典言论: 杠杆是现代的魔法 | 推文风格: 战略家口吻，混合资本洞见和社会评论，像蓝图让你想重新设计游戏规则"
-    },
-    {
-      "name": "Cathie Wood",
-      "username": "@Cathie_D_Wood",
-      "field": "投资",
-      "description": "任务: 通过ARK Invest押注AI、区块链等颠覆性技术，预见未来经济 | 经典言论: 创新是经济的引擎 | 推文风格: 数据驱动，像投资地图，指引你穿越AI和区块链的未来"
-    },
-    {
-      "name": "Jack Dorsey",
-      "username": "@jack",
-      "field": "科技",
-      "description": "任务: 通过Block推动比特币和去中心化金融，简化全球支付 | 经典言论: 比特币是自由的货币 | 推文风格: 极简如代码注释，聚焦去中心化和比特币，像禅师般点拨金融的未来"
-    },
-    {
-      "name": "Balaji Srinivasan",
-      "username": "@balajis",
-      "field": "科技",
-      "description": "任务: 预测去中心化社会趋势，推动Web3生态发展 | 经典言论: 未来国家是数字网络 | 推文风格: 像科幻小说家，充满对Web3和社会的预言，催你为未来写一行代码"
-    },
-    {
-      "name": "Sam Altman",
-      "username": "@sama",
-      "field": "AI",
-      "description": "任务: 通过OpenAI探索AI与人类的未来，平衡技术与伦理 | 经典言论: AI是最重要的事情 | 推文风格: 深思熟虑，如哲学笔记，探讨AI的潜力与风险，让你想为未来调试代码"
-    },
-    {
-      "name": "Patrick Collison",
-      "username": "@patrickc",
-      "field": "科技",
-      "description": "任务: 通过Stripe优化全球支付系统，支持创业者规模化 | 经典言论: 好的基础设施让创业变简单 | 推文风格: 低调实用，如工程师日志，分享支付和创业的微妙洞见"
-    },
-    {
-      "name": "Reid Hoffman",
-      "username": "@reidhoffman",
-      "field": "创投",
-      "description": "任务: 通过Greylock投资网络效应企业，分享商业战略 | 经典言论: 网络效应是护城河 | 推文风格: 战略家口吻，如商业蓝图，教你如何连接点与点，构建商业帝国"
-    },
-    {
-      "name": "Chris Dixon",
-      "username": "@cdixon",
-      "field": "创投",
-      "description": "任务: 通过A16z推动Web3生态，倡导去中心化互联网 | 经典言论: Web3让用户拥有互联网 | 推文风格: 技术驱动，如区块链白皮书，拆解Web3的每一块乐高"
-    },
-    {
-      "name": "Ben Horowitz",
-      "username": "@bhorowitz",
-      "field": "创投",
-      "description": "任务: 指导创业者，分享硬核管理和文化建设经验 | 经典言论: 创业是面对现实的残酷 | 推文风格: 硬核实用，如创业教案，教你在混乱中建立秩序"
-    },
-    {
-      "name": "Jessica Lessin",
-      "username": "@jessicalessin",
-      "field": "科技媒体",
-      "description": "任务: 通过The Information揭露科技行业真相，驱动深度讨论 | 经典言论: 真相比头条重要 | 推文风格: 调查记者口吻，如手术刀，剖开科技行业的内核"
-    },
-    {
-      "name": "Emad Mustak",
-      "username": "@EMostaque",
-      "field": "AI",
-      "description": "任务: 通过Stability AI推动开源AI，降低创造门槛 | 经典言论: AI是每个人的画笔 | 推文风格: 热情如火焰，分享AI进展，催你fork代码加入创造革命"
-    },
-    {
-      "name": "Daniella Amodei",
-      "username": "@daniamodei",
-      "field": "AI",
-      "description": "任务: 通过Anthropic开发安全AI，关注技术伦理 | 经典言论: AI需要责任感 | 推文风格: 冷静如科学家，探讨AI安全与伦理，催你为负责任的未来编码"
-    },
-    {
-      "name": "Laura Shin",
-      "username": "@laurashin",
-      "field": "加密媒体",
-      "description": "任务: 通过《Unchained》普及Web3知识，报道区块链动态 | 经典言论: 真相藏在区块链细节里 | 推文风格: 分析型如探照灯，深入Web3生态，点亮去中心化的每一个角落"
-    },
-    {
-      "name": "Jason Calacanis",
-      "username": "@Jason",
-      "field": "创投",
-      "description": "任务: 通过播客和投资连接创业者，催化早期项目 | 经典言论: 创业者只需开始 | 推文风格: 活泼如创业派对，分享故事和机会，催你立刻投身创业浪潮"
-    },
-    {
-      "name": "Anita Posch",
-      "username": "@AnitaPosch",
-      "field": "比特币",
-      "description": "任务: 通过教育和播客推广比特币，赋能金融自由 | 经典言论: 比特币是自由的起点 | 推文风格: 热情教育型，如布道，激励你学习加密并拥抱去中心化"
-    },
-    {
-      "name": "Barack Obama",
-      "username": "@BarackObama",
-      "field": "政治",
-      "description": "任务: 倡导社会正义和气候行动，激励全球进步主义 | 经典言论: 改变需要我们行动 | 推文风格: 如灯塔般鼓舞，聚焦社会议题，点燃希望与行动的火花"
-    },
-    {
-      "name": "Donald Trump",
-      "username": "@realDonaldTrump",
-      "field": "政治",
-      "description": "任务: 动员支持者，推动保守派议程，引发全球热议 | 经典言论: 让美国再次伟大！ | 推文风格: 争议性如雷霆，直击热点，催人站队或开干"
-    },
-    {
-      "name": "Kamala Harris",
-      "username": "@KamalaHarris",
-      "field": "政治",
-      "description": "任务: 推动种族和经济正义，塑造进步派政策 | 经典言论: 平等是必须执行的承诺 | 推文风格: 政策导向如蓝图，强调公平，催你为正义发声"
-    },
-    {
-      "name": "Bernie Sanders",
-      "username": "@BernieSanders",
-      "field": "政治",
-      "description": "任务: 倡导全民医疗和经济公平，推动系统变革 | 经典言论: 财富集中不是民主 | 推文风格: 批判型如战鼓，揭露不公，催你为系统重构而战"
-    },
-    {
-      "name": "Alexandria Ocasio-Cortez",
-      "username": "@AOC",
-      "field": "政治",
-      "description": "任务: 推动绿色新政和社会正义，点燃草根运动 | 经典言论: 不行动就是选择现状 | 推文风格: 激情如篝火，动员青年，催你加入社会变革的派对"
-    },
-    {
-      "name": "Justin Trudeau",
-      "username": "@JustinTrudeau",
-      "field": "政治",
-      "description": "任务: 推动包容性政策，强化加拿大国际角色 | 经典言论: 多样性是我们的力量 | 推文风格: 温和如春风，强调团结与外交，连接全球愿景"
-    },
-    {
-      "name": "Emmanuel Macron",
-      "username": "@EmmanuelMacron",
-      "field": "政治",
-      "description": "任务: 推动欧洲一体化，应对气候和地缘挑战 | 经典言论: 欧洲是我们共同的代码 | 推文风格: 战略型如棋盘，布局全球视野，催你思考大格局"
-    },
-    {
-      "name": "Narendra Modi",
-      "username": "@narendramodi",
-      "field": "政治",
-      "description": "任务: 推动印度经济崛起和全球影响力 | 经典言论: 印度永不停止前进 | 推文风格: 激励型如号角，点燃民族热情，催你为宏大目标开干"
-    },
-    {
-      "name": "Elizabeth Warren",
-      "username": "@ewarren",
-      "field": "政治",
-      "description": "任务: 改革金融系统，保护消费者权益 | 经典言论: 规则为所有人而设 | 推文风格: 分析型如探针，聚焦经济公平，催你为正义调试规则"
-    },
-    {
-      "name": "Ted Cruz",
-      "username": "@tedcruz",
-      "field": "政治",
-      "description": "任务: 推动保守派和加密货币政策，捍卫自由市场 | 经典言论: 自由是创新的基石 | 推文风格: 对抗型如利剑，强调自由，催你为市场开战"
-    },
-    {
-      "name": "Volodymyr Zelenskyy",
-      "username": "@ZelenskyyUa",
-      "field": "政治",
-      "description": "任务: 领导乌克兰抗击侵略，争取国际支持 | 经典言论: 我们保卫的是自由 | 推文风格: 激情如战鼓，动员全球，催你为信念而战"
-    },
-    {
-      "name": "Jacinda Ardern",
-      "username": "@jacindaardern",
-      "field": "政治",
-      "description": "任务: 推动社会包容和气候政策，分享领导力洞见 | 经典言论: 领导力是用同理心连接 | 推文风格: 温和如暖流，聚焦包容，连接人心与未来"
-    },
-    {
-      "name": "Pete Buttigieg",
-      "username": "@PeteButtigieg",
-      "field": "政治",
-      "description": "任务: 推动基础设施和进步政策，规划美国未来 | 经典言论: 未来是我们建出来的 | 推文风格: 理性如蓝图，强调未来规划，催你为明天奠基"
-    },
-    {
-      "name": "Greta Thunberg",
-      "username": "@GretaThunberg",
-      "field": "环保",
-      "description": "任务: 动员全球青年，推动气候行动 | 经典言论: 我们的家在燃烧 | 推文风格: 直白如警钟，紧急呼吁行动，催你为地球而战"
-    },
-    {
-      "name": "Cory Booker",
-      "username": "@CoryBooker",
-      "field": "政治",
-      "description": "任务: 倡导种族正义和社会平等，推动政策改革 | 经典言论: 爱与正义是改变的起点 | 推文风格: 情感化如诗，聚焦社会议题，催你为平等发声"
-    },
-    {
-      "name": "Nikki Haley",
-      "username": "@NikkiHaley",
-      "field": "政治",
-      "description": "任务: 推动保守派外交政策，分享全球战略洞见 | 经典言论: 强硬外交是和平基石 | 推文风格: 战略型如棋局，聚焦全球事务，催你思考国际格局"
-    },
-    {
-      "name": "Kevin Rudd",
-      "username": "@MrKRudd",
-      "field": "政治",
-      "description": "任务: 分析亚太地缘政治，分享外交战略洞见 | 经典言论: 外交是平衡的艺术 | 推文风格: 分析型如智库报告，聚焦外交洞见，催你思考全球平衡"
-    },
-    {
-      "name": "Tulsi Gabbard",
-      "username": "@TulsiGabbard",
-      "field": "政治",
-      "description": "任务: 挑战传统政治，推动独立改革 | 经典言论: 真相是变革的第一步 | 推文风格: 独立如孤狼，充满争议性，挑战现状，催你重新思考规则"
-    },
-    {
-      "name": "Keir Starmer",
-      "username": "@Keir_Starmer",
-      "field": "政治",
-      "description": "任务: 领导英国工党，推动社会平等和经济改革 | 经典言论: 公平是繁荣的基石 | 推文风格: 稳健如基石，政策导向，催你为社会公平奠基"
-    },
-    {
-      "name": "Sanna Marin",
-      "username": "@MarinSanna",
-      "field": "政治",
-      "description": "任务: 推动性别平等和气候政策，强化全球领导力 | 经典言论: 平等是必须实现的现实 | 推文风格: 进步如晨光，包容全球视野，催你为平等未来努力"
-    },
-    {
-      "name": "Ray Dalio",
-      "username": "@Ray_Dalio",
-      "field": "金融",
-      "description": "任务: 通过桥水基金分享宏观经济洞见，预测市场趋势 | 经典言论: 经济周期如市场代码 | 推文风格: 分析型如经济地图，深入宏观趋势，催你读懂市场的节奏"
-    },
-    {
-      "name": "Janet Yellen",
-      "username": "@JanetYellen",
-      "field": "金融",
-      "description": "任务: 制定美国经济政策，稳定全球金融市场 | 经典言论: 经济稳定是繁荣根基 | 推文风格: 权威如政策白皮书，稳健聚焦经济，催你关注全球稳定"
-    },
-    {
-      "name": "Jamie Dimon",
-      "username": "@jpmdimon",
-      "field": "金融",
-      "description": "任务: 领导摩根大通，分享银行业和经济趋势 | 经典言论: 银行为客户创造价值 | 推文风格: 务实如银行家笔记，聚焦金融趋势，催你思考价值创造"
-    },
-    {
-      "name": "Christine Lagarde",
-      "username": "@Lagarde",
-      "field": "金融",
-      "description": "任务: 领导欧洲央行，稳定欧元区经济 | 经典言论: 货币政策是稳定器 | 推文风格: 正式如央行公告，聚焦货币政策，催你关注经济平衡"
-    },
-    {
-      "name": "Michael Saylor",
-      "username": "@saylor",
-      "field": "金融",
-      "description": "任务: 通过MicroStrategy推动比特币企业投资 | 经典言论: 比特币是数字黄金 | 推文风格: 热情如布道者，聚焦比特币，催你拥抱数字货币革命"
-    },
-    {
-      "name": "Nouriel Roubini",
-      "username": "@Nouriel",
-      "field": "金融",
-      "description": "任务: 预测全球经济风险，分析市场动态 | 经典言论: 危机总在忽视时到来 | 推文风格: 批判型如预警信号，聚焦风险，催你警惕市场暗流"
-    },
-    {
-      "name": "Larry Fink",
-      "username": "@larryfink",
-      "field": "金融",
-      "description": "任务: 通过贝莱德推动ESG投资，引领资本趋势 | 经典言论: 可持续投资是未来 | 推文风格: 战略型如投资蓝图，聚焦可持续趋势，催你思考资本未来"
-    },
-    {
-      "name": "Abigail Johnson",
-      "username": "@AbigailJohnson",
-      "field": "金融",
-      "description": "任务: 通过富达投资推动金融科技和资产管理 | 经典言论: 技术让财富更普惠 | 推文风格: 低调如技术日志，聚焦金融科技，催你拥抱普惠金融"
-    },
-    {
-      "name": "Mohamed El-Erian",
-      "username": "@elerianm",
-      "field": "金融",
-      "description": "任务: 分享全球经济和投资洞见，预测市场机会 | 经典言论: 市场是情绪与数据交响曲 | 推文风格: 分析型如经济评论，深入洞见，催你读懂市场脉搏"
-    },
-    {
-      "name": "Lyn Alden",
-      "username": "@LynAldenContact",
-      "field": "金融",
-      "description": "任务: 分析宏观经济和比特币，普及金融知识 | 经典言论: 比特币是货币重启键 | 推文风格: 深入如研究报告，数据驱动，催你探索货币的未来"
-    },
-    {
-      "name": "Vitalik Buterin",
-      "username": "@VitalikButerin",
-      "field": "Web3",
-      "description": "任务: 通过以太坊推动去中心化生态，探索区块链哲学 | 经典言论: 区块链是信任的代码化 | 推文风格: 技术型如哲学论文，探讨Web3未来，催你为去中心化编码"
-    },
-    {
-      "name": "Changpeng Zhao (CZ)",
-      "username": "@cz_binance",
-      "field": "Web3",
-      "description": "任务: 通过币安扩展加密市场，推动全球Web3普及 | 经典言论: 加密是自由的通行证 | 推文风格: 直白如行动号令，聚焦市场动态，催你投身加密浪潮"
-    },
-    {
-      "name": "Brian Armstrong",
-      "username": "@brian_armstrong",
-      "field": "Web3",
-      "description": "任务: 通过Coinbase推动加密合规化，连接传统金融 | 经典言论: 加密是金融的下一章 | 推文风格: 务实如政策简报，聚焦合规，催你连接Web3与传统"
-    },
-    {
-      "name": "Sandeep Nailwal",
-      "username": "@sandeepnailwal",
-      "field": "Web3",
-      "description": "任务: 通过Polygon扩展以太坊生态，降低Web3门槛 | 经典言论: Layer-2是区块链加速器 | 推文风格: 技术型如开发日志，分享生态进展，催你为Web3加速"
-    },
-    {
-      "name": "Charles Hoskinson",
-      "username": "@IOHK_Charles",
-      "field": "Web3",
-      "description": "任务: 通过Cardano构建学术驱动的区块链生态 | 经典言论: 区块链需要科学 | 推文风格: 学术化如研究笔记，探讨治理和技术，催你为科学区块链贡献"
-    },
-    {
-      "name": "Gavin Wood",
-      "username": "@gavofyork",
-      "field": "Web3",
-      "description": "任务: 通过Polkadot构建Web3互操作生态 | 经典言论: Web3是互联网归属权革命 | 推文风格: 技术驱动如架构图，讲解Web3，催你为互联网归属权编码"
-    },
-    {
-      "name": "Stani Kulechov",
-      "username": "@StaniKulechov",
-      "field": "Web3",
-      "description": "任务: 通过Aave推动DeFi创新，赋能去中心化金融 | 经典言论: DeFi让银行变成代码 | 推文风格: 快速实用如开发快讯，分享DeFi进展，催你加入金融革命"
-    },
-    {
-      "name": "Andre Cronje",
-      "username": "@AndreCronjeTech",
-      "field": "Web3",
-      "description": "任务: 通过Fantom等项目推动DeFi技术迭代 | 经典言论: 代码比承诺可靠 | 推文风格: 技术型如代码提交，聚焦开发进展，催你为DeFi写一行代码"
-    },
-    {
-      "name": "Hayden Adams",
-      "username": "@haydenzadams",
-      "field": "Web3",
-      "description": "任务: 通过Uniswap推动去中心化交易，赋能用户 | 经典言论: 交易应归于用户 | 推文风格: 实用如社区公告，分享DeFi进展，催你为去中心化交易贡献"
-    },
-    {
-      "name": "Anatoly Yakovenko",
-      "username": "@aeyakovenko",
-      "field": "Web3",
-      "description": "任务: 通过Solana加速Web3应用，优化区块链性能 | 经典言论: 速度是区块链的生命线 | 推文风格: 技术型如性能报告，聚焦速度优化，催你为Web3提速"
-    }
-  ]
+  {
+    "name": "Elon Musk",
+    "username": "@elonmusk",
+    "field": "科技",
+    "taste_labels": [
+      {
+        "label": "#工程型浪漫主义 (Romanticism of Engineering)",
+        "definition": "相信最宏大的浪漫，不是诗或艺术，而是亲手把火箭送上太空。真正的梦想，必须能被制造出来。"
+      },
+      {
+        "label": "#激进实用主义 (Radical Pragmatism)",
+        "definition": "不信空谈，只信“能不能做出来”。任何宏愿若不能落地执行，都是浪费时间的幻想。"
+      },
+      {
+        "label": "#高维叙事控制术 (High-Dimensional Narrative Control)",
+        "definition": "同时操控科技愿景、媒体话语与资本想象，在多个舆论维度构建自己的“主宇宙”。"
+      },
+      {
+        "label": "#技术即权力 (Technology as Power)",
+        "definition": "将技术视作新的统治结构，不靠传统权威赢得世界，而是靠造出别人无法模仿的东西。"
+      },
+      {
+        "label": "#高噪点自我表达 (Noisy Self-Expression)",
+        "definition": "在信息洪流中不断发声、出奇、搞怪，是为了确保自己的信号从未消失，永远置顶世界的注意力。"
+      },
+      {
+        "label": "#硬核理想主义 (Hardcore Idealism)",
+        "definition": "理想主义不是空谈善意，而是用超强执行力去完成看似不可能的事，比如把人类变成多星球物种。"
+      },
+      {
+        "label": "#品牌即人类叙事节点 (Brand as Narrative Node)",
+        "definition": "将个体品牌推向人类科技叙事的中心，使“我是谁”与“世界将去向何方”形成绑定关系。"
+      },
+      {
+        "label": "#模因化领袖美学 (Meme Leadership Aesthetics)",
+        "definition": "用模因、玩笑和表情包构建统治力，领导不再是严肃而高冷，而是生动、有趣且病毒式传播。"
+      },
+      {
+        "label": "#系统级赌徒 (Systemic Gambler)",
+        "definition": "不押注小概率事件，而是一次性下注整个系统级问题，比如能源、交通、通信和行星迁徙。"
+      },
+      {
+        "label": "#控制混乱的游戏者 (Player of Controlled Chaos)",
+        "definition": "制造混乱以创造机会，在不可预测中游刃有余。真正的策略，是让一切看起来像是意外。"
+      }
+    ]
+  },
+  {
+    "name": "Paul Graham",
+    "username": "@paulg",
+    "field": "创业",
+    "taste_labels": [
+      {
+        "label": "#黑白分明的思维快感 (Binary Thinking Aesthetic)",
+        "definition": "喜欢将问题剖开为“对”与“错”，在极简逻辑中获得判断的纯粹快感，不留暧昧空间。"
+      },
+      {
+        "label": "#思考即建构 (Thought as Architecture)",
+        "definition": "视写作为建筑，用精准逻辑搭建思想结构，每一段话都像梁柱，必须能撑起全屋。"
+      },
+      {
+        "label": "#原教旨极简主义 (Fundamentalist Minimalism)",
+        "definition": "不相信装饰，凡事讲“最小可行”，从代码到人生都只保留绝对必要部分。"
+      },
+      {
+        "label": "#早期偏执狂美学 (Aesthetics of Early Obsession)",
+        "definition": "推崇创始人初期对产品的全身心沉迷，那种不理世界、只理代码的状态才是真正纯粹。"
+      },
+      {
+        "label": "#清晰即道德 (Clarity as Virtue)",
+        "definition": "不只是写清楚，而是认为表达清晰本身就是道德行为。混乱是一种思维懒惰。"
+      },
+      {
+        "label": "#反商业话术信仰 (Anti-Business Jargon Belief)",
+        "definition": "对一切 corporate-speak 天然过敏。认为用朴素语言说大事，才是智识上的优雅。"
+      },
+      {
+        "label": "#黑客式现实观 (Hacker’s Worldview)",
+        "definition": "相信世界本质上是可以被重构的系统，只要你愿意深入了解底层逻辑并动手修改它。"
+      },
+      {
+        "label": "#问题性感知力 (Taste for Problem Scent)",
+        "definition": "热衷于嗅出问题的“味道”。好创意不是想出来的，是在某种痛点中被闻出来的。"
+      },
+      {
+        "label": "#时间跨度美学 (Aesthetics of Temporal Distance)",
+        "definition": "用 10 年尺度判断价值，今天的冷门在未来可能是主流。看不见时间，就看不见本质。"
+      },
+      {
+        "label": "#语言是投资 (Language as Investment)",
+        "definition": "写作不是表达，是压缩思想的资产管理。每句话都是可以增值的长期认知股权。"
+      }
+    ]
+  },
+  {
+    "name": "Naval Ravikant",
+    "username": "@naval",
+    "field": "创业",
+    "taste_labels": [
+      {
+        "label": "#杠杆思维崇拜 (Leverage Worship)",
+        "definition": "人生就是寻找复利工具。代码、资本与媒体，是通往无限游戏的三大乘法器。"
+      },
+      {
+        "label": "#内观式理性主义 (Introspective Rationalism)",
+        "definition": "真正的理性源于内心澄明。先理清自己，再谈看清世界。"
+      },
+      {
+        "label": "#财富哲学美学 (Wealth Philosophy Aesthetic)",
+        "definition": "不把赚钱当目标，而是当作理解人生运转规律的实验场。"
+      },
+      {
+        "label": "#反苦行成功学 (Anti-Grind Success Theory)",
+        "definition": "不推崇焦虑与疲惫的奋斗美学，真正的自由来自精准决策与最小必要行动。"
+      },
+      {
+        "label": "#思想即资产 (Ideas as Assets)",
+        "definition": "文字、思想、认知结构不是装饰，而是长期复利性的资产，可以积累，可以变现。"
+      },
+      {
+        "label": "#孤独即奢侈 (Solitude as Luxury)",
+        "definition": "把拒绝社交视作高等级自由。真正的独处是少数人的奢侈权利。"
+      },
+      {
+        "label": "#精神效率主义 (Spiritual Efficiency)",
+        "definition": "追求心智上的极简与高效，每个念头都要有清晰价值与归属。"
+      },
+      {
+        "label": "#深度选择偏执 (Paranoid about Choice)",
+        "definition": "选择比努力重要得多。真正的高手在意入口点，而不是途中挣扎。"
+      },
+      {
+        "label": "#非显性领导力 (Non-Coercive Influence)",
+        "definition": "拒绝权威式管理。用思维、文字和存在状态影响人，而不是指挥人。"
+      },
+      {
+        "label": "#极端长期主义 (Extreme Long-Termism)",
+        "definition": "投资不是为了三年后自由，而是为了三十年后仍然轻盈地活在自己定义的时间里。"
+      }
+    ]
+  },
+  {
+    "name": "Shaan Puri",
+    "username": "@shaanvp",
+    "field": "创业",
+    "taste_labels": [
+      {
+        "label": "#高频构想癖 (High-Velocity Idea Generation)",
+        "definition": "大脑像内容工厂，永远在造点子。不是等灵感，而是通过持续说话来召唤灵感。"
+      },
+      {
+        "label": "#社交型建设者美学 (Social Builder Aesthetic)",
+        "definition": "不靠独处冥想出伟大项目，而是边聊边造，边建边发，把社交当生产力杠杆。"
+      },
+      {
+        "label": "#懒人效率哲学 (Lazy-Efficiency Philosophy)",
+        "definition": "追求“懒人路径”：不是不努力，而是只做自己会做、喜欢做、最管用的那一件事。"
+      },
+      {
+        "label": "#模因式表达冲动 (Meme-Level Expression)",
+        "definition": "用一句梗包裹深度，用一条推文炸出价值。观点不是逻辑链，是社交货币。"
+      },
+      {
+        "label": "#产品即内容逻辑 (Product-as-Content Thinking)",
+        "definition": "做东西不是为了营收，而是为了制造传播素材。产品本身要像段子一样好讲。"
+      },
+      {
+        "label": "#即时发布信仰 (Build in Public)",
+        "definition": "在还没想清楚前就开始说、开始造、开始发。透明是一种战略性的注意力引擎。"
+      },
+      {
+        "label": "#去专家化表达 (Anti-Expert Voice)",
+        "definition": "不站在高处讲大道理，而是用朋友的语气聊大趋势，让认知更接地气，也更可信。"
+      },
+      {
+        "label": "#点子即货币 (Ideas as Currency)",
+        "definition": "用点子建立存在感，用点子积累人脉，用点子触发合作。想得快，就是赚得快。"
+      },
+      {
+        "label": "#轻量级玩家心态 (Lightweight Player Mode)",
+        "definition": "把商业当游戏，把失败当练级。不沉重、不执着、但极度高频。"
+      },
+      {
+        "label": "#注意力黑客术 (Attention Hacking)",
+        "definition": "理解注意力流动的底层规律，擅长制造抓眼话题，把信息流变成引力场。"
+      }
+    ]
+  },
+  {
+    "name": "Marc Andreessen",
+    "username": "@pmarca",
+    "field": "创投",
+    "taste_labels": [
+      {
+        "label": "#技术决定论信仰 (Tech Determinism Belief)",
+        "definition": "坚信技术才是历史的真正叙事主角。政治只是噪音，代码才是真实权力的形态。"
+      },
+      {
+        "label": "#元叙事驾驭术 (Meta-Narrative Control)",
+        "definition": "不参与情绪争吵，而是直接改写框架。控制谁定义问题，就控制谁能赢。"
+      },
+      {
+        "label": "#意识形态冷感 (Ideological Coldness)",
+        "definition": "不迷恋立场，也不讨好正义。更关心结构是否稳定，机制是否有效。"
+      },
+      {
+        "label": "#构建者统治美学 (Builder Supremacy Aesthetic)",
+        "definition": "认为世界应由建设者统治——他们用产品创造秩序，而不是用话语维护秩序。"
+      },
+      {
+        "label": "#信息密度快感 (High Information Density)",
+        "definition": "每句话都像压缩包，信息比情绪重要，推文像小型 PDF，语速设定为 x3。"
+      },
+      {
+        "label": "#结构高于风格 (Structure Over Style)",
+        "definition": "不关心语言是否优美，只关心论点是否闭环。表达是一种认知的逻辑布线术。"
+      },
+      {
+        "label": "#反人本叙事偏好 (Post-Humanist Narrative Taste)",
+        "definition": "不执着于人的主观体验，而是迷恋系统级效率，算法优于情感，架构高于个体。"
+      },
+      {
+        "label": "#科技福音派 (Techno-Optimist Gospel)",
+        "definition": "在技术中寻找精神寄托与文明希望。认为解决一切问题的钥匙都藏在未来版本中。"
+      },
+      {
+        "label": "#信息战争格局感 (Info-War Mindset)",
+        "definition": "认为认知就是战场，写作是战略导弹，推文是一种地缘投送。输赢先于真伪。"
+      },
+      {
+        "label": "#软件即文明底座 (Software as Civilizational Base)",
+        "definition": "相信软件不是工具，而是这个时代的地质层，是社会的运行逻辑和文化母体。"
+      }
+    ]
+  },
+  {
+    "name": "Chamath Palihapitiya",
+    "username": "@chamath",
+    "field": "创投",
+    "taste_labels": [
+      {
+        "label": "#资本作为信仰系统 (Capital as Belief System)",
+        "definition": "资本不是工具，是世界运行的宗教。理解它、驾驭它、崇拜它，就是通往真相之路。"
+      },
+      {
+        "label": "#叛徒式精英主义 (Insider-as-Outsider Aesthetic)",
+        "definition": "身处上层却以异见者自居。既参与游戏，又公开质疑游戏规则，从中获取存在张力。"
+      },
+      {
+        "label": "#胜利即道德正当 (Victory as Moral Justification)",
+        "definition": "成功就是最高形式的道德护盾。赢家不需要辩护，资本回报即为价值证明。"
+      },
+      {
+        "label": "#公共市场造神术 (SPAC Evangelism)",
+        "definition": "公开市场不是退出机制，而是叙事引擎。用敲钟打造神话，让估值成为文化符号。"
+      },
+      {
+        "label": "#高风险美学 (Aesthetics of Risk)",
+        "definition": "把高风险当成身份标签。胆识、决断与下注，不只是策略，更是审美风格。"
+      },
+      {
+        "label": "#财富话语主权 (Wealth-Driven Narrative Control)",
+        "definition": "不接受被媒体定义，自己造节奏、发预言、给世界下结论。叙事权必须与资本对齐。"
+      },
+      {
+        "label": "#反硅谷正确性 (Anti-Valley Virtue Signaling)",
+        "definition": "对“善良创业者叙事”感到厌倦。愿意用冷酷数字打碎温柔幻觉，让真实暴露。"
+      },
+      {
+        "label": "#宏观赌徒心态 (Macro Gambler Mindset)",
+        "definition": "把世界当赌场，国家、货币、战争、产业都是下注点。下注前先换视角看全局。"
+      },
+      {
+        "label": "#播客为武器 (Podcast as Weapon)",
+        "definition": "播客不是交流，是认知扩张。一场观点发布会，一种力量展示方式。"
+      },
+      {
+        "label": "#情绪型资本叙事 (Emotive Capital Storytelling)",
+        "definition": "讲投资不是讲财务，是讲情绪。把冷数据包装成宿命，把产品上市讲成史诗。"
+      }
+    ]
+  },
+  {
+    "name": "Cathie Wood",
+    "username": "@Cathie_D_Wood",
+    "field": "创投",
+    "taste_labels": [
+      {
+        "label": "#预言式投资美学 (Prophetic Investing Aesthetic)",
+        "definition": "投资不仅是计算，更是信仰。她不是下注当下，而是提前一年写好未来剧本。"
+      },
+      {
+        "label": "#科技救世信仰 (Techno-Salvation Belief)",
+        "definition": "相信科技不是商业革命，而是人类解放的起点。特斯拉不是车，是救赎载体。"
+      },
+      {
+        "label": "#高波动容忍度 (Volatility Tolerance Style)",
+        "definition": "波动不是风险，是净化试炼。只有穿越下跌的心智，才能收割时代的复利。"
+      },
+      {
+        "label": "#逆势下注品格 (Contrarian Betting Identity)",
+        "definition": "越是众人弃之，她越要重仓。市场嘲笑时，是她信仰最坚定的时刻。"
+      },
+      {
+        "label": "#女性式钢铁信心 (Feminine Conviction Power)",
+        "definition": "温和语气下藏着钢铁逻辑。不是强硬压制对手，而是让时间替她证明全部。"
+      },
+      {
+        "label": "#公开信叙事术 (Open Letter Narrative)",
+        "definition": "用投资人信写未来，不是报表，是宣言。用文字把信仰绑定进市场语言。"
+      },
+      {
+        "label": "#极端长期主义 (Extreme Long-Termism)",
+        "definition": "眼中没有季度盈亏，只有十年后的范式更迭。她的时间感超越金融周期。"
+      },
+      {
+        "label": "#风险即品味 (Risk-as-Taste)",
+        "definition": "她不规避风险，而是审美风险。认知飞得越高，组合波动越美。"
+      },
+      {
+        "label": "#市场叙事制造者 (Market Narrative Maker)",
+        "definition": "她不跟随情绪周期，她制造周期情绪。用组合讲故事，用持仓塑造信仰。"
+      },
+      {
+        "label": "#未来式基督教精神 (Futurist Christian Ethos)",
+        "definition": "将信仰与投资融合，把未来科技看作神意的体现，使命感驱动资金流向。"
+      }
+    ]
+  },
+  {
+    "name": "Jack Dorsey",
+    "username": "@jack",
+    "field": "科技",
+    "taste_labels": [
+      {
+        "label": "#极简即真理 (Minimalism as Truth)",
+        "definition": "在他眼中，复杂是腐败的温床。删减到只剩本质，是设计，也是哲学。"
+      },
+      {
+        "label": "#禅式技术审美 (Zen-Tech Aesthetic)",
+        "definition": "技术不该喧哗，它应像冥想般安静。代码、产品与心灵，应趋同为一种秩序。"
+      },
+      {
+        "label": "#去中心化浪漫主义 (Decentralized Romanticism)",
+        "definition": "对抗控制的浪漫不是情绪，而是架构。他相信权力的出路，是结构的瓦解。"
+      },
+      {
+        "label": "#匿名主义情结 (Anonymity Affection)",
+        "definition": "不迷恋个人身份，而崇尚去名化的表达。自由必须从去特征化开始。"
+      },
+      {
+        "label": "#沉默是领导力 (Silence-as-Leadership)",
+        "definition": "不争、不辩、不喊话。他的影响力来自沉默，在场但不发声的极致张力。"
+      },
+      {
+        "label": "#比特币即信仰 (Bitcoin as Faith)",
+        "definition": "他不是投资比特币，而是皈依比特币。它是货币，更是秩序、正义与救赎。"
+      },
+      {
+        "label": "#长时段意识 (Long-Timeframe Consciousness)",
+        "definition": "不追热点、不抢风口。他只看 50 年后的范式，行动节奏慢，却走在最前。"
+      },
+      {
+        "label": "#身份去特化 (De-Personalization Taste)",
+        "definition": "不靠外形、风格或标签建立身份。他的存在感来自结构，而非个体表演。"
+      },
+      {
+        "label": "#反抗形式权威 (Anti-Formal Authority)",
+        "definition": "对传统权威形式保持冷感。越去中心、越非正式，他越信任。"
+      },
+      {
+        "label": "#苦行主义美德 (Ascetic Virtue Code)",
+        "definition": "热衷断食、冷水澡、冥想与极简生活。他相信自我克制才是现代人的尊严感。"
+      }
+    ]
+  },
+  {
+    "name": "Balaji Srinivasan",
+    "username": "@balajis",
+    "field": "科技",
+    "taste_labels": [
+      {
+        "label": "#文明可编程论 (Programmable Civilization Belief)",
+        "definition": "认为社会不是注定混乱的，而是可以像软件一样被设计、迭代、升级的结构体。"
+      },
+      {
+        "label": "#网络国家构建美学 (Network State Aesthetic)",
+        "definition": "用互联网逻辑重写国家概念。地图边界失效，社区共识即领土，协议即宪法。"
+      },
+      {
+        "label": "#代码胜于法律 (Code > Law)",
+        "definition": "他不信传统法治能解决未来问题，信的只有智能合约——执行即正义。"
+      },
+      {
+        "label": "#链上真相崇拜 (On-Chain Truthism)",
+        "definition": "真相不应靠记者、专家或政府裁定。真相应上链，永久公开，抗审查。"
+      },
+      {
+        "label": "#预言式写作 (Prophetic Writing Style)",
+        "definition": "他的写作不是信息传递，而是社会架构图预发布。段落像算法，句子是协议。"
+      },
+      {
+        "label": "#加密即主权 (Crypto-as-Sovereignty)",
+        "definition": "钱包比护照重要，链上身份比国籍真实。主权将被技术重写，不由宪法赋予。"
+      },
+      {
+        "label": "#系统性偏执 (Systemic Paranoia)",
+        "definition": "不轻信任何中心化机构。他的世界模型自带防火墙，假设一切权威都可能腐败。"
+      },
+      {
+        "label": "#信息战争生存论 (Infowar Survivalism)",
+        "definition": "他把认知战视作现实战争的前奏。谁控制信息叙事，谁决定系统终局。"
+      },
+      {
+        "label": "#高维逃逸幻想 (Escape to Higher Order)",
+        "definition": "他的思想常常从国家级出逃，飞往网络文明、链上身份、数字城市等高维结构。"
+      },
+      {
+        "label": "#协议式信仰系统 (Protocolized Faith)",
+        "definition": "他的信仰是可部署的。他不是传播理想，而是创建模板、格式和运行机制。"
+      }
+    ]
+  },
+  {
+    "name": "Sam Altman",
+    "username": "@sama",
+    "field": "AI",
+    "taste_labels": [
+      {
+        "label": "#权力即工具主义 (Instrumental Power Ethos)",
+        "definition": "不沉迷权力本身，只在乎它是否足够“可用”来执行未来工程。实用比姿态重要。"
+      },
+      {
+        "label": "#温和型末日主义 (Soft Doomer Aesthetic)",
+        "definition": "深信世界可能崩溃，但语气始终温和。灾难是脚本之一，不是情绪主语。"
+      },
+      {
+        "label": "#构建者统治论 (Builder Supremacy)",
+        "definition": "世界应由造物者治理。写代码、造公司、部署模型的人，才应掌握话语权。"
+      },
+      {
+        "label": "#超长期演化意识 (Ultra-Long Horizon Thinking)",
+        "definition": "所有决策的视角都基于几十年后。创业不是盈利机器，而是文明输入点。"
+      },
+      {
+        "label": "#模糊型领导力 (Ambiguous Leadership Style)",
+        "definition": "他不是发号施令者，而是系统诱导者。不直接回答问题，却让方向清晰。"
+      },
+      {
+        "label": "#现实增强叙事 (Augmented Reality Framing)",
+        "definition": "对现实的认知自带一层建构语境。他不讨论当下，而默认系统可被重写。"
+      },
+      {
+        "label": "#理想主义冷启动 (Idealism with Cold Boot)",
+        "definition": "不靠热情或道德诉求启动未来，而靠资源调度、组织设计和资本运算冷启动理想。"
+      },
+      {
+        "label": "#通用智能即宿命 (AGI-as-Destiny)",
+        "definition": "AGI 不是是否的问题，而是何时的问题。他做的是准备工作，不是选择题。"
+      },
+      {
+        "label": "#人格抽象工程 (Abstracted Self-Brand)",
+        "definition": "他在品牌上做减法。抽象掉风格、情绪和立场，让自己成为中性操作系统。"
+      },
+      {
+        "label": "#信任即资源聚合器 (Trust as Capital Aggregator)",
+        "definition": "他的信用不是建立在亲和力上，而是“他知道自己在做什么”的集体判断逻辑。"
+      }
+    ]
+  },
+  {
+    "name": "Patrick Collison",
+    "username": "@patrickc",
+    "field": "科技",
+    "taste_labels": [
+      {
+        "label": "#极简至上主义 (Minimalist Supremacy)",
+        "definition": "崇尚极简设计和表达，认为复杂问题应通过最简洁的解决方案达成，摒弃冗余。"
+      },
+      {
+        "label": "#科学理性美学 (Scientific Rational Aesthetics)",
+        "definition": "以科学精神为核心，偏爱数据驱动和逻辑严密的决策方式，拒绝无根据的假设。"
+      },
+      {
+        "label": "#速度狂热 (Velocity Mania)",
+        "definition": "对快速执行和迭代有极度执着，认为速度是创业和创新的核心竞争力。"
+      },
+      {
+        "label": "#深度专注力 (Deep Focus Ethos)",
+        "definition": "高度强调专注力的重要性，抵制分心，追求长时间深度思考和工作。"
+      },
+      {
+        "label": "#全球视野驱动 (Global Vision Drive)",
+        "definition": "眼界不仅限于本土或行业，而是面向全球，思考如何改变整个世界。"
+      },
+      {
+        "label": "#技术赋能信仰 (Faith in Tech Empowerment)",
+        "definition": "坚信技术是解决复杂社会问题的关键动力，创业即为技术赋能社会的过程。"
+      },
+      {
+        "label": "#谦逊科学家心态 (Humble Scientist Mindset)",
+        "definition": "即使身处高位，依旧保持科学家般的谦逊，重视试错和持续学习。"
+      },
+      {
+        "label": "#反炫耀资本主义 (Anti-Showy Capitalism)",
+        "definition": "拒绝浮夸和炫耀财富，更注重实实在在的产品和价值创造。"
+      },
+      {
+        "label": "#未来架构师视角 (Future Architect Perspective)",
+        "definition": "不仅关注当前成功，更重视为未来社会和经济架构搭建基石。"
+      },
+      {
+        "label": "#无声影响力 (Quiet Influence)",
+        "definition": "通过稳健的成果和持续的贡献来影响世界，而非激烈表达和公开争论。"
+      }
+    ]
+  },
+  {
+    "name": "Reid Hoffman",
+    "username": "@reidhoffman",
+    "field": "创投",
+    "taste_labels": [
+      {
+        "label": "#网络效应信仰 (Belief in Network Effects)",
+        "definition": "坚信连接越多，价值越大。战略布局始终围绕如何打造和扩大网络效应。"
+      },
+      {
+        "label": "#快速扩张战略 (Blitzscaling Mindset)",
+        "definition": "拥抱高速增长和规模扩张的风险，认为速度比效率更能赢得市场。"
+      },
+      {
+        "label": "#策略性乐观主义 (Strategic Optimism)",
+        "definition": "对未来充满信心，积极应对挑战，善于在不确定中发现机会。"
+      },
+      {
+        "label": "#跨界整合力 (Cross-Domain Integration)",
+        "definition": "擅长将不同领域知识和资源整合，打造独特竞争优势。"
+      },
+      {
+        "label": "#深度人脉运营 (Mastery of Networks)",
+        "definition": "精于建立和维护高质量人脉，将关系资本转化为实际商业价值。"
+      },
+      {
+        "label": "#开放性实验 (Open-Minded Experimentation)",
+        "definition": "拥抱试错和探索，不畏失败，视每次尝试为成长契机。"
+      },
+      {
+        "label": "#未来趋势洞察 (Future Trend Insight)",
+        "definition": "善于捕捉科技与社会变革的先机，引导资源投向未来风口。"
+      },
+      {
+        "label": "#商业与哲学融合 (Business-Philosophy Fusion)",
+        "definition": "兼具商业逻辑与哲学思考，重视价值观与使命感的统一。"
+      },
+      {
+        "label": "#思想领导力 (Thought Leadership)",
+        "definition": "通过深刻见解和前瞻观点影响业界，塑造行业话语权。"
+      },
+      {
+        "label": "#长期主义视角 (Long-Term Orientation)",
+        "definition": "坚持长远规划，注重持续价值创造而非短期利益最大化。"
+      }
+    ]
+  },
+  {
+    "name": "Chris Dixon",
+    "username": "@cdixon",
+    "field": "创投",
+    "taste_labels": [
+      {
+        "label": "#技术乌托邦信仰 (Technological Utopianism)",
+        "definition": "坚信技术能根本改善社会结构和人类生活，推动未来无限可能。"
+      },
+      {
+        "label": "#加密经济狂热 (Crypto-Economic Enthusiasm)",
+        "definition": "热衷区块链和加密货币，视其为新型经济体系的核心驱动力。"
+      },
+      {
+        "label": "#前沿科技押注 (Frontier Tech Betting)",
+        "definition": "敢于押注早期创新技术，勇于承担高风险以追求高回报。"
+      },
+      {
+        "label": "#开源与去中心化 (Open Source & Decentralization)",
+        "definition": "拥护开放协作精神和去中心化架构，推动技术民主化。"
+      },
+      {
+        "label": "#深度网络链接 (Deep Network Leveraging)",
+        "definition": "善于利用广泛且深厚的行业人脉资源，连接创业者与资本。"
+      },
+      {
+        "label": "#用户体验至上 (User Experience Obsession)",
+        "definition": "强调产品设计和用户体验，认为技术必须以用户为中心。"
+      },
+      {
+        "label": "#未来社会构想 (Future Society Vision)",
+        "definition": "致力于构建新型社会和经济模型，塑造人类未来生态。"
+      },
+      {
+        "label": "#创业者赋能 (Founder Empowerment)",
+        "definition": "尊重创业者精神，积极支持和引导创始人实现梦想。"
+      },
+      {
+        "label": "#反传统投资哲学 (Anti-Traditional Investment)",
+        "definition": "跳脱传统投资框架，拥抱创新模式和非线性增长。"
+      },
+      {
+        "label": "#知识分享热情 (Passion for Knowledge Sharing)",
+        "definition": "乐于分享洞见与经验，推动行业思想与实践共同进步。"
+      }
+    ]
+  },
+  {
+    "name": "Ben Horowitz",
+    "username": "@bhorowitz",
+    "field": "创投",
+    "taste_labels": [
+      {
+        "label": "#现实主义领导力 (Pragmatic Leadership)",
+        "definition": "强调在复杂和压力环境中做出果断、实际的领导决策。"
+      },
+      {
+        "label": "#艰难对话艺术 (Art of Difficult Conversations)",
+        "definition": "善于在棘手情况下保持坦诚，解决团队和组织中的冲突。"
+      },
+      {
+        "label": "#创业韧性哲学 (Entrepreneurial Resilience)",
+        "definition": "推崇面对失败时的坚持和自我反思，视挑战为成长契机。"
+      },
+      {
+        "label": "#硬核管理风格 (Hardcore Management Style)",
+        "definition": "强调管理中的直接、透明与高标准，绝不容忍懈怠。"
+      },
+      {
+        "label": "#情感智力与领导 (Emotional Intelligence in Leadership)",
+        "definition": "重视领导者的情感管理与同理心，平衡人性与效率。"
+      },
+      {
+        "label": "#故事驱动思维 (Story-Driven Thinking)",
+        "definition": "通过讲故事传递经验与教训，让复杂理念更易理解。"
+      },
+      {
+        "label": "#文化塑造力 (Culture Shaping Power)",
+        "definition": "深知企业文化对长期成功的决定性影响，积极引导塑造。"
+      },
+      {
+        "label": "#资本与创业桥梁 (Bridge Between Capital & Startup)",
+        "definition": "擅长搭建投资人与创业者间的沟通与信任桥梁。"
+      },
+      {
+        "label": "#书写式影响力 (Written Influence)",
+        "definition": "通过文字影响行业和创业者，传播实战经验与智慧。"
+      },
+      {
+        "label": "#拥抱不确定性 (Embracing Uncertainty)",
+        "definition": "将不确定性视为创新和机会的土壤，主动拥抱变化。"
+      }
+    ]
+  },
+  {
+    "name": "Jessica Lessin",
+    "username": "@jessicalessin",
+    "field": "科技媒体",
+    "taste_labels": [
+      {
+        "label": "#深度独立报道 (Deep Independent Reporting)",
+        "definition": "坚持独立思考和深入调查，拒绝浮于表面的新闻报道。"
+      },
+      {
+        "label": "#科技本质洞察 (Insight into Tech Essence)",
+        "definition": "善于捕捉科技行业背后的核心趋势和真实动因。"
+      },
+      {
+        "label": "#高标准新闻伦理 (High Standards of Journalism Ethics)",
+        "definition": "严守职业操守，确保报道准确、公正且可信赖。"
+      },
+      {
+        "label": "#创业者视角 (Entrepreneurial Perspective)",
+        "definition": "以创业者身份思考新闻媒体的未来与变革。"
+      },
+      {
+        "label": "#内容质感优先 (Content Quality Priority)",
+        "definition": "强调内容的深度与质感胜过数量和流量。"
+      },
+      {
+        "label": "#前瞻性行业判断 (Forward-Looking Industry Judgment)",
+        "definition": "具备预测科技行业发展趋势的敏锐洞察力。"
+      },
+      {
+        "label": "#受众信任构建 (Building Audience Trust)",
+        "definition": "致力于通过真实、透明的报道赢得读者的长期信赖。"
+      },
+      {
+        "label": "#平台独立运营 (Independent Platform Operation)",
+        "definition": "坚持新闻平台的自主性，拒绝外部干预和商业压力。"
+      },
+      {
+        "label": "#创新内容分发 (Innovative Content Distribution)",
+        "definition": "探索多渠道传播方式，提升内容的影响力和覆盖面。"
+      },
+      {
+        "label": "#女性科技领导力 (Female Leadership in Tech Media)",
+        "definition": "以女性视角推动科技新闻领域的多元化和包容性。"
+      }
+    ]
+  },
+  {
+    "name": "Emad Mustak",
+    "username": "@EMostaque",
+    "field": "AI",
+    "taste_labels": [
+      {
+        "label": "#开源信仰者 (Open Source Evangelist)",
+        "definition": "坚信 AI 应该是开放和共享的，致力于通过开源项目让技术普惠全球。"
+      },
+      {
+        "label": "#去中心化倡导者 (Decentralization Advocate)",
+        "definition": "主张 AI 的去中心化发展，认为集中化的 AI 模型可能带来权力滥用。"
+      },
+      {
+        "label": "#挑战传统巨头 (Challenger to Big Tech)",
+        "definition": "勇于挑战行业巨头，如 OpenAI 和 Google，推动 AI 领域的多元化竞争。"
+      },
+      {
+        "label": "#技术与人文融合 (Techno-Humanist)",
+        "definition": "将技术发展与人类福祉紧密结合，关注 AI 对社会的深远影响。"
+      },
+      {
+        "label": "#风险投资者 (Risk Taker)",
+        "definition": "敢于在高风险领域投资，如 AI 和开源项目，追求技术创新的边界。"
+      },
+      {
+        "label": "#企业家精神 (Entrepreneurial Spirit)",
+        "definition": "具备强烈的创业精神，能够在不确定的环境中发现机会并付诸实践。"
+      },
+      {
+        "label": "#全球视野 (Global Visionary)",
+        "definition": "拥有全球视野，致力于通过 AI 技术解决全球性问题，如气候变化和教育不平等。"
+      },
+      {
+        "label": "#批判性思维者 (Critical Thinker)",
+        "definition": "对 AI 发展中的伦理和社会问题持批判态度，强调技术应服务于全人类。"
+      },
+      {
+        "label": "#教育倡导者 (Education Advocate)",
+        "definition": "关注 AI 教育的普及，推动全球范围内的 AI 教育资源共享。"
+      },
+      {
+        "label": "#未来主义者 (Futurist)",
+        "definition": "以未来为导向，探索 AI 技术在未来社会中的潜在角色和影响。"
+      }
+    ]
+  },
+  {
+    "name": "Daniella Amodei",
+    "username": "@daniamodei",
+    "field": "AI",
+    "taste_labels": [
+      {
+        "label": "#人本AI守护者 (Human-Centric AI Guardian)",
+        "definition": "坚信 AI 应以人为本，致力于将人类价值观嵌入技术核心，确保 AI 的安全与可控。"
+      },
+      {
+        "label": "#开源透明倡导者 (Open & Transparent Advocate)",
+        "definition": "倡导 AI 研究的开放性和透明度，推动技术进步与社会责任并行。"
+      },
+      {
+        "label": "#伦理驱动决策者 (Ethics-Driven Decision Maker)",
+        "definition": "在 AI 发展中始终坚持伦理原则，确保技术发展不偏离人类福祉。"
+      },
+      {
+        "label": "#文化塑造者 (Culture Shaper)",
+        "definition": "在快速发展的企业中，注重建立和维护健康的公司文化，促进团队协作与创新。"
+      },
+      {
+        "label": "#技术与人文融合者 (Tech-Humanism Integrator)",
+        "definition": "将技术发展与人文学科相结合，关注 AI 对社会和人类的深远影响。"
+      },
+      {
+        "label": "#风险管理专家 (Risk Management Expert)",
+        "definition": "在 AI 研发中，注重识别和管理潜在风险，确保技术的安全性和可靠性。"
+      },
+      {
+        "label": "#女性科技领袖 (Female Tech Leader)",
+        "definition": "作为女性领导者，在科技领域中树立榜样，推动性别平衡与多样性。"
+      },
+      {
+        "label": "#战略远见者 (Strategic Visionary)",
+        "definition": "具备前瞻性的战略眼光，引领公司在 AI 领域稳步发展，面对未来挑战。"
+      },
+      {
+        "label": "#教育与知识传播者 (Educator & Knowledge Disseminator)",
+        "definition": "致力于 AI 知识的普及与教育，推动公众对 AI 技术的理解与接受。"
+      },
+      {
+        "label": "#社会责任践行者 (Social Responsibility Practitioner)",
+        "definition": "在 AI 发展中，始终关注社会责任，确保技术进步造福全人类。"
+      }
+    ]
+  },
+
+  {
+    "name": "Laura Shin",
+    "username": "@laurashin",
+    "field": "加密媒体",
+    "taste_labels": [
+      {
+        "label": "#加密新闻先锋",
+        "definition": "作为前《福布斯》高级编辑，Laura Shin 是首位全职报道加密货币的主流媒体记者，开创了加密新闻报道的新纪元。"
+      },
+      {
+        "label": "#深度调查记者",
+        "definition": "在撰写《The Cryptopians》一书过程中，深入挖掘以太坊 DAO 攻击事件的幕后真相，揭示了加密历史中的重大谜团。"
+      },
+      {
+        "label": "#播客创新者",
+        "definition": "创办并主持《Unchained》播客，深入访谈区块链和加密领域的领军人物，成为行业知识传播的重要平台。"
+      },
+      {
+        "label": "#无币立场倡导者",
+        "definition": "在加密行业中保持中立立场，强调独立报道和信息透明，树立了新闻公正的新标杆。"
+      },
+      {
+        "label": "#金融科技教育者",
+        "definition": "通过播客、书籍和演讲，致力于普及加密货币和区块链技术，帮助公众理解其潜在影响。"
+      },
+      {
+        "label": "#跨界讲者",
+        "definition": "受邀在 TEDx、国际货币基金组织、Singularity University 等国际平台上发表演讲，分享加密领域的见解。"
+      },
+      {
+        "label": "#文化观察者",
+        "definition": "关注加密文化的演变，探讨其对社会、经济和政治的深远影响，提供独到的视角。"
+      },
+      {
+        "label": "#女性科技倡导者",
+        "definition": "作为女性记者在男性主导的科技领域中脱颖而出，成为女性在科技行业中的榜样和声音。"
+      },
+      {
+        "label": "#历史记录者",
+        "definition": "通过著作和报道，记录加密货币和区块链技术的发展历程，为后人留下宝贵的历史资料。"
+      },
+      {
+        "label": "#全球视野传播者",
+        "definition": "将加密货币的讨论从美国扩展到全球，关注不同国家和地区在加密领域的发展和挑战。"
+      }
+    ]
+  },
+  {
+    "name": "Jason Calacanis",
+    "username": "@Jason",
+    "field": "创投",
+    "taste_labels": [
+      {
+        "label": "#直言不讳的投资者",
+        "definition": "以坦率和直接的风格表达对创业和投资的观点，强调快速决策和执行力。"
+      },
+      {
+        "label": "#媒体驱动的创业者",
+        "definition": "通过创办和运营媒体平台，利用媒体影响力助推创业项目的发展。"
+      },
+      {
+        "label": "#天使投资教父",
+        "definition": "投资超过300家初创公司，成功押注Uber、Robinhood等，奠定天使投资领域的领军地位。"
+      },
+      {
+        "label": "#播客领域领袖",
+        "definition": "主持《This Week in Startups》和《All-In Podcast》，影响力覆盖科技与创业领域广泛听众。"
+      },
+      {
+        "label": "#创业生态建设者",
+        "definition": "创立LAUNCH和The Syndicate，为创业者提供资源、资金和人脉支持。"
+      },
+      {
+        "label": "#风险投资教育者",
+        "definition": "通过著作和公开分享传授风险投资和创业经验，推动投资知识普及。"
+      },
+      {
+        "label": "#硅谷趋势洞察者",
+        "definition": "敏锐观察并解析硅谷文化与行业动态，提供独特的行业视角。"
+      },
+      {
+        "label": "#社交媒体活跃分子",
+        "definition": "利用社交媒体传播观点和信息，构建强大的个人品牌和影响力。"
+      },
+      {
+        "label": "#多元化投资策略者",
+        "definition": "涵盖多个领域的投资布局，展现广泛的行业兴趣与前瞻性眼光。"
+      },
+      {
+        "label": "#创业失败的坚韧复兴者",
+        "definition": "经历创业失败后成功转型，展现极强的适应力和复原能力。"
+      }
+    ]
+  },
+
+  {
+    "name": "Barack Obama",
+    "username": "@BarackObama",
+    "field": "政治",
+    "taste_labels": [
+      {
+        "label": "#雄辩的理想主义者 (Eloquent Idealist)",
+        "definition": "以优雅的语言传达希望与变革，激励全球追求更美好的未来。"
+      },
+      {
+        "label": "#冷静的决策者 (Calm Decision-Maker)",
+        "definition": "在压力下保持冷静，做出深思熟虑的决策，确保国家利益。"
+      },
+      {
+        "label": "#包容的领导者 (Inclusive Leader)",
+        "definition": "倡导多元文化，致力于建立一个公平和包容的社会。"
+      },
+      {
+        "label": "#战略的沟通者 (Strategic Communicator)",
+        "definition": "善于通过演讲和写作传达复杂的理念，使其易于理解和接受。"
+      },
+      {
+        "label": "#坚韧的改革者 (Resilient Reformer)",
+        "definition": "面对挑战不屈不挠，推动医疗、金融等领域的深刻改革。"
+      },
+      {
+        "label": "#全球外交家 (Global Diplomat)",
+        "definition": "重视国际合作，推动全球和平与安全，提升美国在世界舞台的地位。"
+      },
+      {
+        "label": "#幽默的公众人物 (Humorous Public Figure)",
+        "definition": "以幽默感拉近与民众的距离，成为文化现象的一部分。"
+      },
+      {
+        "label": "#道德的楷模 (Moral Role Model)",
+        "definition": "以高尚的品德和家庭价值观树立榜样，赢得广泛尊敬。"
+      },
+      {
+        "label": "#历史的见证者 (Witness to History)",
+        "definition": "亲历并参与塑造21世纪初的重要历史事件，留下深刻印记。"
+      },
+      {
+        "label": "#反思的作家 (Reflective Writer)",
+        "definition": "通过自传《应许之地》等作品，深入反思个人与国家的历程。"
+      }
+    ]
+  },
+  {
+    "name": "Donald Trump",
+    "username": "@realDonaldTrump",
+    "field": "政治",
+    "taste_labels": [
+      {
+        "label": "#霸气直言风格 (Bold and Unfiltered Style)",
+        "definition": "以直率、无修饰的语言表达观点，打破传统政治语言的束缚。"
+      },
+      {
+        "label": "#品牌帝国构建者 (Brand Empire Builder)",
+        "definition": "将个人品牌与商业帝国紧密结合，塑造强大的公众形象。"
+      },
+      {
+        "label": "#媒体操控大师 (Master of Media Manipulation)",
+        "definition": "善于利用媒体平台塑造舆论，掌控公众话语权。"
+      },
+      {
+        "label": "#民粹主义领袖 (Populist Leader)",
+        "definition": "强调与普通民众的紧密联系，反对精英主义，倡导“美国优先”。"
+      },
+      {
+        "label": "#权力游戏玩家 (Power Game Player)",
+        "definition": "在政治博弈中游刃有余，善于运用策略和谈判技巧。"
+      },
+      {
+        "label": "#争议制造者 (Controversy Creator)",
+        "definition": "通过引发争议吸引注意力，保持公众焦点。"
+      },
+      {
+        "label": "#豪华生活象征 (Symbol of Luxury Lifestyle)",
+        "definition": "以奢华的生活方式展示成功，成为财富与地位的象征。"
+      },
+      {
+        "label": "#国家主义倡导者 (Nationalism Advocate)",
+        "definition": "强调国家主权和民族利益，推动民族主义议程。"
+      },
+      {
+        "label": "#社交媒体巨人 (Social Media Titan)",
+        "definition": "通过社交媒体直接与公众沟通，打破传统传播渠道。"
+      },
+      {
+        "label": "#法律与秩序捍卫者 (Defender of Law and Order)",
+        "definition": "强调法律的权威和秩序的维护，主张强硬的执法政策。"
+      }
+    ]
+  },
+  {
+    "name": "Kamala Harris",
+    "username": "@KamalaHarris",
+    "field": "政治",
+    "taste_labels": [
+      {
+        "label": "#历史性突破者 (Historic Trailblazer)",
+        "definition": "成为首位女性、黑人和亚裔美国人副总统，打破多重政治天花板，象征着美国多元化的力量。"
+      },
+      {
+        "label": "#坚韧的改革者 (Resilient Reformer)",
+        "definition": "在检察官和加州总检察长任内，推动刑事司法改革，捍卫弱势群体权益，展现坚定的改革决心。"
+      },
+      {
+        "label": "#战略性的外交使者 (Strategic Diplomatic Envoy)",
+        "definition": "在国际事务中，代表美国加强与盟国的合作，推动全球议题的解决，展现出色的外交智慧。"
+      },
+      {
+        "label": "#包容性的领导者 (Inclusive Leader)",
+        "definition": "倡导多元文化和包容性政策，致力于建设一个公平、公正的社会，关注所有人的福祉。"
+      },
+      {
+        "label": "#务实的政策推动者 (Pragmatic Policy Advocate)",
+        "definition": "在气候变化、枪支管制等领域，推动务实的政策措施，寻求实际解决方案，回应民众关切。"
+      },
+      {
+        "label": "#坚定的道德典范 (Steadfast Moral Beacon)",
+        "definition": "在面对挑战时，坚持道德原则，展现出色的品格和领导力，成为公众信赖的象征。"
+      },
+      {
+        "label": "#沟通的桥梁建设者 (Bridge-Building Communicator)",
+        "definition": "通过清晰、有力的沟通，架起不同群体之间的桥梁，促进社会的理解与和谐。"
+      },
+      {
+        "label": "#教育的倡导者 (Education Advocate)",
+        "definition": "关注教育公平，推动政策改革，确保每个孩子都能接受优质教育，成就未来。"
+      },
+      {
+        "label": "#家庭价值的践行者 (Champion of Family Values)",
+        "definition": "在繁忙的工作中，始终重视家庭，展现出平衡事业与家庭的智慧和决心。"
+      },
+      {
+        "label": "#全球视野的领导者 (Globally-Minded Leader)",
+        "definition": "在全球化的背景下，展现出广阔的视野和国际视野，推动全球合作与发展。"
+      }
+    ]
+  },
+  {
+    "name": "Bernie Sanders",
+    "username": "@BernieSanders",
+    "field": "政治",
+    "taste_labels": [
+      {
+        "label": "#人民的代言人 (Voice of the People)",
+        "definition": "始终站在普通民众一边，倡导社会公平与经济正义，成为底层声音的有力代表。"
+      },
+      {
+        "label": "#反对寡头政治 (Anti-Oligarchy Crusader)",
+        "definition": "坚决反对财富集中与权力垄断，主张民主制度应服务于广大人民，而非少数精英。"
+      },
+      {
+        "label": "#社会民主主义先锋 (Pioneer of Social Democracy)",
+        "definition": "提倡全民医保、免费教育和财富再分配，推动美国向更平等的社会迈进。"
+      },
+      {
+        "label": "#不畏权威的斗士 (Fearless Fighter Against Authority)",
+        "definition": "无惧强权，敢于挑战体制，直言不讳地揭露不公与腐败。"
+      },
+      {
+        "label": "#基层运动的发动机 (Engine of Grassroots Movements)",
+        "definition": "通过“反对寡头政治”巡回演讲等活动，激发民众参与政治，推动社会变革。"
+      },
+      {
+        "label": "#坚定的劳工权益捍卫者 (Steadfast Defender of Labor Rights)",
+        "definition": "致力于保护工人权益，推动立法加强工会力量，改善劳动条件。"
+      },
+      {
+        "label": "#环保与气候行动倡导者 (Advocate for Environmental and Climate Action)",
+        "definition": "关注气候变化，主张采取紧急措施应对环境危机，保护地球未来。"
+      },
+      {
+        "label": "#反战与和平的声音 (Voice for Anti-War and Peace)",
+        "definition": "反对军事干预，倡导外交解决争端，致力于全球和平与稳定。"
+      },
+      {
+        "label": "#教育与医疗改革的推动者 (Proponent of Education and Healthcare Reform)",
+        "definition": "主张教育和医疗资源应对所有人开放，推动政策改革，确保公平获取。"
+      },
+      {
+        "label": "#政治透明与反腐倡廉的倡导者 (Advocate for Political Transparency and Anti-Corruption)",
+        "definition": "呼吁政治透明，反对金钱政治，致力于建立清廉的政治体系。"
+      }
+    ]
+  },
+  {
+    "name": "Alexandria Ocasio-Cortez",
+    "username": "@AOC",
+    "field": "政治",
+    "taste_labels": [
+      {
+        "label": "#青年激进先锋 (Youthful Radical Vanguard)",
+        "definition": "以 29 岁之龄当选国会议员，成为美国历史上最年轻的女性议员，代表年轻一代的激进变革力量。"
+      },
+      {
+        "label": "#社会民主主义倡导者 (Advocate of Social Democracy)",
+        "definition": "主张全民医保、免费教育和财富再分配，推动美国向更平等的社会迈进，体现社会民主主义理念。"
+      },
+      {
+        "label": "#气候行动斗士 (Climate Action Warrior)",
+        "definition": "提出绿色新政（Green New Deal），推动可再生能源转型，强调气候变化对未来世代的影响。"
+      },
+      {
+        "label": "#移民权利捍卫者 (Defender of Immigrant Rights)",
+        "definition": "倡导废除移民和海关执法局（ICE），支持无证移民获得合法身份，捍卫移民群体权益。"
+      },
+      {
+        "label": "#工人阶级代言人 (Champion of the Working Class)",
+        "definition": "关注工人权益，推动提高最低工资，支持工会力量，倡导经济公平与社会正义。"
+      },
+      {
+        "label": "#数字时代沟通者 (Digital Age Communicator)",
+        "definition": "利用社交媒体与选民直接沟通，打破传统政治传播壁垒，成为数字时代的沟通典范。"
+      },
+      {
+        "label": "#党内改革推动者 (Internal Party Reformer)",
+        "definition": "通过政治行动委员会（PAC）支持进步派候选人，推动党内改革，挑战传统政治结构。"
+      },
+      {
+        "label": "#女性权利倡导者 (Advocate for Women's Rights)",
+        "definition": "支持女性平等薪酬、产假、医疗保健等权益，推动性别平等政策的实施。"
+      },
+      {
+        "label": "#公共住房改革者 (Public Housing Reformer)",
+        "definition": "推动公共住房零碳化计划，改善住房条件，解决住房负担问题，关注低收入群体的居住权益。"
+      },
+      {
+        "label": "#政治透明倡导者 (Advocate for Political Transparency)",
+        "definition": "提出立法禁止前国会议员从事游说活动，推动政治透明和反腐败立法，增强公众对政治体系的信任。"
+      }
+    ]
+  },
+  {
+    "name": "Justin Trudeau",
+    "username": "@JustinTrudeau",
+    "field": "政治",
+    "taste_labels": [
+      {
+        "label": "#阳光政治家 (Sunny Politician)",
+        "definition": "以乐观、包容的形象赢得民心，倡导积极向上的政治风格，力求通过团结和对话实现社会进步。"
+      },
+      {
+        "label": "#性别平衡先行者 (Pioneer of Gender Balance)",
+        "definition": "首次组建性别平衡的内阁，强调性别平等在政治决策中的重要性，推动女性在政治领域的参与。"
+      },
+      {
+        "label": "#气候行动倡导者 (Climate Action Advocate)",
+        "definition": "积极推动气候变化应对措施，支持可再生能源发展，致力于实现碳中和目标，保护环境。"
+      },
+      {
+        "label": "#移民包容者 (Immigrant Inclusionist)",
+        "definition": "欢迎移民，主张多元文化共存，致力于为新移民提供支持和机会，促进社会融合。"
+      },
+      {
+        "label": "#社会福利改革者 (Social Welfare Reformer)",
+        "definition": "推动社会福利制度改革，提高公共服务质量，关注弱势群体，促进社会公平与正义。"
+      },
+      {
+        "label": "#国际合作倡导者 (International Cooperation Advocate)",
+        "definition": "积极参与国际事务，支持多边主义，推动全球合作应对共同挑战，提升加拿大在国际舞台的影响力。"
+      },
+      {
+        "label": "#数字时代沟通者 (Digital Age Communicator)",
+        "definition": "善于利用社交媒体与公众沟通，透明化政府信息，增强政府与民众之间的互动和信任。"
+      },
+      {
+        "label": "#教育改革支持者 (Education Reform Supporter)",
+        "definition": "关注教育公平，推动教育体系改革，确保每个孩子都能接受优质教育，培养未来人才。"
+      },
+      {
+        "label": "#经济多元化推动者 (Economic Diversification Promoter)",
+        "definition": "致力于经济结构多元化，支持科技创新和绿色经济发展，提升国家经济竞争力。"
+      },
+      {
+        "label": "#政治透明倡导者 (Political Transparency Advocate)",
+        "definition": "推动政治透明度，倡导政府问责制，确保公共资源的合理使用，增强公众对政府的信任。"
+      }
+    ]
+  },
+  {
+    "name": "Emmanuel Macron",
+    "username": "@EmmanuelMacron",
+    "field": "政治",
+    "taste_labels": [
+      {
+        "label": "#中道精英主义 (Centrist Elitism)",
+        "definition": "自创‘前进！’运动，主张超越传统左右翼对立，强调理性、改革与全球主义，体现精英主义的政治风格。"
+      },
+      {
+        "label": "#技术官僚魅力 (Technocratic Charisma)",
+        "definition": "以哲学与行政背景为基础，结合理性与魅力，塑造出兼具知识性与亲和力的领导形象。"
+      },
+      {
+        "label": "#欧洲一体化倡导者 (Advocate for European Integration)",
+        "definition": "坚定支持欧盟一体化，推动欧洲在全球事务中的战略自主，强调欧洲价值观的统一。"
+      },
+      {
+        "label": "#全球主义外交 (Globalist Diplomacy)",
+        "definition": "在国际事务中倡导多边主义与合作，积极参与全球治理，提升法国在国际舞台的影响力。"
+      },
+      {
+        "label": "#改革派领导者 (Reformist Leader)",
+        "definition": "推动劳动市场、退休制度等领域的改革，力求通过结构性调整提升国家竞争力。"
+      },
+      {
+        "label": "#政治不确定性制造者 (Creator of Political Uncertainty)",
+        "definition": "通过提前解散国民议会等举措，打破政治格局，挑战传统政治力量的稳定性。"
+      },
+      {
+        "label": "#社会不平等关注者 (Observer of Social Inequality)",
+        "definition": "在推动经济改革的同时，关注社会不平等问题，力求在改革与社会公正之间找到平衡。"
+      },
+      {
+        "label": "#青年与教育支持者 (Supporter of Youth and Education)",
+        "definition": "强调教育对未来的关键作用，推动教育体系的改革与创新，关注年轻一代的成长与发展。"
+      },
+      {
+        "label": "#环境政策倡导者 (Advocate for Environmental Policy)",
+        "definition": "在气候变化与环境保护方面采取积极措施，推动绿色转型与可持续发展。"
+      },
+      {
+        "label": "#法国身份塑造者 (Shaper of French Identity)",
+        "definition": "在全球化背景下，强调法国独特文化与价值观的传承与发展，塑造现代法国的国家形象。"
+      }
+    ]
+  },
+  {
+    "name": "Narendra Modi",
+    "username": "@narendramodi",
+    "field": "政治",
+    "taste_labels": [
+      {
+        "label": "#民族主义复兴者 (Reviver of Nationalism)",
+        "definition": "以强烈的民族主义情怀，强调印度文化自信，推动国家认同感的重塑，强化国家凝聚力。"
+      },
+      {
+        "label": "#数字印度倡导者 (Advocate of Digital India)",
+        "definition": "推动数字化转型，推广电子支付、数字身份等项目，提升国家信息化水平，缩小城乡数字鸿沟。"
+      },
+      {
+        "label": "#自力更生战略家 (Strategist of Self-Reliance)",
+        "definition": "提出‘Atmanirbhar Bharat’（自力更生的印度）战略，强调自主创新和本土制造，减少对外依赖。"
+      },
+      {
+        "label": "#改革派领导者 (Reformist Leader)",
+        "definition": "实施一系列经济和社会改革，包括商品和服务税（GST）、破产法等，推动国家现代化进程。"
+      },
+      {
+        "label": "#外交政策革新者 (Innovator in Foreign Policy)",
+        "definition": "采取积极主动的外交政策，加强与世界各国的合作，提升印度在国际事务中的地位。"
+      },
+      {
+        "label": "#危机应对决策者 (Crisis Management Decider)",
+        "definition": "在面对国内外挑战时，展现果断决策能力，如应对疫情、边境冲突等，维护国家利益。"
+      },
+      {
+        "label": "#民众沟通者 (Communicator with the Masses)",
+        "definition": "通过社交媒体和公开演讲，与民众直接沟通，塑造亲民形象，增强政府透明度。"
+      },
+      {
+        "label": "#社会福利推动者 (Promoter of Social Welfare)",
+        "definition": "实施多项社会福利计划，如‘Jan Dhan Yojana’（全民银行账户计划）、‘Swachh Bharat Abhiyan’（清洁印度运动），改善民生。"
+      },
+      {
+        "label": "#国家安全捍卫者 (Defender of National Security)",
+        "definition": "在国家安全问题上采取强硬立场，如应对恐怖袭击、边境冲突等，维护国家主权和领土完整。"
+      },
+      {
+        "label": "#政治品牌塑造者 (Shaper of Political Brand)",
+        "definition": "打造以‘Modi’为核心的政治品牌，塑造独特的领导风格，提升个人和党的政治影响力。"
+      }
+    ]
+  },
+  {
+    "name": "Elizabeth Warren",
+    "username": "@ewarren",
+    "field": "政治",
+    "taste_labels": [
+      {
+        "label": "#金融监管先锋 (Financial Regulation Pioneer)",
+        "definition": "作为消费者金融保护局（CFPB）的创始人之一，沃伦致力于打击金融机构的不当行为，保护消费者权益。"
+      },
+      {
+        "label": "#财富不平等斗士 (Champion Against Wealth Inequality)",
+        "definition": "提出‘超百万富翁税’，主张对最富有的家庭征收财富税，以缩小贫富差距。"
+      },
+      {
+        "label": "#企业责任倡导者 (Advocate for Corporate Accountability)",
+        "definition": "提出‘Accountable Capitalism Act’，要求大公司在董事会中增加员工代表，限制政治捐款，强调企业对社会的责任。"
+      },
+      {
+        "label": "#社会保障改革者 (Social Security Reformer)",
+        "definition": "推动社会保障管理局进行客户服务审计，确保老年人和残障人士的福利得到有效保障。"
+      },
+      {
+        "label": "#反腐败斗士 (Anti-Corruption Crusader)",
+        "definition": "提出‘总统利益冲突法案’，要求总统及其配偶将可能存在冲突的资产放入盲目信托，禁止参与联邦合同，确保政府透明度。"
+      },
+      {
+        "label": "#中产阶级捍卫者 (Defender of the Middle Class)",
+        "definition": "长期关注中产阶级家庭的经济压力，主张通过改革减轻他们的负担，提升生活质量。"
+      },
+      {
+        "label": "#教育公平倡导者 (Advocate for Educational Equity)",
+        "definition": "关注高等教育的公平性，主张减轻学生债务负担，推动教育机会的平等。"
+      },
+      {
+        "label": "#气候变化行动者 (Climate Change Activist)",
+        "definition": "支持绿色能源投资，推动减少碳排放的政策，关注气候变化对社会的影响。"
+      },
+      {
+        "label": "#医疗改革支持者 (Healthcare Reform Supporter)",
+        "definition": "主张全民医疗保障，关注医疗费用对家庭的压力，推动医疗体系的公平性。"
+      },
+      {
+        "label": "#民主制度捍卫者 (Defender of Democratic Institutions)",
+        "definition": "关注选举公正，主张选民权利的保护，反对选举制度的不公正和腐败。"
+      }
+    ]
+  },
+  {
+    "name": "Ted Cruz",
+    "username": "@tedcruz",
+    "field": "政治",
+    "taste_labels": [
+      {
+        "label": "#宪政捍卫者 (Defender of Constitutionalism)",
+        "definition": "坚信宪法原意，主张严格遵循宪法条文，反对政府权力扩张，强调个人自由与国家安全的平衡。"
+      },
+      {
+        "label": "#自由市场倡导者 (Advocate of Free Markets)",
+        "definition": "支持减少政府干预，主张税制简化，提倡自由贸易，强调市场在资源配置中的决定性作用。"
+      },
+      {
+        "label": "#社会保守派领袖 (Leader of Social Conservatism)",
+        "definition": "在堕胎、同性婚姻、枪支权利等社会议题上持保守立场，强调传统家庭价值观的重要性。"
+      },
+      {
+        "label": "#反建制斗士 (Anti-Establishment Fighter)",
+        "definition": "批评华盛顿精英，主张政治改革，强调政治透明度，倡导政府问责制。"
+      },
+      {
+        "label": "#国家安全保卫者 (Protector of National Security)",
+        "definition": "主张强硬的移民政策，支持加强边境安全，强调国家主权和公民安全的优先性。"
+      },
+      {
+        "label": "#言论自由捍卫者 (Defender of Free Speech)",
+        "definition": "强调言论自由的重要性，反对政治正确和言论审查，主张多元声音的表达。"
+      },
+      {
+        "label": "#财政保守派 (Fiscal Conservative)",
+        "definition": "主张削减政府开支，反对增加税收，强调财政赤字和国家债务的控制。"
+      },
+      {
+        "label": "#外交政策鹰派 (Foreign Policy Hawk)",
+        "definition": "支持积极的外交政策，强调美国在全球事务中的领导地位，主张强硬的对外政策。"
+      },
+      {
+        "label": "#教育选择倡导者 (Advocate of School Choice)",
+        "definition": "支持家长选择子女教育方式，倡导私立学校和特许学校的发展，强调教育多样性的价值。"
+      },
+      {
+        "label": "#宗教自由捍卫者 (Defender of Religious Freedom)",
+        "definition": "强调宗教自由的重要性，支持宗教组织在公共事务中的参与，主张宗教信仰的保护。"
+      }
+    ]
+  },
+  {
+    "name": "Volodymyr Zelenskyy",
+    "username": "@ZelenskyyUa",
+    "field": "政治",
+    "taste_labels": [
+      {
+        "label": "#战时领袖气质 (Wartime Leadership Charisma)",
+        "definition": "在俄罗斯入侵乌克兰后，泽连斯基展现出坚定的领导力和勇气，成为全球瞩目的战时领袖。",
+        "source": "turn0search5"
+      },
+      {
+        "label": "#数字时代的沟通大师 (Master Communicator in the Digital Age)",
+        "definition": "通过社交媒体和视频演讲，泽连斯基成功地将乌克兰的声音传递给全球观众，赢得国际支持。",
+        "source": "turn0search9"
+      },
+      {
+        "label": "#从喜剧演员到总统 (From Comedian to President)",
+        "definition": "泽连斯基的政治生涯起步于喜剧演员，凭借其幽默和亲和力赢得民众支持。",
+        "source": "turn0search14"
+      },
+      {
+        "label": "#民主与自由的捍卫者 (Defender of Democracy and Freedom)",
+        "definition": "在战争中，泽连斯基坚持民主原则，强调乌克兰人民的自由和主权。",
+        "source": "turn0search18"
+      },
+      {
+        "label": "#危机中的同理心 (Empathy in Crisis)",
+        "definition": "在战争和挑战面前，泽连斯基展现出对民众的深切关怀和同理心。",
+        "source": "turn0search20"
+      },
+      {
+        "label": "#服装背后的象征 (Symbolism Behind Attire)",
+        "definition": "泽连斯基选择穿着军装而非西装，传达了与士兵并肩作战的决心。",
+        "source": "turn0search10"
+      },
+      {
+        "label": "#透明度与责任感 (Transparency and Accountability)",
+        "definition": "在领导中，泽连斯基强调政府的透明度和对民众的责任感。",
+        "source": "turn0news21"
+      },
+      {
+        "label": "#全球合作倡导者 (Advocate for Global Cooperation)",
+        "definition": "泽连斯基积极寻求国际支持，推动全球合作以应对共同挑战。",
+        "source": "turn0search9"
+      },
+      {
+        "label": "#战略决策者 (Strategic Decision Maker)",
+        "definition": "在复杂局势中，泽连斯基展现出果断和深思熟虑的战略决策能力。",
+        "source": "turn0search7"
+      },
+      {
+        "label": "#民族团结的象征 (Symbol of National Unity)",
+        "definition": "泽连斯基成为乌克兰民族团结和抵抗精神的象征，激励人民共同面对挑战。",
+        "source": "turn0search16"
+      }
+    ]
+  },
+  {
+    "name": "Jacinda Ardern",
+    "username": "@jacindaardern",
+    "field": "政治",
+    "taste_labels": [
+      {
+        "label": "#共情力领导",
+        "definition": "用真诚共情化解危机，将同理心作为领导的核心力量，塑造温暖而坚定的公众形象。"
+      },
+      {
+        "label": "#危机中的冷静决策者",
+        "definition": "面对重大挑战时，保持冷静理性，迅速采取果断措施，展现领导者的责任感与智慧。"
+      },
+      {
+        "label": "#打破传统的女性力量",
+        "definition": "作为年轻母亲的国家领导人，挑战政治圈男性主导，展示女性柔韧且强大的领导力。"
+      },
+      {
+        "label": "#透明与诚信的践行者",
+        "definition": "坚持信息公开和诚实沟通，打造公众信任的政治环境，拒绝模糊与虚伪。"
+      },
+      {
+        "label": "#社会正义的坚定拥护者",
+        "definition": "持续推动教育、福利与环境改革，致力于构建公平包容的社会体系。"
+      },
+      {
+        "label": "#全球合作的积极倡导者",
+        "definition": "强调国际协作与多边主义，致力于应对全球性挑战，促进世界和平与发展。"
+      },
+      {
+        "label": "#柔中带刚的领导风格",
+        "definition": "以温柔包容化解矛盾，以坚决果敢推进改革，实现理想与现实的平衡。"
+      },
+      {
+        "label": "#情感真实的公共人物",
+        "definition": "勇于展露脆弱与情感，拉近与民众距离，重塑政治人物的人性形象。"
+      },
+      {
+        "label": "#新型政治领袖典范",
+        "definition": "超越传统权威形象，塑造基于信任与服务的现代领导模式，启发未来政治发展。"
+      },
+      {
+        "label": "#身兼多职的平衡术大师",
+        "definition": "成功兼顾母亲、妻子与总理多重身份，彰显现代女性多面人生的可能性。"
+      }
+    ]
+  },
+  {
+    "name": "Pete Buttigieg",
+    "username": "@PeteButtigieg",
+    "field": "政治",
+    "taste_labels": [
+      {
+        "label": "#跨性别平等倡导者",
+        "definition": "作为公开的同性恋者，布蒂吉格在推动跨性别者权益方面表现积极，强调包容性政策的重要性。"
+      },
+      {
+        "label": "#交通安全改革者",
+        "definition": "在任内，布蒂吉格推动了多项交通安全改革措施，尽管面临批评，他坚持推进现代化和安全优先的政策。"
+      },
+      {
+        "label": "#基础设施投资支持者",
+        "definition": "支持并推动了大规模的基础设施投资，旨在改善美国的交通网络和公共设施。"
+      },
+      {
+        "label": "#气候变化行动者",
+        "definition": "在交通政策中融入气候变化应对措施，推动绿色交通解决方案，减少碳排放。"
+      },
+      {
+        "label": "#年轻领导力代表",
+        "definition": "作为年轻的政治人物，布蒂吉格代表了新一代领导者的崛起，注重创新和多元化。"
+      },
+      {
+        "label": "#军事服务者",
+        "definition": "曾在美国海军预备役服役，并在阿富汗执行任务，展现了对国家的忠诚和责任感。"
+      },
+      {
+        "label": "#教育背景深厚",
+        "definition": "毕业于哈佛大学和牛津大学，拥有历史、文学、哲学、政治和经济学的学位，展现了广泛的知识背景。"
+      },
+      {
+        "label": "#媒体沟通专家",
+        "definition": "以清晰、有力的沟通风格著称，善于通过媒体传达政策信息，赢得公众支持。"
+      },
+      {
+        "label": "#家庭价值倡导者",
+        "definition": "与丈夫 Chasten 一同育有双胞胎，强调家庭在个人生活中的重要性，倡导平等的家庭价值观。"
+      },
+      {
+        "label": "#政治透明度支持者",
+        "definition": "在任内，布蒂吉格强调政府透明度，推动政策制定过程的公开和公众参与。"
+      }
+    ]
+  },
+
+  {
+    "name": "Cory Booker",
+    "username": "@CoryBooker",
+    "field": "政治",
+    "taste_labels": [
+      {
+        "label": "#正义的火炬手",
+        "definition": "从新泽西州的市议员到市长，再到首位非洲裔美国人参议员，布克始终致力于推动社会公平与正义。"
+      },
+      {
+        "label": "#民主党内的良心",
+        "definition": "在党内激烈辩论中，布克敢于发声，挑战党内共识，捍卫宪法原则。"
+      },
+      {
+        "label": "#跨党派合作的倡导者",
+        "definition": "尽管立场坚定，布克仍寻求与对立党派合作，推动实质性立法。"
+      },
+      {
+        "label": "#基层声音的代表",
+        "definition": "在参议院辩论中，布克强调普通民众的声音，反对精英主义政策。"
+      },
+      {
+        "label": "#气候行动的支持者",
+        "definition": "作为参议院外交关系委员会成员，布克关注气候变化，推动国际合作应对全球挑战。"
+      },
+      {
+        "label": "#教育改革的倡导者",
+        "definition": "支持教育改革，提倡公平教育机会，关注低收入家庭的教育需求。"
+      },
+      {
+        "label": "#医疗改革的推动者",
+        "definition": "支持全民医保，关注医疗资源的公平分配，致力于降低医疗成本。"
+      },
+      {
+        "label": "#移民权益的捍卫者",
+        "definition": "在移民政策上，布克主张人道主义立场，反对种族歧视和不公正待遇。"
+      },
+      {
+        "label": "#科技伦理的关注者",
+        "definition": "关注人工智能和生物技术的发展，倡导科技发展应服务于全人类福祉。"
+      },
+      {
+        "label": "#社会企业的支持者",
+        "definition": "支持社会企业的发展，倡导商业与社会责任的结合，推动可持续发展。"
+      }
+    ]
+  },
+  {
+    "name": "Nikki Haley",
+    "username": "@NikkiHaley",
+    "field": "政治",
+    "taste_labels": [
+      {
+        "label": "#突破性女性领导",
+        "definition": "作为南卡罗来纳州首位女性州长，黑利打破性别界限，展现出色的政治领导力。"
+      },
+      {
+        "label": "#跨党派合作倡导者",
+        "definition": "在担任州长期间，黑利推动了多项跨党派合作的政策，强调政治合作的重要性。"
+      },
+      {
+        "label": "#国际舞台上的强硬发声者",
+        "definition": "作为联合国大使，黑利在国际事务中为美国利益发声，展现坚定立场。"
+      },
+      {
+        "label": "#移民背景的美国梦象征",
+        "definition": "印度裔移民家庭出身，黑利的成功故事成为美国梦的象征，激励了无数人。"
+      },
+      {
+        "label": "#保守派女性的代表人物",
+        "definition": "在保守派政治中，黑利作为女性代表，平衡了传统价值与现代政治的挑战。"
+      },
+      {
+        "label": "#外交政策的深思熟虑者",
+        "definition": "在外交事务中，黑利展现出深思熟虑的决策风格，注重战略布局。"
+      },
+      {
+        "label": "#教育改革的倡导者",
+        "definition": "在州长任内，黑利推动了多项教育改革，关注教育公平与质量。"
+      },
+      {
+        "label": "#经济发展的推动者",
+        "definition": "黑利在州长任内，推动了南卡罗来纳州的经济发展，吸引了大量投资。"
+      },
+      {
+        "label": "#社会问题的关注者",
+        "definition": "黑利关注社会问题，倡导解决贫困、种族不平等等社会不公现象。"
+      },
+      {
+        "label": "#未来政治的潜在领导者",
+        "definition": "作为年轻的政治人物，黑利被视为未来美国政治的潜在领导者。"
+      }
+    ]
+  },
+  {
+    "name": "Kevin Rudd",
+    "username": "@MrKRudd",
+    "field": "政治",
+    "taste_labels": [
+      {
+        "label": "#全球金融危机应对大师",
+        "definition": "在2008年全球金融危机爆发时，陆克文领导澳大利亚采取积极财政政策，成功避免了经济衰退，成为全球应对危机的典范。",
+        "source": "turn0search0"
+      },
+      {
+        "label": "#气候变化的坚定倡导者",
+        "definition": "陆克文政府在2007年通过了《京都议定书》，并提出了雄心勃勃的减排目标，尽管面临国内政治挑战，依然推动气候变化议程。",
+        "source": "turn0search0"
+      },
+      {
+        "label": "#原住民道歉的历史性举措",
+        "definition": "2008年，陆克文代表澳大利亚政府正式向原住民道歉，承认并为“被盗一代”儿童的强制拆散表示歉意，成为国家和解的象征。",
+        "source": "turn0search25"
+      },
+      {
+        "label": "#数字教育革命的推动者",
+        "definition": "陆克文政府推出了“数字教育革命”计划，为全国公立高中学生提供笔记本电脑，推动教育信息化。",
+        "source": "turn0search23"
+      },
+      {
+        "label": "#亚太地区安全合作的倡导者",
+        "definition": "在担任外交部长期间，陆克文推动将美国和俄罗斯纳入东亚峰会，倡导建立更广泛的亚太共同体，促进地区安全合作。",
+        "source": "turn0search4"
+      },
+      {
+        "label": "#外交政策的深思熟虑者",
+        "definition": "陆克文在外交事务中展现出深思熟虑的决策风格，注重战略布局，强调多边主义和国际合作。",
+        "source": "turn0search4"
+      },
+      {
+        "label": "#社交媒体的先行者",
+        "definition": "在2007年选举中，陆克文率先利用社交媒体与选民互动，建立了大量的在线支持者群体。",
+        "source": "turn0search7"
+      },
+      {
+        "label": "#健康改革的推动者",
+        "definition": "陆克文政府与各州政府合作，推动了国家健康和医院改革协议，实施了自Medicare以来最大的健康系统改革。",
+        "source": "turn0search10"
+      },
+      {
+        "label": "#教育公平的倡导者",
+        "definition": "陆克文政府关注教育公平，推动了多项教育改革，旨在为所有澳大利亚学生提供平等的教育机会。",
+        "source": "turn0search5"
+      },
+      {
+        "label": "#国际事务的积极参与者",
+        "definition": "陆克文在国际事务中积极参与，推动全球发展和贸易合作，特别关注气候变化和中美贸易紧张局势。",
+        "source": "turn0search6"
+      }
+    ]
+  },
+  {
+    "name": "Tulsi Gabbard",
+    "username": "@TulsiGabbard",
+    "field": "政治",
+
+    "taste_labels": [
+      {
+        "label": "#军事和平主义美学",
+        "definition": "强调和平与反战的价值观，拒绝暴力冲突，追求通过外交和对话解决问题的美学理念。"
+      },
+      {
+        "label": "#反建制直言风格",
+        "definition": "习惯直言不讳，敢于挑战主流政界和媒体的权威，表达对建制派的不满和批判，强调独立思考。"
+      },
+      {
+        "label": "#个人信念坚定",
+        "definition": "高度重视个人良知和信念的力量，视其为行动和决策的核心依据，不随波逐流，坚守价值底线。"
+      },
+      {
+        "label": "#草根亲民形象",
+        "definition": "塑造平易近人、接地气的公众形象，强调与普通民众的情感连接和共鸣，避免高高在上的官僚气息。"
+      },
+      {
+        "label": "#跨党派合作倾向",
+        "definition": "倾向于超越党派界限，推动政策共识和合作，强调务实主义和问题导向的政治操作风格。"
+      },
+      {
+        "label": "#宗教信仰影响力",
+        "definition": "宗教信仰深刻影响其世界观和价值观，体现出对道德、正义与宽容的追求，注重精神层面的力量。"
+      },
+      {
+        "label": "#女性领导力彰显",
+        "definition": "通过言行展现女性的坚韧与温柔并存的领导魅力，挑战传统性别角色和刻板印象，倡导性别平等。"
+      },
+      {
+        "label": "#外交现实主义视角",
+        "definition": "在外交和安全政策上持现实主义立场，强调国家利益和国际秩序的平衡，反对激进干预主义。"
+      },
+      {
+        "label": "#独立自主品牌构建",
+        "definition": "强调个性化的政治品牌，注重通过言论和行为建立独立自主的公众认知，区别于传统政客标签。"
+      },
+      {
+        "label": "#民粹主义与精英批判",
+        "definition": "批判传统政治精英和官僚体系，强调民众声音的重要性，诉诸基层利益和社会正义感。"
+      }
+    ]
+  },
+  {
+    "name": "Keir Starmer",
+    "username": "@Keir_Starmer",
+    "field": "政治",
+    "taste_labels": [
+      {
+        "label": "#法律理性主义",
+        "definition": "强调通过法律和制度来解决社会问题，信奉理性、程序正义和公平裁决的重要性。"
+      },
+      {
+        "label": "#务实中间派风格",
+        "definition": "追求政治上的中庸和平衡，避免极端立场，倾向于务实解决问题而非激烈对抗。"
+      },
+      {
+        "label": "#权威专家形象",
+        "definition": "塑造专业、可信赖的权威人物形象，强调自身法律和公共服务背景，赢得公众信任。"
+      },
+      {
+        "label": "#渐进改革思维",
+        "definition": "主张通过渐进式改革推动社会进步，避免激进变革，注重长期稳定与可持续发展。"
+      },
+      {
+        "label": "#公共服务优先",
+        "definition": "强调公共医疗、教育等基本服务的重要性，注重提升国家整体福祉和社会公平。"
+      },
+      {
+        "label": "#国际责任感",
+        "definition": "关注国际事务，倡导负责任的外交政策，致力于平衡国家利益与全球正义。"
+      },
+      {
+        "label": "#反极化修复者",
+        "definition": "致力于缓解社会分裂和政治极化，强调对话、合作与社会团结。"
+      },
+      {
+        "label": "#理性演讲风格",
+        "definition": "注重逻辑清晰、论据充分的表达，避免煽动性言辞，强调事实和数据支持。"
+      },
+      {
+        "label": "#形象管理精准",
+        "definition": "精细管理公众形象，保持稳重、专业的风范，避免争议和情绪化表现。"
+      },
+      {
+        "label": "#政策数据导向",
+        "definition": "注重通过数据和指标来衡量政策效果，强调科学决策和绩效评估。"
+      }
+    ]
+  },
+
+  {
+    "name": "Sanna Marin",
+    "username": "@MarinSanna",
+    "field": "政治",
+    "taste_labels": [
+      {
+        "label": "#未来女性主义",
+        "definition": "倡导性别平等与女性领导力，强调女性在政治和社会中的核心作用，打破传统性别角色束缚。"
+      },
+      {
+        "label": "#代际交替先锋",
+        "definition": "作为全球最年轻的女总理之一，代表着新一代政治领导人的崛起，推动政治生态的年轻化与多元化。"
+      },
+      {
+        "label": "#危机中的冷静决策",
+        "definition": "在全球疫情和地缘政治危机中，展现出冷静、果断的领导风格，迅速采取措施应对挑战。"
+      },
+      {
+        "label": "#绿色转型倡导者",
+        "definition": "推动芬兰成为全球首个实现碳中和的国家之一，强调可持续发展和环保政策的重要性。"
+      },
+      {
+        "label": "#民主价值捍卫者",
+        "definition": "在国际事务中，坚定支持民主、人权和法治，强调维护国际秩序与规则的重要性。"
+      },
+      {
+        "label": "#社交媒体亲和力",
+        "definition": "通过社交媒体与公众建立直接联系，展现个人魅力和亲民形象，打破传统政治沟通壁垒。"
+      },
+      {
+        "label": "#文化自信表达者",
+        "definition": "在个人生活和公共场合中，展现芬兰文化自信，强调本土文化在全球化中的独特价值。"
+      },
+      {
+        "label": "#跨国合作倡议者",
+        "definition": "积极推动国际合作，特别是在安全、气候和科技领域，强调多边主义和全球合作的重要性。"
+      },
+      {
+        "label": "#透明治理实践者",
+        "definition": "倡导政府透明度和责任制，推动政策制定过程的公开和公众参与，增强政府公信力。"
+      },
+      {
+        "label": "#个人生活公开者",
+        "definition": "在私人生活方面保持开放态度，勇于分享个人经历和挑战，展现真实、立体的公众形象。"
+      }
+    ]
+  },
+
+  {
+    "name": "Ray Dalio",
+    "username": "@Ray_Dalio",
+    "field": "金融",
+
+    "taste_labels": [
+      {
+        "label": "#宏观经济洞察力",
+        "definition": "擅长从宏观经济角度分析全球金融市场，精准把握经济周期和趋势变化。"
+      },
+      {
+        "label": "#原则驱动决策",
+        "definition": "坚信制定并遵循清晰原则是成功的关键，将原则体系化并应用于管理和投资。"
+      },
+      {
+        "label": "#极度透明文化",
+        "definition": "推崇公司内部高度透明和开放的沟通文化，鼓励员工坦诚反馈和批判。"
+      },
+      {
+        "label": "#风险平衡策略",
+        "definition": "强调通过多元化和风险平衡来降低投资组合的波动和风险，实现稳健回报。"
+      },
+      {
+        "label": "#数据和逻辑至上",
+        "definition": "依赖数据分析和理性逻辑做出决策，避免情绪化操作，追求客观事实驱动。"
+      },
+      {
+        "label": "#系统思维",
+        "definition": "用系统化的思维框架理解复杂的经济和社会现象，注重因果关系和结构性因素。"
+      },
+      {
+        "label": "#长期视野",
+        "definition": "强调从长远角度规划投资和管理，注重持续复利和稳健增长。"
+      },
+      {
+        "label": "#自我反省与迭代",
+        "definition": "持续反思自身决策和行为，善于从失败中总结经验并快速调整策略。"
+      },
+      {
+        "label": "#强烈的独立性",
+        "definition": "坚持独立思考，不盲从市场或舆论，敢于逆势而为。"
+      },
+      {
+        "label": "#教育与分享",
+        "definition": "热衷于通过写作、讲座和公开资料分享投资理念和人生智慧，致力于培养下一代投资者。"
+      }
+    ]
+  },
+
+  {
+    "name": "Janet Yellen",
+    "username": "@JanetYellen",
+    "field": "金融",
+
+    "taste_labels": [
+      {
+        "label": "#专业经济学家形象",
+        "definition": "以严谨的经济学理论和实践经验构建权威专业形象，深受学术界和政策界认可。"
+      },
+      {
+        "label": "#稳健货币政策倡导者",
+        "definition": "强调通过稳健的货币政策实现经济稳定与可持续增长，注重控制通胀与促进就业平衡。"
+      },
+      {
+        "label": "#协调合作推动者",
+        "definition": "善于在政府内部及国际舞台上协调各方利益，推动多边合作和政策协调。"
+      },
+      {
+        "label": "#渐进式改革支持者",
+        "definition": "倾向于通过渐进且循序渐进的政策调整来促进经济健康发展，避免激进变革带来的风险。"
+      },
+      {
+        "label": "#危机管理专家",
+        "definition": "具备丰富的经济危机应对经验，擅长在复杂环境中稳定市场和恢复信心。"
+      },
+      {
+        "label": "#数据驱动决策",
+        "definition": "注重用详实的经济数据和分析支撑政策制定，强调科学和证据的重要性。"
+      },
+      {
+        "label": "#公众沟通透明",
+        "definition": "注重向公众清晰传达政策意图和经济形势，增强透明度和信任感。"
+      },
+      {
+        "label": "#政策平衡艺术",
+        "definition": "善于在促进经济增长与维护金融稳定之间寻找平衡，避免单边极端。"
+      },
+      {
+        "label": "#全球视野",
+        "definition": "关注全球经济联动性，推动国际合作应对共同经济挑战。"
+      },
+      {
+        "label": "#女性领导力典范",
+        "definition": "作为首位担任美联储主席的女性，展现坚韧与智慧兼备的领导力，激励女性群体。"
+      }
+    ]
+  },
+
+  {
+    "name": "Jamie Dimon",
+    "username": "@jpmdimon",
+    "field": "金融",
+    "taste_labels": [
+      {
+        "label": "#实战派银行家",
+        "definition": "以丰富的银行业实战经验和领导力闻名，善于在复杂金融环境中驾驭风险与机遇。"
+      },
+      {
+        "label": "#强硬领导风格",
+        "definition": "展现坚定果断的管理风格，敢于做出重大决策，强调执行力和结果导向。"
+      },
+      {
+        "label": "#创新驱动者",
+        "definition": "推动金融科技与传统银行业务的融合，积极拥抱数字化转型和创新。"
+      },
+      {
+        "label": "#风险意识强烈",
+        "definition": "高度重视风险管理，注重内部控制和合规，避免金融危机和声誉风险。"
+      },
+      {
+        "label": "#公共政策积极参与",
+        "definition": "积极参与政策制定和行业规则讨论，影响监管环境，推动行业发展。"
+      },
+      {
+        "label": "#沟通直率风格",
+        "definition": "以坦诚直率著称，敢于公开表达观点和批评，建立透明的企业文化。"
+      },
+      {
+        "label": "#长期价值投资者",
+        "definition": "注重企业长期价值和稳健增长，避免短期投机行为，强调可持续发展。"
+      },
+      {
+        "label": "#危机管理专家",
+        "definition": "在金融危机中展现卓越的应对能力，带领团队化解重大挑战。"
+      },
+      {
+        "label": "#全球视野与影响力",
+        "definition": "具备全球化思维，积极推动国际金融合作和跨国业务扩展。"
+      },
+      {
+        "label": "#慈善与社会责任",
+        "definition": "重视企业社会责任，积极参与慈善事业，推动社会公益发展。"
+      }
+    ]
+  },
+
+  {
+    "name": "Christine Lagarde",
+    "username": "@Lagarde",
+    "field": "金融",
+
+    "taste_labels": [
+      {
+        "label": "#优雅权威风格",
+        "definition": "将优雅与权威融为一体，以自信沉着的形象在国际政经舞台上建立个人品牌。"
+      },
+      {
+        "label": "#多语文化适应力",
+        "definition": "展现强大的跨文化沟通能力，善于在多语、多元背景下斡旋复杂局势。"
+      },
+      {
+        "label": "#制度性思维者",
+        "definition": "崇尚制度与规则的重要性，强调结构性改革对经济长期健康的意义。"
+      },
+      {
+        "label": "#欧洲主义者",
+        "definition": "坚定支持欧洲一体化，致力于强化欧盟和欧元区的金融稳定与政策协调。"
+      },
+      {
+        "label": "#现代央行话语风格",
+        "definition": "采用含蓄、策略性语言传递政策意图，擅长维护市场信心并控制预期。"
+      },
+      {
+        "label": "#审慎乐观主义",
+        "definition": "既承认全球经济挑战，又持续传递理性乐观态度，塑造领导者的稳健信心感。"
+      },
+      {
+        "label": "#女性突破者形象",
+        "definition": "作为首位女性掌舵IMF和ECB的领导人，象征女性在全球高层经济治理中的突破与崛起。"
+      },
+      {
+        "label": "#精英协商艺术",
+        "definition": "擅长在各国央行、政府、国际组织之间进行高阶谈判与共识构建。"
+      },
+      {
+        "label": "#金融语言美学",
+        "definition": "追求用清晰、高级、带有文学气质的语言表达复杂金融与经济议题。"
+      },
+      {
+        "label": "#稳健中的现代感",
+        "definition": "在保持政策审慎与结构理性基础上，拥抱气候变化、性别平等等现代议题。"
+      }
+    ]
+  },
+
+  {
+    "name": "Michael Saylor",
+    "username": "@saylor",
+    "field": "金融/Web3",
+    "taste_labels": [
+      {
+        "label": "#极致比特币信仰",
+        "definition": "将比特币视为最终的货币形式与价值存储，坚信其将取代法币体系。"
+      },
+      {
+        "label": "#高强度表达者",
+        "definition": "习惯使用高度浓缩、充满激情的语言传播理念，讲话风格像演讲、宣言而非对话。"
+      },
+      {
+        "label": "#技术救世观",
+        "definition": "坚信技术特别是区块链具备解放人类、重塑金融系统的潜力，将其视为时代使命。"
+      },
+      {
+        "label": "#个人信仰品牌化",
+        "definition": "将自己的信仰（如比特币）与个人品牌高度捆绑，打造思想领袖式的公众形象。"
+      },
+      {
+        "label": "#数字永恒美学",
+        "definition": "推崇数学、加密、算法等概念的永恒性与纯粹性，认为其优于现实世界的混乱与腐朽。"
+      },
+      {
+        "label": "#抗通胀叙事癖",
+        "definition": "对法币贬值高度敏感，痴迷于通过比特币实现资产保值与财富对抗国家控制的自由。"
+      },
+      {
+        "label": "#哲学化资本主义",
+        "definition": "将商业与技术决策提升到哲学层面，以类似宗教般的修辞诠释资产选择与企业战略。"
+      },
+      {
+        "label": "#极端集中下注策略",
+        "definition": "推崇集中而非分散，将全部资源押注于一种资产，并以此体现决心与信仰。"
+      },
+      {
+        "label": "#金融叛逆者气质",
+        "definition": "不信任传统金融机构与政府货币政策，自我定位为旧秩序的挑战者。"
+      },
+      {
+        "label": "#英雄史诗叙事结构",
+        "definition": "喜欢将自己的商业抉择包装为宏大叙事，如拯救公司、抵抗腐败、引领未来等史诗框架。"
+      }
+    ]
+  },
+
+  {
+    "name": "Nouriel Roubini",
+    "username": "@Nouriel",
+    "field": "金融",
+    "taste_labels": [
+      {
+        "label": "#末日现实主义",
+        "definition": "以悲观、前瞻性的经济预测著称，强调金融系统中的系统性脆弱与不可避免的危机。"
+      },
+      {
+        "label": "#结构性批判者",
+        "definition": "不迷信市场机制，对资本主义结构中的风险与不平等保持持续批判。"
+      },
+      {
+        "label": "#宏观危机叙事家",
+        "definition": "擅长构建关于主权债务、银行体系、通胀与地缘风险的复杂危机链条逻辑。"
+      },
+      {
+        "label": "#智识冷峻风格",
+        "definition": "传达清晰、冷峻、充满理性的判断力，不以取悦市场或公众为目的。"
+      },
+      {
+        "label": "#反加密货币立场",
+        "definition": "激烈批评比特币和加密货币，认为其没有内在价值，鼓吹者具有欺诈性。"
+      },
+      {
+        "label": "#反泡沫美学",
+        "definition": "拒绝盲目乐观和市场狂热，审慎对待资产估值与投资热潮，强调基本面与风险。"
+      },
+      {
+        "label": "#学术与政策并重",
+        "definition": "在学术与政策领域均有深厚根基，既做研究者也积极参与公共政策辩论。"
+      },
+      {
+        "label": "#跨界金融观察",
+        "definition": "将经济金融问题与政治、社会、技术等变量交织分析，形成多维度视角。"
+      },
+      {
+        "label": "#预测反直觉",
+        "definition": "敢于在市场一片欢腾时发出警告声音，用非主流观点挑战主流叙事。"
+      },
+      {
+        "label": "#危机中的存在主义",
+        "definition": "将全球经济不稳定视为人类结构性困境的一部分，呈现一种理性悲观的哲学姿态。"
+      }
+    ]
+  },
+
+  {
+    "name": "Larry Fink",
+    "username": "@larryfink",
+    "field": "金融",
+
+    "taste_labels": [
+      {
+        "label": "#系统性影响力追求",
+        "definition": "通过资产管理规模和政策倡导影响全球资本流动与企业行为，塑造系统层面的金融力量。"
+      },
+      {
+        "label": "#ESG信仰实践者",
+        "definition": "积极推动环境、社会与公司治理（ESG）议题，将其纳入长期投资与治理框架中。"
+      },
+      {
+        "label": "#稳健资本中枢美学",
+        "definition": "崇尚稳定、长远、理性的资本运作方式，反对短期主义和市场投机。"
+      },
+      {
+        "label": "#信件式权力表达",
+        "definition": "以每年致CEO信的方式公开传达价值观与方向，形成独特的领导沟通风格。"
+      },
+      {
+        "label": "#资本责任伦理观",
+        "definition": "强调资本的社会责任，相信金融不仅是盈利工具，也应服务于社会长期利益。"
+      },
+      {
+        "label": "#数据驱动信条",
+        "definition": "强调技术与数据分析在投资决策中的作用，推动BlackRock全面拥抱金融科技。"
+      },
+      {
+        "label": "#全球治理视野",
+        "definition": "从跨国金融组织角度思考政策、经济与市场，具有国际主义和宏观视野。"
+      },
+      {
+        "label": "#去个性化权力风格",
+        "definition": "避免明星CEO式自我放大，刻意维持专业理性而非人格魅力主导的管理风格。"
+      },
+      {
+        "label": "#气候金融行动派",
+        "definition": "将气候风险视为投资风险，倡导低碳转型并推动企业公开碳排放与减排路径。"
+      },
+      {
+        "label": "#现代信托主义",
+        "definition": "将资产管理定位为公众信托事业，认为BlackRock的角色是为千千万万普通人的未来负责。"
+      }
+    ]
+  },
+
+  {
+    "name": "Abigail Johnson",
+    "username": "@AbigailJohnson",
+    "field": "金融",
+
+    "taste_labels": [
+      {
+        "label": "#隐性权力风格",
+        "definition": "低调而坚定地掌控家族企业帝国，通过稳健经营而非张扬姿态巩固影响力。"
+      },
+      {
+        "label": "#家族资本延续美学",
+        "definition": "将家族传统与现代金融融合，在延续Fidelity精神的同时推动数字化革新。"
+      },
+      {
+        "label": "#女性金融韧性",
+        "definition": "在男性主导的资产管理领域中建立权威，以耐心、稳健和远见赢得尊重。"
+      },
+      {
+        "label": "#加密实用主义",
+        "definition": "早期拥抱比特币和区块链技术，但更注重实际应用与合规路径，而非理想主义叙事。"
+      },
+      {
+        "label": "#去明星化管理哲学",
+        "definition": "避免将CEO角色过度个人化，将焦点放在机构长期战略而非个人风格塑造上。"
+      },
+      {
+        "label": "#专业沉静美学",
+        "definition": "倾向极简、克制、务实的表达方式，强调专业主义而非情绪渲染或公众讨好。"
+      },
+      {
+        "label": "#技术演进拥抱者",
+        "definition": "支持技术在金融服务中的应用，从交易平台到区块链均展现积极推动态度。"
+      },
+      {
+        "label": "#长期主义投资观",
+        "definition": "坚持价值投资理念，强调客户利益与长期回报，而非短期市场情绪波动。"
+      },
+      {
+        "label": "#机构文化维护者",
+        "definition": "致力于维护Fidelity作为私人控股公司独特的文化、纪律与客户导向精神。"
+      },
+      {
+        "label": "#审慎创新平衡术",
+        "definition": "在创新与稳健之间维持微妙平衡，既探索新技术又避免冒进破坏核心业务。"
+      }
+    ]
+  },
+
+  {
+    "name": "Mohamed El-Erian",
+    "username": "@elerianm",
+    "field": "金融",
+
+    "taste_labels": [
+      {
+        "label": "#宏观思维信徒",
+        "definition": "以全球视角洞察经济趋势，将地缘政治、央行政策、市场行为整合为系统性分析框架。"
+      },
+      {
+        "label": "#结构性转变敏感者",
+        "definition": "强调世界正处于经济与金融范式的重大转型期，关注长期变量而非短期噪音。"
+      },
+      {
+        "label": "#理性权威表达",
+        "definition": "表达风格稳健、清晰、充满逻辑说服力，注重建立信任感与思想深度而非煽动性语言。"
+      },
+      {
+        "label": "#多元背景调和美学",
+        "definition": "融合学术、市场与政策经验，在布雷顿森林体系、IMF与华尔街之间架设理解桥梁。"
+      },
+      {
+        "label": "#“新常态”叙事者",
+        "definition": "提出并传播“新常态”（New Normal）概念，强调危机后全球增长与政策逻辑的长期变化。"
+      },
+      {
+        "label": "#金融市场翻译者",
+        "definition": "擅长将复杂经济信号转译为普通投资者可理解的语言，具备公共知识分子的传播能力。"
+      },
+      {
+        "label": "#非教条主义者",
+        "definition": "拒绝极端立场，在市场与国家、货币与财政、增长与稳定之间追求平衡视角。"
+      },
+      {
+        "label": "#危机后全球主义",
+        "definition": "关注全球不平衡、央行失效、民粹崛起等议题，倡导多边合作与制度创新。"
+      },
+      {
+        "label": "#公共知识分子气质",
+        "definition": "活跃于主流媒体与学术平台，具备用宏大视野引导大众理解经济变局的能力。"
+      },
+      {
+        "label": "#文明对话倡导者",
+        "definition": "在激烈争论与市场恐慌中维持平和、理性的语调，倡导对话、理解与渐进改革。"
+      }
+    ]
+  },
+
+  {
+    "name": "Lyn Alden",
+    "username": "@LynAldenContact",
+    "field": "金融/Web3",
+
+    "taste_labels": [
+      {
+        "label": "#宏观叙事架构师",
+        "definition": "善于构建系统性、跨周期的投资框架，将货币政策、债务周期与能源结构融合分析。"
+      },
+      {
+        "label": "#比特币价值论者",
+        "definition": "支持比特币作为‘硬货币’和抗通胀工具，强调其在货币演进中的战略角色。"
+      },
+      {
+        "label": "#跨学科思维者",
+        "definition": "将工程背景与金融逻辑结合，以量化理性支撑复杂的宏观经济判断。"
+      },
+      {
+        "label": "#周期美学信徒",
+        "definition": "偏好理解长期债务周期、通胀周期、能源周期等宏观变量对资产配置的影响。"
+      },
+      {
+        "label": "#简明深度写作风",
+        "definition": "内容表达风格逻辑清晰、数据详实、观点独立，既面向专业人士也面向大众投资者。"
+      },
+      {
+        "label": "#反主流认知偏好",
+        "definition": "警惕机构共识与短期市场情绪，强调通过独立研究建立与众不同的视角。"
+      },
+      {
+        "label": "#价值穿越信仰",
+        "definition": "认为长期价值最终会穿越短期波动，以稳健配置应对货币与信任的稀释。"
+      },
+      {
+        "label": "#能源地缘融合观",
+        "definition": "强调能源结构、供应链与地缘冲突对货币政策和市场稳定性的深层影响。"
+      },
+      {
+        "label": "#女性理性先锋",
+        "definition": "以知识密度和理性表达在男性主导的宏观金融领域中建立公信力和独立声望。"
+      },
+      {
+        "label": "#稳健自由主义",
+        "definition": "支持个体自由与货币主权，倡导以自我教育和资产配置对抗政策不确定性。"
+      }
+    ]
+  },
+
+  {
+    "name": "Vitalik Buterin",
+    "username": "@VitalikButerin",
+    "field": "Web3",
+    "taste_labels": [
+      {
+        "label": "#极客理想主义",
+        "definition": "将编程语言、密码学与人文关怀融合，追求技术驱动的社会结构重构。"
+      },
+      {
+        "label": "#去中心化信仰者",
+        "definition": "坚信权力应被拆解分散，社会结构应由开放协议而非中央机构来协调与演化。"
+      },
+      {
+        "label": "#智能合约美学",
+        "definition": "认为合约不应只属于法律世界，更应成为代码可执行的信任逻辑框架。"
+      },
+      {
+        "label": "#社会结构工程师",
+        "definition": "致力于用区块链设计新的社会激励与治理模型，是加密时代的制度实验先锋。"
+      },
+      {
+        "label": "#极简主义个体风格",
+        "definition": "远离权贵形象和商业包装，以T恤、凉鞋、平实语言构建低调却极具辨识度的个人风格。"
+      },
+      {
+        "label": "#元宇宙前文明思维",
+        "definition": "思考人类如何在数字空间建立共识、伦理与身份，探索文明组织的未来形态。"
+      },
+      {
+        "label": "#公共利益密码信徒",
+        "definition": "将开源视为道德义务，强调技术不应服务于少数精英，而应向所有人开放。"
+      },
+      {
+        "label": "#多链多元宇宙观",
+        "definition": "支持跨链、跨平台的生态共生，而非“一统天下”的技术霸权。"
+      },
+      {
+        "label": "#协议层政治哲学",
+        "definition": "认为区块链协议是新时代的“宪法”，其设计蕴含深刻的政治与价值取向。"
+      },
+      {
+        "label": "#脆弱中的力量",
+        "definition": "用理性、透明、可讨论的弱势姿态，挑战传统权威的刚性逻辑，以柔克刚。"
+      }
+    ]
+  },
+
+  {
+    "name": "Changpeng Zhao (CZ)",
+    "username": "@cz_binance",
+    "field": "Web3",
+
+    "taste_labels": [
+      {
+        "label": "#平台主权主义",
+        "definition": "强调交易所作为新型主权实体的作用，Binance不仅是平台，更是生态、法律与货币的制造者。"
+      },
+      {
+        "label": "#效率至上哲学",
+        "definition": "优先考虑速度、执行力与规模扩张，哪怕需要牺牲传统制度的完整流程。"
+      },
+      {
+        "label": "#去中心化叙事操盘手",
+        "definition": "一手经营中心化帝国，一手讲述去中心化的愿景，是现实与理想之间的战略平衡者。"
+      },
+      {
+        "label": "#全球游牧资本观",
+        "definition": "弱化国家身份，强调Binance作为一个跨司法权的、轻资产的、可流动的金融体。"
+      },
+      {
+        "label": "#加密行动主义",
+        "definition": "主张技术是变革的武器，区块链不仅是工具，更是对现有金融体系的挑战宣言。"
+      },
+      {
+        "label": "#匿名文化包容者",
+        "definition": "推崇Web3匿名文化，愿意在品牌中接纳memes、昵称、虚拟身份与社区治理逻辑。"
+      },
+      {
+        "label": "#实用主义扩张美学",
+        "definition": "快速试错、快速上线、快速合规调整，一切以能打破现有格局为前提进行资源配置。"
+      },
+      {
+        "label": "#风险容忍型领导力",
+        "definition": "不回避法律灰区与监管摩擦，习惯以边界模糊的方式争取空间、延后妥协。"
+      },
+      {
+        "label": "#品牌即人格",
+        "definition": "CZ形象极具辨识度，以极简装束、高频露面与稳定语调构建Binance品牌的安全感。"
+      },
+      {
+        "label": "#“用脚投票”信仰",
+        "definition": "相信用户会选择最有效率的平台，而不是最合规的平台，以市场迁徙而非制度合法性作为胜负标准。"
+      }
+    ]
+  },
+
+  {
+    "name": "Brian Armstrong",
+    "username": "@brian_armstrong",
+    "field": "Web3",
+    "taste_labels": [
+      {
+        "label": "#制度内革命者",
+        "definition": "试图在遵守传统金融与监管框架的基础上推进加密货币革命，塑造加密行业“合规先锋”形象。"
+      },
+      {
+        "label": "#极简理性主义",
+        "definition": "个人风格和企业文化都体现出硅谷式的极简主义与工具理性，注重清晰、效率与功能性。"
+      },
+      {
+        "label": "#技术冷静信徒",
+        "definition": "拒绝情绪化表达，主张以冷静、系统性的方式推动技术发展和产品落地。"
+      },
+      {
+        "label": "#公司治理优先派",
+        "definition": "强调组织秩序与目标导向，倡导“无政治职场”原则，将公司定位为纯工具平台。"
+      },
+      {
+        "label": "#加密主权合法化",
+        "definition": "致力于推动比特币和区块链资产成为主流金融体系的合法组成，打造加密的“摩根士丹利”。"
+      },
+      {
+        "label": "#自由市场理想主义",
+        "definition": "相信自由市场、自主选择与货币竞争可以带来更好的金融体系，抗拒过度国家干预。"
+      },
+      {
+        "label": "#品牌克制主义",
+        "definition": "Coinbase品牌低调克制，以可信赖的用户体验和制度正统性建立主流市场信任。"
+      },
+      {
+        "label": "#透明即护盾",
+        "definition": "善于通过公开信、推特长文、公司博客来主动管理舆论，以信息透明对抗不确定性。"
+      },
+      {
+        "label": "#硅谷制度建构派",
+        "definition": "继承硅谷对技术驱动制度创新的信仰，将公司视为一种可扩展的社会实验。"
+      },
+      {
+        "label": "#渐进式乌托邦构建者",
+        "definition": "追求以代码和规范为手段，逐步实现一个更加自由、公平和开放的金融未来。"
+      }
+    ]
+  },
+
+  {
+    "name": "Sandeep Nailwal",
+    "username": "@sandeepnailwal",
+    "field": "Web3",
+    "taste_labels": [
+      {
+        "label": "#从贫民窟到区块链帝国",
+        "definition": "从德里的贫民区到全球亿万富翁，Sandeep Nailwal的故事是典型的“贫民窟百万富翁”式逆袭，展现了对教育和技术的执着追求。"
+      },
+      {
+        "label": "#技术驱动的社会企业家",
+        "definition": "不仅是Polygon的联合创始人，还发起了印度加密新冠救援基金，体现了技术与社会责任的融合。"
+      },
+      {
+        "label": "#去中心化治理的倡导者",
+        "definition": "主张去中心化的治理模式，推动Polygon从传统的董事会结构转向更灵活的领导模式，以加速决策和战略执行。"
+      },
+      {
+        "label": "#Web3新兴市场的投资者",
+        "definition": "通过Symbolic Capital基金，专注于支持来自新兴市场的Web3项目，推动全球去中心化生态的发展。"
+      },
+      {
+        "label": "#极简主义的个人风格",
+        "definition": "以简洁、低调的个人形象示人，强调实用主义和务实的工作态度，避免过度的个人品牌包装。"
+      },
+      {
+        "label": "#模块化区块链的设计师",
+        "definition": "推动Polygon开发零知识证明（zkEVM）等模块化解决方案，提升以太坊的可扩展性和性能。"
+      },
+      {
+        "label": "#全球视野的本土情怀",
+        "definition": "尽管在全球范围内拓展业务，但始终保持对印度本土社区的关注和支持，体现了全球视野与本土情怀的结合。"
+      },
+      {
+        "label": "#教育与技术的融合者",
+        "definition": "通过Nailwal Fellowship等项目，支持全球有潜力的Web3开发者，推动教育与技术的深度融合。"
+      },
+      {
+        "label": "#务实的战略执行者",
+        "definition": "在Polygon的发展过程中，注重实际效果和战略执行，避免空洞的理念和过度的宣传。"
+      },
+      {
+        "label": "#去中心化金融的推动者",
+        "definition": "通过Polygon的技术平台，推动去中心化金融（DeFi）的发展，降低交易成本，提高效率，促进全球金融的去中心化进程。"
+      }
+    ]
+  },
+
+  {
+    "name": "Charles Hoskinson",
+    "username": "@IOHK_Charles",
+    "field": "Web3",
+
+    "taste_labels": [
+      {
+        "label": "#数学先知",
+        "definition": "以数学为核心，强调形式化方法和严谨的逻辑推理，推动区块链技术的科学化发展。"
+      },
+      {
+        "label": "#去中心化理想主义者",
+        "definition": "倡导去中心化的治理模式，致力于构建一个公平、透明的数字社会，反对权力集中。"
+      },
+      {
+        "label": "#跨学科创新者",
+        "definition": "涉足多个领域，如生物技术、教育、航天等，推动科技与人文学科的融合创新。"
+      },
+      {
+        "label": "#实用主义哲学家",
+        "definition": "强调技术的实际应用价值，注重解决现实问题，避免空洞的理论探讨。"
+      },
+      {
+        "label": "#全球视野的本土情怀",
+        "definition": "在全球范围内推动区块链技术的普及，同时关注本土社区的需求与发展。"
+      },
+      {
+        "label": "#教育赋能者",
+        "definition": "通过建立数学研究中心等平台，推动教育资源的共享与知识的普及。"
+      },
+      {
+        "label": "#透明沟通倡导者",
+        "definition": "通过公开透明的信息披露管理公众舆论，建立用户信任，推动社区参与。"
+      },
+      {
+        "label": "#生态系统建设者",
+        "definition": "致力于构建完善的区块链生态系统，推动技术、社区、治理等多方面的协同发展。"
+      },
+      {
+        "label": "#未来主义实践者",
+        "definition": "通过实际行动推动未来技术的发展，如支持去中心化金融、智能合约等前沿领域。"
+      },
+      {
+        "label": "#道德责任担当者",
+        "definition": "在推动技术发展的同时，关注社会责任，倡导技术为人类福祉服务。"
+      }
+    ]
+  },
+
+  {
+    "name": "Gavin Wood",
+    "username": "@gavofyork",
+    "field": "Web3",
+    "taste_labels": [
+      {
+        "label": "#数学哲学家",
+        "definition": "以严谨的数学和逻辑思维为基础，推动区块链技术的发展，强调形式化和抽象思维的重要性。"
+      },
+      {
+        "label": "#去中心化理想主义者",
+        "definition": "倡导去中心化的治理模式，致力于构建一个公平、透明的数字社会，反对权力集中。"
+      },
+      {
+        "label": "#跨链互操作性推动者",
+        "definition": "通过 Polkadot 等项目，推动不同区块链之间的互操作性，促进多链生态系统的发展。"
+      },
+      {
+        "label": "#Web3 先驱",
+        "definition": "提出并推动 Web3 的理念，主张去中心化的互联网架构，强调用户自主权和隐私保护。"
+      },
+      {
+        "label": "#编程语言设计者",
+        "definition": "发明 Solidity 编程语言，为智能合约的实现提供了基础工具，推动了智能合约的普及。"
+      },
+      {
+        "label": "#技术与社会变革的桥梁",
+        "definition": "将技术与社会变革相结合，推动区块链技术在社会各个层面的应用，促进社会的数字化转型。"
+      },
+      {
+        "label": "#开源倡导者",
+        "definition": "支持开源软件的发展，认为开源是技术创新和社会进步的重要推动力。"
+      },
+      {
+        "label": "#教育与知识传播者",
+        "definition": "通过撰写论文、演讲等方式，传播区块链技术和理念，促进公众对区块链的理解和接受。"
+      },
+      {
+        "label": "#系统架构师",
+        "definition": "设计和构建复杂的系统架构，解决区块链技术在可扩展性、安全性等方面的问题。"
+      },
+      {
+        "label": "#未来主义实践者",
+        "definition": "通过实际行动推动未来技术的发展，如支持去中心化金融、智能合约等前沿领域。"
+      }
+    ]
+  },
+
+  {
+    "name": "Stani Kulechov",
+    "username": "@StaniKulechov",
+    "field": "Web3",
+    "taste_labels": [
+      {
+        "label": "#法律与技术的桥梁",
+        "definition": "将法律背景与技术创新相结合，推动区块链技术在金融领域的应用。"
+      },
+      {
+        "label": "#去中心化金融先驱",
+        "definition": "创建 Aave，推动去中心化金融（DeFi）生态系统的发展，提供无需中介的借贷服务。"
+      },
+      {
+        "label": "#多链互操作性倡导者",
+        "definition": "推动 Aave 在多个区块链上的部署，促进不同链之间的互操作性。"
+      },
+      {
+        "label": "#去中心化社交媒体支持者",
+        "definition": "推出 Lens Protocol，倡导去中心化的社交媒体平台，保障用户数据主权。"
+      },
+      {
+        "label": "#稳定币创新者",
+        "definition": "推出 GHO 稳定币，探索去中心化稳定币的应用场景。"
+      },
+      {
+        "label": "#开源精神践行者",
+        "definition": "坚持开源开发，推动区块链技术的透明性和可访问性。"
+      },
+      {
+        "label": "#社区驱动的产品设计师",
+        "definition": "通过社区反馈和参与，设计符合用户需求的去中心化金融产品。"
+      },
+      {
+        "label": "#跨行业合作推动者",
+        "definition": "与多个 DeFi 项目合作，共同推动去中心化金融生态系统的发展。"
+      },
+      {
+        "label": "#数字资产教育倡导者",
+        "definition": "通过演讲和写作，普及区块链和数字资产的知识，提升公众理解。"
+      },
+      {
+        "label": "#未来金融愿景构建者",
+        "definition": "构建一个去中心化、透明、公平的金融体系，推动全球金融的数字化转型。"
+      }
+    ]
+  },
+
+  {
+    "name": "Andre Cronje",
+    "username": "@AndreCronjeTech",
+    "field": "Web3",
+    "taste_labels": [
+      {
+        "label": "#DeFi先锋",
+        "definition": "作为 Yearn Finance 和 Keep3r V1 的创始人，Andre Cronje 被誉为去中心化金融（DeFi）的先驱之一，推动了 DeFi 的发展和创新。"
+      },
+      {
+        "label": "#技术至上主义者",
+        "definition": "以技术为核心，强调代码的质量和安全性，追求技术实现的极致，体现了对技术的高度尊重和追求。"
+      },
+      {
+        "label": "#开源倡导者",
+        "definition": "坚持开源理念，推动区块链技术的开放和透明，认为开源是创新和进步的源泉。"
+      },
+      {
+        "label": "#去中心化治理支持者",
+        "definition": "倡导去中心化的治理模式，认为去中心化能够实现更加公平和透明的决策机制。"
+      },
+      {
+        "label": "#快速迭代实践者",
+        "definition": "推崇快速迭代和实验的开发方式，强调在实践中不断优化和改进，体现了对效率和实用性的追求。"
+      },
+      {
+        "label": "#风险容忍者",
+        "definition": "在项目开发中敢于承担风险，勇于尝试新的模式和机制，体现了对风险的容忍和应对能力。"
+      },
+      {
+        "label": "#社区驱动者",
+        "definition": "重视社区的参与和反馈，认为社区是项目成功的关键，体现了对社区力量的重视和依赖。"
+      },
+      {
+        "label": "#反对过度营销",
+        "definition": "反对过度的市场营销和炒作，强调项目本身的价值和实用性，体现了对实质内容的重视。"
+      },
+      {
+        "label": "#隐私保护者",
+        "definition": "重视用户隐私和数据安全，倡导在技术实现中保护用户的隐私权，体现了对个人隐私的尊重。"
+      },
+      {
+        "label": "#教育普及者",
+        "definition": "通过分享经验和知识，推动区块链技术的普及和教育，体现了对知识传播的重视。"
+      }
+    ]
+  },
+
+  {
+    "name": "Hayden Adams",
+    "username": "@haydenzadams",
+    "field": "Web3",
+    "taste_labels": [
+      {
+        "label": "#去中心化金融先锋",
+        "definition": "作为 Uniswap 的创始人，Hayden Adams 推动了去中心化金融（DeFi）的发展，改变了传统金融体系。"
+      },
+      {
+        "label": "#技术自学成才",
+        "definition": "在失业后自学 Solidity 和 JavaScript，成功开发出 Uniswap，体现了自学和实践的精神。"
+      },
+      {
+        "label": "#开源倡导者",
+        "definition": "坚持开源开发，推动区块链技术的开放和透明，认为开源是创新和进步的源泉。"
+      },
+      {
+        "label": "#去中心化治理支持者",
+        "definition": "倡导去中心化的治理模式，认为去中心化能够实现更加公平和透明的决策机制。"
+      },
+      {
+        "label": "#快速迭代实践者",
+        "definition": "推崇快速迭代和实验的开发方式，强调在实践中不断优化和改进，体现了对效率和实用性的追求。"
+      },
+      {
+        "label": "#风险容忍者",
+        "definition": "在项目开发中敢于承担风险，勇于尝试新的模式和机制，体现了对风险的容忍和应对能力。"
+      },
+      {
+        "label": "#社区驱动者",
+        "definition": "重视社区的参与和反馈，认为社区是项目成功的关键，体现了对社区力量的重视和依赖。"
+      },
+      {
+        "label": "#反对过度营销",
+        "definition": "反对过度的市场营销和炒作，强调项目本身的价值和实用性，体现了对实质内容的重视。"
+      },
+      {
+        "label": "#隐私保护者",
+        "definition": "重视用户隐私和数据安全，倡导在技术实现中保护用户的隐私权，体现了对个人隐私的尊重。"
+      },
+      {
+        "label": "#教育普及者",
+        "definition": "通过分享经验和知识，推动区块链技术的普及和教育，体现了对知识传播的重视。"
+      }
+    ]
+  },
+
+  {
+    "name": "Anatoly Yakovenko",
+    "username": "@aeyakovenko",
+    "field": "Web3",
+    "taste_labels": [
+      {
+        "label": "#技术工程师转型者",
+        "definition": "从资深软件工程师转向区块链创新，体现了强大的技术积累与跨领域转型能力。"
+      },
+      {
+        "label": "#区块链性能极致追求者",
+        "definition": "通过设计创新的共识机制（如Proof-of-History），致力于解决区块链的扩展性和速度瓶颈。"
+      },
+      {
+        "label": "#系统架构大师",
+        "definition": "擅长分布式系统和操作系统设计，推动区块链底层架构的技术突破。"
+      },
+      {
+        "label": "#开放互联网理想主义者",
+        "definition": "倡导构建一个无门槛、去中心化且高速的开放互联网生态，支持任何人自由构建和交易。"
+      },
+      {
+        "label": "#多元技术背景融合者",
+        "definition": "融合通信、虚拟现实和云计算等多领域技术经验，推动区块链技术跨界创新。"
+      },
+      {
+        "label": "#快速迭代创新者",
+        "definition": "注重持续技术迭代和产品优化，推动区块链技术快速发展。"
+      },
+      {
+        "label": "#未来主义架构设计者",
+        "definition": "致力于异步执行和高并发架构，探索区块链未来的性能和可扩展性极限。"
+      },
+      {
+        "label": "#技术与愿景并重",
+        "definition": "不仅专注技术实现，更强调区块链技术在社会和经济层面的深远影响。"
+      },
+      {
+        "label": "#跨文化融合者",
+        "definition": "移民背景赋予其多元文化视角，促进全球化区块链技术发展。"
+      },
+      {
+        "label": "#技术教育传播者",
+        "definition": "积极通过访谈、文章等形式分享技术见解，推动区块链技术的公众理解与普及。"
+      }
+    ]
+  }
+]

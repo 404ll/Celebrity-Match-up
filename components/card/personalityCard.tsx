@@ -1,25 +1,25 @@
 "use client";
 
 import React, { useRef, useState, useEffect } from "react";
-import { PersonalityCardData } from "@/types/index";
+import { DeepDiveData, TwitterUser } from "@/types/index";
 import Image from "next/image";
 import { YouMindLogo } from "../icon/logo";
 import { generateShareUrl, generateTwitterShareUrl } from "@/utils/card-utils";
 import { DownloadButton } from "./downloadButton";
 
 interface PersonalityCardProps {
-  data: PersonalityCardData;
+  data: DeepDiveData;
+  user: TwitterUser;
 }
 
-export const PersonalityCard = ({ data }: PersonalityCardProps) => {
+export const PersonalityCard = ({ data, user }: PersonalityCardProps) => {
   const cardContentRef = useRef<HTMLDivElement>(null);
   const [shareUrl, setShareUrl] = useState('');
-
   useEffect(() => {
     // 在客户端设置shareUrl
-    setShareUrl(data.id ? generateShareUrl(data.id) : window.location.href);
-  }, [data.id]);
-
+    setShareUrl(user.username ? generateShareUrl(user.username) : window.location.href);
+  }, [user.username]);
+  console.log("personalityCard", data);
   return (
     <div ref={cardContentRef} className="text-card-foreground shadow-lg overflow-hidden rounded-xl border border-gray-200 bg-white hover:shadow-xl transition-all duration-300">
       <div  className="flex flex-col p-8 text-black">
@@ -27,14 +27,14 @@ export const PersonalityCard = ({ data }: PersonalityCardProps) => {
         <div className="flex flex-row justify-between items-start mb-6">
           <div className="flex items-center">
             <Image
-              src={data.image}
-              alt={data.name}
+              src={user.profile_image_url}
+              alt={user.display_name}
               width={40}
               height={40}
               className="rounded-full border-2 border-gray-200 shadow-sm"
             />
             <div className="ml-4">
-              <h1 className="text-sm font-semibold text-gray-900">{data.name}</h1>
+              <h1 className="text-sm font-semibold text-gray-900">{user.display_name}</h1>
             </div>
           </div>
           
@@ -43,7 +43,7 @@ export const PersonalityCard = ({ data }: PersonalityCardProps) => {
             target="_blank"
             className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg shadow-sm hover:from-orange-600 hover:to-orange-700 transition-all duration-200 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
             href={generateTwitterShareUrl(
-              { name: data.name, analysis: data.personality, id: data.id },
+              { name: user.display_name, analysis: data.summary, id: user.username },
               shareUrl
             )}
           >
@@ -67,7 +67,43 @@ export const PersonalityCard = ({ data }: PersonalityCardProps) => {
 
         {/* Analysis Content */}
         <div className="bg-gray-50 rounded-lg p-6 mb-6">
-          <p className="text-gray-700 leading-relaxed text-base">{data.personality}</p>
+          {/* 深度解析标题 */}
+          <div className="mb-4">
+            <h2 className="text-lg font-semibold text-gray-800 mb-2">
+              {data.title}
+            </h2>
+          </div>
+
+          {/* 引言 */}
+          <div className="mb-6">
+            <p className="text-gray-700 leading-relaxed text-base italic">
+              {data.introduction}
+            </p>
+          </div>
+
+          {/* 三个关键点 */}
+          <div className="space-y-4 mb-6">
+            {data.points.map((point, index) => (
+              <div key={index} className="border-l-4 border-purple-500 pl-4">
+                <h3 className="font-semibold text-gray-900 mb-2">
+                  {point.title}
+                </h3>
+                <p className="text-gray-700 text-sm leading-relaxed">
+                  {point.body}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* 总结 */}
+          <div className="border-t border-gray-200 pt-4">
+            <h3 className="text-lg font-semibold text-gray-800 mb-2">
+              总结：
+            </h3>
+            <p className="text-gray-700 leading-relaxed text-base">
+              {data.summary}
+            </p>
+          </div>
         </div>
 
         {/* Footer */}

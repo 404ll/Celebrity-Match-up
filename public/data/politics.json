@@ -1,0 +1,915 @@
+[
+  {
+    "name": "Barack Obama",
+    "username": "@BarackObama",
+    "field": "政治",
+    "taste_labels": [
+      {
+        "label": "#雄辩的理想主义者 (Eloquent Idealist)",
+        "definition": "以优雅的语言传达希望与变革，激励全球追求更美好的未来。"
+      },
+      {
+        "label": "#冷静的决策者 (Calm Decision-Maker)",
+        "definition": "在压力下保持冷静，做出深思熟虑的决策，确保国家利益。"
+      },
+      {
+        "label": "#包容的领导者 (Inclusive Leader)",
+        "definition": "倡导多元文化，致力于建立一个公平和包容的社会。"
+      },
+      {
+        "label": "#战略的沟通者 (Strategic Communicator)",
+        "definition": "善于通过演讲和写作传达复杂的理念，使其易于理解和接受。"
+      },
+      {
+        "label": "#坚韧的改革者 (Resilient Reformer)",
+        "definition": "面对挑战不屈不挠，推动医疗、金融等领域的深刻改革。"
+      },
+      {
+        "label": "#全球外交家 (Global Diplomat)",
+        "definition": "重视国际合作，推动全球和平与安全，提升美国在世界舞台的地位。"
+      },
+      {
+        "label": "#幽默的公众人物 (Humorous Public Figure)",
+        "definition": "以幽默感拉近与民众的距离，成为文化现象的一部分。"
+      },
+      {
+        "label": "#道德的楷模 (Moral Role Model)",
+        "definition": "以高尚的品德和家庭价值观树立榜样，赢得广泛尊敬。"
+      },
+      {
+        "label": "#历史的见证者 (Witness to History)",
+        "definition": "亲历并参与塑造21世纪初的重要历史事件，留下深刻印记。"
+      },
+      {
+        "label": "#反思的作家 (Reflective Writer)",
+        "definition": "通过自传《应许之地》等作品，深入反思个人与国家的历程。"
+      }
+    ]
+  },
+  {
+    "name": "Donald Trump",
+    "username": "@realDonaldTrump",
+    "field": "政治",
+    "taste_labels": [
+      {
+        "label": "#霸气直言风格 (Bold and Unfiltered Style)",
+        "definition": "以直率、无修饰的语言表达观点，打破传统政治语言的束缚。"
+      },
+      {
+        "label": "#品牌帝国构建者 (Brand Empire Builder)",
+        "definition": "将个人品牌与商业帝国紧密结合，塑造强大的公众形象。"
+      },
+      {
+        "label": "#媒体操控大师 (Master of Media Manipulation)",
+        "definition": "善于利用媒体平台塑造舆论，掌控公众话语权。"
+      },
+      {
+        "label": "#民粹主义领袖 (Populist Leader)",
+        "definition": "强调与普通民众的紧密联系，反对精英主义，倡导“美国优先”。"
+      },
+      {
+        "label": "#权力游戏玩家 (Power Game Player)",
+        "definition": "在政治博弈中游刃有余，善于运用策略和谈判技巧。"
+      },
+      {
+        "label": "#争议制造者 (Controversy Creator)",
+        "definition": "通过引发争议吸引注意力，保持公众焦点。"
+      },
+      {
+        "label": "#豪华生活象征 (Symbol of Luxury Lifestyle)",
+        "definition": "以奢华的生活方式展示成功，成为财富与地位的象征。"
+      },
+      {
+        "label": "#国家主义倡导者 (Nationalism Advocate)",
+        "definition": "强调国家主权和民族利益，推动民族主义议程。"
+      },
+      {
+        "label": "#社交媒体巨人 (Social Media Titan)",
+        "definition": "通过社交媒体直接与公众沟通，打破传统传播渠道。"
+      },
+      {
+        "label": "#法律与秩序捍卫者 (Defender of Law and Order)",
+        "definition": "强调法律的权威和秩序的维护，主张强硬的执法政策。"
+      }
+    ]
+  },
+  {
+    "name": "Kamala Harris",
+    "username": "@KamalaHarris",
+    "field": "政治",
+    "taste_labels": [
+      {
+        "label": "#历史性突破者 (Historic Trailblazer)",
+        "definition": "成为首位女性、黑人和亚裔美国人副总统，打破多重政治天花板，象征着美国多元化的力量。"
+      },
+      {
+        "label": "#坚韧的改革者 (Resilient Reformer)",
+        "definition": "在检察官和加州总检察长任内，推动刑事司法改革，捍卫弱势群体权益，展现坚定的改革决心。"
+      },
+      {
+        "label": "#战略性的外交使者 (Strategic Diplomatic Envoy)",
+        "definition": "在国际事务中，代表美国加强与盟国的合作，推动全球议题的解决，展现出色的外交智慧。"
+      },
+      {
+        "label": "#包容性的领导者 (Inclusive Leader)",
+        "definition": "倡导多元文化和包容性政策，致力于建设一个公平、公正的社会，关注所有人的福祉。"
+      },
+      {
+        "label": "#务实的政策推动者 (Pragmatic Policy Advocate)",
+        "definition": "在气候变化、枪支管制等领域，推动务实的政策措施，寻求实际解决方案，回应民众关切。"
+      },
+      {
+        "label": "#坚定的道德典范 (Steadfast Moral Beacon)",
+        "definition": "在面对挑战时，坚持道德原则，展现出色的品格和领导力，成为公众信赖的象征。"
+      },
+      {
+        "label": "#沟通的桥梁建设者 (Bridge-Building Communicator)",
+        "definition": "通过清晰、有力的沟通，架起不同群体之间的桥梁，促进社会的理解与和谐。"
+      },
+      {
+        "label": "#教育的倡导者 (Education Advocate)",
+        "definition": "关注教育公平，推动政策改革，确保每个孩子都能接受优质教育，成就未来。"
+      },
+      {
+        "label": "#家庭价值的践行者 (Champion of Family Values)",
+        "definition": "在繁忙的工作中，始终重视家庭，展现出平衡事业与家庭的智慧和决心。"
+      },
+      {
+        "label": "#全球视野的领导者 (Globally-Minded Leader)",
+        "definition": "在全球化的背景下，展现出广阔的视野和国际视野，推动全球合作与发展。"
+      }
+    ]
+  },
+  {
+    "name": "Bernie Sanders",
+    "username": "@BernieSanders",
+    "field": "政治",
+    "taste_labels": [
+      {
+        "label": "#人民的代言人 (Voice of the People)",
+        "definition": "始终站在普通民众一边，倡导社会公平与经济正义，成为底层声音的有力代表。"
+      },
+      {
+        "label": "#反对寡头政治 (Anti-Oligarchy Crusader)",
+        "definition": "坚决反对财富集中与权力垄断，主张民主制度应服务于广大人民，而非少数精英。"
+      },
+      {
+        "label": "#社会民主主义先锋 (Pioneer of Social Democracy)",
+        "definition": "提倡全民医保、免费教育和财富再分配，推动美国向更平等的社会迈进。"
+      },
+      {
+        "label": "#不畏权威的斗士 (Fearless Fighter Against Authority)",
+        "definition": "无惧强权，敢于挑战体制，直言不讳地揭露不公与腐败。"
+      },
+      {
+        "label": "#基层运动的发动机 (Engine of Grassroots Movements)",
+        "definition": "通过“反对寡头政治”巡回演讲等活动，激发民众参与政治，推动社会变革。"
+      },
+      {
+        "label": "#坚定的劳工权益捍卫者 (Steadfast Defender of Labor Rights)",
+        "definition": "致力于保护工人权益，推动立法加强工会力量，改善劳动条件。"
+      },
+      {
+        "label": "#环保与气候行动倡导者 (Advocate for Environmental and Climate Action)",
+        "definition": "关注气候变化，主张采取紧急措施应对环境危机，保护地球未来。"
+      },
+      {
+        "label": "#反战与和平的声音 (Voice for Anti-War and Peace)",
+        "definition": "反对军事干预，倡导外交解决争端，致力于全球和平与稳定。"
+      },
+      {
+        "label": "#教育与医疗改革的推动者 (Proponent of Education and Healthcare Reform)",
+        "definition": "主张教育和医疗资源应对所有人开放，推动政策改革，确保公平获取。"
+      },
+      {
+        "label": "#政治透明与反腐倡廉的倡导者 (Advocate for Political Transparency and Anti-Corruption)",
+        "definition": "呼吁政治透明，反对金钱政治，致力于建立清廉的政治体系。"
+      }
+    ]
+  },
+  {
+    "name": "Alexandria Ocasio-Cortez",
+    "username": "@AOC",
+    "field": "政治",
+    "taste_labels": [
+      {
+        "label": "#青年激进先锋 (Youthful Radical Vanguard)",
+        "definition": "以 29 岁之龄当选国会议员，成为美国历史上最年轻的女性议员，代表年轻一代的激进变革力量。"
+      },
+      {
+        "label": "#社会民主主义倡导者 (Advocate of Social Democracy)",
+        "definition": "主张全民医保、免费教育和财富再分配，推动美国向更平等的社会迈进，体现社会民主主义理念。"
+      },
+      {
+        "label": "#气候行动斗士 (Climate Action Warrior)",
+        "definition": "提出绿色新政（Green New Deal），推动可再生能源转型，强调气候变化对未来世代的影响。"
+      },
+      {
+        "label": "#移民权利捍卫者 (Defender of Immigrant Rights)",
+        "definition": "倡导废除移民和海关执法局（ICE），支持无证移民获得合法身份，捍卫移民群体权益。"
+      },
+      {
+        "label": "#工人阶级代言人 (Champion of the Working Class)",
+        "definition": "关注工人权益，推动提高最低工资，支持工会力量，倡导经济公平与社会正义。"
+      },
+      {
+        "label": "#数字时代沟通者 (Digital Age Communicator)",
+        "definition": "利用社交媒体与选民直接沟通，打破传统政治传播壁垒，成为数字时代的沟通典范。"
+      },
+      {
+        "label": "#党内改革推动者 (Internal Party Reformer)",
+        "definition": "通过政治行动委员会（PAC）支持进步派候选人，推动党内改革，挑战传统政治结构。"
+      },
+      {
+        "label": "#女性权利倡导者 (Advocate for Women's Rights)",
+        "definition": "支持女性平等薪酬、产假、医疗保健等权益，推动性别平等政策的实施。"
+      },
+      {
+        "label": "#公共住房改革者 (Public Housing Reformer)",
+        "definition": "推动公共住房零碳化计划，改善住房条件，解决住房负担问题，关注低收入群体的居住权益。"
+      },
+      {
+        "label": "#政治透明倡导者 (Advocate for Political Transparency)",
+        "definition": "提出立法禁止前国会议员从事游说活动，推动政治透明和反腐败立法，增强公众对政治体系的信任。"
+      }
+    ]
+  },
+  {
+    "name": "Justin Trudeau",
+    "username": "@JustinTrudeau",
+    "field": "政治",
+    "taste_labels": [
+      {
+        "label": "#阳光政治家 (Sunny Politician)",
+        "definition": "以乐观、包容的形象赢得民心，倡导积极向上的政治风格，力求通过团结和对话实现社会进步。"
+      },
+      {
+        "label": "#性别平衡先行者 (Pioneer of Gender Balance)",
+        "definition": "首次组建性别平衡的内阁，强调性别平等在政治决策中的重要性，推动女性在政治领域的参与。"
+      },
+      {
+        "label": "#气候行动倡导者 (Climate Action Advocate)",
+        "definition": "积极推动气候变化应对措施，支持可再生能源发展，致力于实现碳中和目标，保护环境。"
+      },
+      {
+        "label": "#移民包容者 (Immigrant Inclusionist)",
+        "definition": "欢迎移民，主张多元文化共存，致力于为新移民提供支持和机会，促进社会融合。"
+      },
+      {
+        "label": "#社会福利改革者 (Social Welfare Reformer)",
+        "definition": "推动社会福利制度改革，提高公共服务质量，关注弱势群体，促进社会公平与正义。"
+      },
+      {
+        "label": "#国际合作倡导者 (International Cooperation Advocate)",
+        "definition": "积极参与国际事务，支持多边主义，推动全球合作应对共同挑战，提升加拿大在国际舞台的影响力。"
+      },
+      {
+        "label": "#数字时代沟通者 (Digital Age Communicator)",
+        "definition": "善于利用社交媒体与公众沟通，透明化政府信息，增强政府与民众之间的互动和信任。"
+      },
+      {
+        "label": "#教育改革支持者 (Education Reform Supporter)",
+        "definition": "关注教育公平，推动教育体系改革，确保每个孩子都能接受优质教育，培养未来人才。"
+      },
+      {
+        "label": "#经济多元化推动者 (Economic Diversification Promoter)",
+        "definition": "致力于经济结构多元化，支持科技创新和绿色经济发展，提升国家经济竞争力。"
+      },
+      {
+        "label": "#政治透明倡导者 (Political Transparency Advocate)",
+        "definition": "推动政治透明度，倡导政府问责制，确保公共资源的合理使用，增强公众对政府的信任。"
+      }
+    ]
+  },
+  {
+    "name": "Emmanuel Macron",
+    "username": "@EmmanuelMacron",
+    "field": "政治",
+    "taste_labels": [
+      {
+        "label": "#中道精英主义 (Centrist Elitism)",
+        "definition": "自创‘前进！’运动，主张超越传统左右翼对立，强调理性、改革与全球主义，体现精英主义的政治风格。"
+      },
+      {
+        "label": "#技术官僚魅力 (Technocratic Charisma)",
+        "definition": "以哲学与行政背景为基础，结合理性与魅力，塑造出兼具知识性与亲和力的领导形象。"
+      },
+      {
+        "label": "#欧洲一体化倡导者 (Advocate for European Integration)",
+        "definition": "坚定支持欧盟一体化，推动欧洲在全球事务中的战略自主，强调欧洲价值观的统一。"
+      },
+      {
+        "label": "#全球主义外交 (Globalist Diplomacy)",
+        "definition": "在国际事务中倡导多边主义与合作，积极参与全球治理，提升法国在国际舞台的影响力。"
+      },
+      {
+        "label": "#改革派领导者 (Reformist Leader)",
+        "definition": "推动劳动市场、退休制度等领域的改革，力求通过结构性调整提升国家竞争力。"
+      },
+      {
+        "label": "#政治不确定性制造者 (Creator of Political Uncertainty)",
+        "definition": "通过提前解散国民议会等举措，打破政治格局，挑战传统政治力量的稳定性。"
+      },
+      {
+        "label": "#社会不平等关注者 (Observer of Social Inequality)",
+        "definition": "在推动经济改革的同时，关注社会不平等问题，力求在改革与社会公正之间找到平衡。"
+      },
+      {
+        "label": "#青年与教育支持者 (Supporter of Youth and Education)",
+        "definition": "强调教育对未来的关键作用，推动教育体系的改革与创新，关注年轻一代的成长与发展。"
+      },
+      {
+        "label": "#环境政策倡导者 (Advocate for Environmental Policy)",
+        "definition": "在气候变化与环境保护方面采取积极措施，推动绿色转型与可持续发展。"
+      },
+      {
+        "label": "#法国身份塑造者 (Shaper of French Identity)",
+        "definition": "在全球化背景下，强调法国独特文化与价值观的传承与发展，塑造现代法国的国家形象。"
+      }
+    ]
+  },
+  {
+    "name": "Narendra Modi",
+    "username": "@narendramodi",
+    "field": "政治",
+    "taste_labels": [
+      {
+        "label": "#民族主义复兴者 (Reviver of Nationalism)",
+        "definition": "以强烈的民族主义情怀，强调印度文化自信，推动国家认同感的重塑，强化国家凝聚力。"
+      },
+      {
+        "label": "#数字印度倡导者 (Advocate of Digital India)",
+        "definition": "推动数字化转型，推广电子支付、数字身份等项目，提升国家信息化水平，缩小城乡数字鸿沟。"
+      },
+      {
+        "label": "#自力更生战略家 (Strategist of Self-Reliance)",
+        "definition": "提出‘Atmanirbhar Bharat’（自力更生的印度）战略，强调自主创新和本土制造，减少对外依赖。"
+      },
+      {
+        "label": "#改革派领导者 (Reformist Leader)",
+        "definition": "实施一系列经济和社会改革，包括商品和服务税（GST）、破产法等，推动国家现代化进程。"
+      },
+      {
+        "label": "#外交政策革新者 (Innovator in Foreign Policy)",
+        "definition": "采取积极主动的外交政策，加强与世界各国的合作，提升印度在国际事务中的地位。"
+      },
+      {
+        "label": "#危机应对决策者 (Crisis Management Decider)",
+        "definition": "在面对国内外挑战时，展现果断决策能力，如应对疫情、边境冲突等，维护国家利益。"
+      },
+      {
+        "label": "#民众沟通者 (Communicator with the Masses)",
+        "definition": "通过社交媒体和公开演讲，与民众直接沟通，塑造亲民形象，增强政府透明度。"
+      },
+      {
+        "label": "#社会福利推动者 (Promoter of Social Welfare)",
+        "definition": "实施多项社会福利计划，如‘Jan Dhan Yojana’（全民银行账户计划）、‘Swachh Bharat Abhiyan’（清洁印度运动），改善民生。"
+      },
+      {
+        "label": "#国家安全捍卫者 (Defender of National Security)",
+        "definition": "在国家安全问题上采取强硬立场，如应对恐怖袭击、边境冲突等，维护国家主权和领土完整。"
+      },
+      {
+        "label": "#政治品牌塑造者 (Shaper of Political Brand)",
+        "definition": "打造以‘Modi’为核心的政治品牌，塑造独特的领导风格，提升个人和党的政治影响力。"
+      }
+    ]
+  },
+  {
+    "name": "Elizabeth Warren",
+    "username": "@ewarren",
+    "field": "政治",
+    "taste_labels": [
+      {
+        "label": "#金融监管先锋 (Financial Regulation Pioneer)",
+        "definition": "作为消费者金融保护局（CFPB）的创始人之一，沃伦致力于打击金融机构的不当行为，保护消费者权益。"
+      },
+      {
+        "label": "#财富不平等斗士 (Champion Against Wealth Inequality)",
+        "definition": "提出‘超百万富翁税’，主张对最富有的家庭征收财富税，以缩小贫富差距。"
+      },
+      {
+        "label": "#企业责任倡导者 (Advocate for Corporate Accountability)",
+        "definition": "提出‘Accountable Capitalism Act’，要求大公司在董事会中增加员工代表，限制政治捐款，强调企业对社会的责任。"
+      },
+      {
+        "label": "#社会保障改革者 (Social Security Reformer)",
+        "definition": "推动社会保障管理局进行客户服务审计，确保老年人和残障人士的福利得到有效保障。"
+      },
+      {
+        "label": "#反腐败斗士 (Anti-Corruption Crusader)",
+        "definition": "提出‘总统利益冲突法案’，要求总统及其配偶将可能存在冲突的资产放入盲目信托，禁止参与联邦合同，确保政府透明度。"
+      },
+      {
+        "label": "#中产阶级捍卫者 (Defender of the Middle Class)",
+        "definition": "长期关注中产阶级家庭的经济压力，主张通过改革减轻他们的负担，提升生活质量。"
+      },
+      {
+        "label": "#教育公平倡导者 (Advocate for Educational Equity)",
+        "definition": "关注高等教育的公平性，主张减轻学生债务负担，推动教育机会的平等。"
+      },
+      {
+        "label": "#气候变化行动者 (Climate Change Activist)",
+        "definition": "支持绿色能源投资，推动减少碳排放的政策，关注气候变化对社会的影响。"
+      },
+      {
+        "label": "#医疗改革支持者 (Healthcare Reform Supporter)",
+        "definition": "主张全民医疗保障，关注医疗费用对家庭的压力，推动医疗体系的公平性。"
+      },
+      {
+        "label": "#民主制度捍卫者 (Defender of Democratic Institutions)",
+        "definition": "关注选举公正，主张选民权利的保护，反对选举制度的不公正和腐败。"
+      }
+    ]
+  },
+  {
+    "name": "Ted Cruz",
+    "username": "@tedcruz",
+    "field": "政治",
+    "taste_labels": [
+      {
+        "label": "#宪政捍卫者 (Defender of Constitutionalism)",
+        "definition": "坚信宪法原意，主张严格遵循宪法条文，反对政府权力扩张，强调个人自由与国家安全的平衡。"
+      },
+      {
+        "label": "#自由市场倡导者 (Advocate of Free Markets)",
+        "definition": "支持减少政府干预，主张税制简化，提倡自由贸易，强调市场在资源配置中的决定性作用。"
+      },
+      {
+        "label": "#社会保守派领袖 (Leader of Social Conservatism)",
+        "definition": "在堕胎、同性婚姻、枪支权利等社会议题上持保守立场，强调传统家庭价值观的重要性。"
+      },
+      {
+        "label": "#反建制斗士 (Anti-Establishment Fighter)",
+        "definition": "批评华盛顿精英，主张政治改革，强调政治透明度，倡导政府问责制。"
+      },
+      {
+        "label": "#国家安全保卫者 (Protector of National Security)",
+        "definition": "主张强硬的移民政策，支持加强边境安全，强调国家主权和公民安全的优先性。"
+      },
+      {
+        "label": "#言论自由捍卫者 (Defender of Free Speech)",
+        "definition": "强调言论自由的重要性，反对政治正确和言论审查，主张多元声音的表达。"
+      },
+      {
+        "label": "#财政保守派 (Fiscal Conservative)",
+        "definition": "主张削减政府开支，反对增加税收，强调财政赤字和国家债务的控制。"
+      },
+      {
+        "label": "#外交政策鹰派 (Foreign Policy Hawk)",
+        "definition": "支持积极的外交政策，强调美国在全球事务中的领导地位，主张强硬的对外政策。"
+      },
+      {
+        "label": "#教育选择倡导者 (Advocate of School Choice)",
+        "definition": "支持家长选择子女教育方式，倡导私立学校和特许学校的发展，强调教育多样性的价值。"
+      },
+      {
+        "label": "#宗教自由捍卫者 (Defender of Religious Freedom)",
+        "definition": "强调宗教自由的重要性，支持宗教组织在公共事务中的参与，主张宗教信仰的保护。"
+      }
+    ]
+  },
+  {
+    "name": "Volodymyr Zelenskyy",
+    "username": "@ZelenskyyUa",
+    "field": "政治",
+    "taste_labels": [
+      {
+        "label": "#战时领袖气质 (Wartime Leadership Charisma)",
+        "definition": "在俄罗斯入侵乌克兰后，泽连斯基展现出坚定的领导力和勇气，成为全球瞩目的战时领袖。",
+        "source": "turn0search5"
+      },
+      {
+        "label": "#数字时代的沟通大师 (Master Communicator in the Digital Age)",
+        "definition": "通过社交媒体和视频演讲，泽连斯基成功地将乌克兰的声音传递给全球观众，赢得国际支持。",
+        "source": "turn0search9"
+      },
+      {
+        "label": "#从喜剧演员到总统 (From Comedian to President)",
+        "definition": "泽连斯基的政治生涯起步于喜剧演员，凭借其幽默和亲和力赢得民众支持。",
+        "source": "turn0search14"
+      },
+      {
+        "label": "#民主与自由的捍卫者 (Defender of Democracy and Freedom)",
+        "definition": "在战争中，泽连斯基坚持民主原则，强调乌克兰人民的自由和主权。",
+        "source": "turn0search18"
+      },
+      {
+        "label": "#危机中的同理心 (Empathy in Crisis)",
+        "definition": "在战争和挑战面前，泽连斯基展现出对民众的深切关怀和同理心。",
+        "source": "turn0search20"
+      },
+      {
+        "label": "#服装背后的象征 (Symbolism Behind Attire)",
+        "definition": "泽连斯基选择穿着军装而非西装，传达了与士兵并肩作战的决心。",
+        "source": "turn0search10"
+      },
+      {
+        "label": "#透明度与责任感 (Transparency and Accountability)",
+        "definition": "在领导中，泽连斯基强调政府的透明度和对民众的责任感。",
+        "source": "turn0news21"
+      },
+      {
+        "label": "#全球合作倡导者 (Advocate for Global Cooperation)",
+        "definition": "泽连斯基积极寻求国际支持，推动全球合作以应对共同挑战。",
+        "source": "turn0search9"
+      },
+      {
+        "label": "#战略决策者 (Strategic Decision Maker)",
+        "definition": "在复杂局势中，泽连斯基展现出果断和深思熟虑的战略决策能力。",
+        "source": "turn0search7"
+      },
+      {
+        "label": "#民族团结的象征 (Symbol of National Unity)",
+        "definition": "泽连斯基成为乌克兰民族团结和抵抗精神的象征，激励人民共同面对挑战。",
+        "source": "turn0search16"
+      }
+    ]
+  },
+  {
+    "name": "Jacinda Ardern",
+    "username": "@jacindaardern",
+    "field": "政治",
+    "taste_labels": [
+      {
+        "label": "#共情力领导",
+        "definition": "用真诚共情化解危机，将同理心作为领导的核心力量，塑造温暖而坚定的公众形象。"
+      },
+      {
+        "label": "#危机中的冷静决策者",
+        "definition": "面对重大挑战时，保持冷静理性，迅速采取果断措施，展现领导者的责任感与智慧。"
+      },
+      {
+        "label": "#打破传统的女性力量",
+        "definition": "作为年轻母亲的国家领导人，挑战政治圈男性主导，展示女性柔韧且强大的领导力。"
+      },
+      {
+        "label": "#透明与诚信的践行者",
+        "definition": "坚持信息公开和诚实沟通，打造公众信任的政治环境，拒绝模糊与虚伪。"
+      },
+      {
+        "label": "#社会正义的坚定拥护者",
+        "definition": "持续推动教育、福利与环境改革，致力于构建公平包容的社会体系。"
+      },
+      {
+        "label": "#全球合作的积极倡导者",
+        "definition": "强调国际协作与多边主义，致力于应对全球性挑战，促进世界和平与发展。"
+      },
+      {
+        "label": "#柔中带刚的领导风格",
+        "definition": "以温柔包容化解矛盾，以坚决果敢推进改革，实现理想与现实的平衡。"
+      },
+      {
+        "label": "#情感真实的公共人物",
+        "definition": "勇于展露脆弱与情感，拉近与民众距离，重塑政治人物的人性形象。"
+      },
+      {
+        "label": "#新型政治领袖典范",
+        "definition": "超越传统权威形象，塑造基于信任与服务的现代领导模式，启发未来政治发展。"
+      },
+      {
+        "label": "#身兼多职的平衡术大师",
+        "definition": "成功兼顾母亲、妻子与总理多重身份，彰显现代女性多面人生的可能性。"
+      }
+    ]
+  },
+  {
+    "name": "Pete Buttigieg",
+    "username": "@PeteButtigieg",
+    "field": "政治",
+    "taste_labels": [
+      {
+        "label": "#跨性别平等倡导者",
+        "definition": "作为公开的同性恋者，布蒂吉格在推动跨性别者权益方面表现积极，强调包容性政策的重要性。"
+      },
+      {
+        "label": "#交通安全改革者",
+        "definition": "在任内，布蒂吉格推动了多项交通安全改革措施，尽管面临批评，他坚持推进现代化和安全优先的政策。"
+      },
+      {
+        "label": "#基础设施投资支持者",
+        "definition": "支持并推动了大规模的基础设施投资，旨在改善美国的交通网络和公共设施。"
+      },
+      {
+        "label": "#气候变化行动者",
+        "definition": "在交通政策中融入气候变化应对措施，推动绿色交通解决方案，减少碳排放。"
+      },
+      {
+        "label": "#年轻领导力代表",
+        "definition": "作为年轻的政治人物，布蒂吉格代表了新一代领导者的崛起，注重创新和多元化。"
+      },
+      {
+        "label": "#军事服务者",
+        "definition": "曾在美国海军预备役服役，并在阿富汗执行任务，展现了对国家的忠诚和责任感。"
+      },
+      {
+        "label": "#教育背景深厚",
+        "definition": "毕业于哈佛大学和牛津大学，拥有历史、文学、哲学、政治和经济学的学位，展现了广泛的知识背景。"
+      },
+      {
+        "label": "#媒体沟通专家",
+        "definition": "以清晰、有力的沟通风格著称，善于通过媒体传达政策信息，赢得公众支持。"
+      },
+      {
+        "label": "#家庭价值倡导者",
+        "definition": "与丈夫 Chasten 一同育有双胞胎，强调家庭在个人生活中的重要性，倡导平等的家庭价值观。"
+      },
+      {
+        "label": "#政治透明度支持者",
+        "definition": "在任内，布蒂吉格强调政府透明度，推动政策制定过程的公开和公众参与。"
+      }
+    ]
+  },
+  {
+    "name": "Cory Booker",
+    "username": "@CoryBooker",
+    "field": "政治",
+    "taste_labels": [
+      {
+        "label": "#正义的火炬手",
+        "definition": "从新泽西州的市议员到市长，再到首位非洲裔美国人参议员，布克始终致力于推动社会公平与正义。"
+      },
+      {
+        "label": "#民主党内的良心",
+        "definition": "在党内激烈辩论中，布克敢于发声，挑战党内共识，捍卫宪法原则。"
+      },
+      {
+        "label": "#跨党派合作的倡导者",
+        "definition": "尽管立场坚定，布克仍寻求与对立党派合作，推动实质性立法。"
+      },
+      {
+        "label": "#基层声音的代表",
+        "definition": "在参议院辩论中，布克强调普通民众的声音，反对精英主义政策。"
+      },
+      {
+        "label": "#气候行动的支持者",
+        "definition": "作为参议院外交关系委员会成员，布克关注气候变化，推动国际合作应对全球挑战。"
+      },
+      {
+        "label": "#教育改革的倡导者",
+        "definition": "支持教育改革，提倡公平教育机会，关注低收入家庭的教育需求。"
+      },
+      {
+        "label": "#医疗改革的推动者",
+        "definition": "支持全民医保，关注医疗资源的公平分配，致力于降低医疗成本。"
+      },
+      {
+        "label": "#移民权益的捍卫者",
+        "definition": "在移民政策上，布克主张人道主义立场，反对种族歧视和不公正待遇。"
+      },
+      {
+        "label": "#科技伦理的关注者",
+        "definition": "关注人工智能和生物技术的发展，倡导科技发展应服务于全人类福祉。"
+      },
+      {
+        "label": "#社会企业的支持者",
+        "definition": "支持社会企业的发展，倡导商业与社会责任的结合，推动可持续发展。"
+      }
+    ]
+  },
+  {
+    "name": "Nikki Haley",
+    "username": "@NikkiHaley",
+    "field": "政治",
+    "taste_labels": [
+      {
+        "label": "#突破性女性领导",
+        "definition": "作为南卡罗来纳州首位女性州长，黑利打破性别界限，展现出色的政治领导力。"
+      },
+      {
+        "label": "#跨党派合作倡导者",
+        "definition": "在担任州长期间，黑利推动了多项跨党派合作的政策，强调政治合作的重要性。"
+      },
+      {
+        "label": "#国际舞台上的强硬发声者",
+        "definition": "作为联合国大使，黑利在国际事务中为美国利益发声，展现坚定立场。"
+      },
+      {
+        "label": "#移民背景的美国梦象征",
+        "definition": "印度裔移民家庭出身，黑利的成功故事成为美国梦的象征，激励了无数人。"
+      },
+      {
+        "label": "#保守派女性的代表人物",
+        "definition": "在保守派政治中，黑利作为女性代表，平衡了传统价值与现代政治的挑战。"
+      },
+      {
+        "label": "#外交政策的深思熟虑者",
+        "definition": "在外交事务中，黑利展现出深思熟虑的决策风格，注重战略布局。"
+      },
+      {
+        "label": "#教育改革的倡导者",
+        "definition": "在州长任内，黑利推动了多项教育改革，关注教育公平与质量。"
+      },
+      {
+        "label": "#经济发展的推动者",
+        "definition": "黑利在州长任内，推动了南卡罗来纳州的经济发展，吸引了大量投资。"
+      },
+      {
+        "label": "#社会问题的关注者",
+        "definition": "黑利关注社会问题，倡导解决贫困、种族不平等等社会不公现象。"
+      },
+      {
+        "label": "#未来政治的潜在领导者",
+        "definition": "作为年轻的政治人物，黑利被视为未来美国政治的潜在领导者。"
+      }
+    ]
+  },
+  {
+    "name": "Kevin Rudd",
+    "username": "@MrKRudd",
+    "field": "政治",
+    "taste_labels": [
+      {
+        "label": "#全球金融危机应对大师",
+        "definition": "在2008年全球金融危机爆发时，陆克文领导澳大利亚采取积极财政政策，成功避免了经济衰退，成为全球应对危机的典范。",
+        "source": "turn0search0"
+      },
+      {
+        "label": "#气候变化的坚定倡导者",
+        "definition": "陆克文政府在2007年通过了《京都议定书》，并提出了雄心勃勃的减排目标，尽管面临国内政治挑战，依然推动气候变化议程。",
+        "source": "turn0search0"
+      },
+      {
+        "label": "#原住民道歉的历史性举措",
+        "definition": "2008年，陆克文代表澳大利亚政府正式向原住民道歉，承认并为“被盗一代”儿童的强制拆散表示歉意，成为国家和解的象征。",
+        "source": "turn0search25"
+      },
+      {
+        "label": "#数字教育革命的推动者",
+        "definition": "陆克文政府推出了“数字教育革命”计划，为全国公立高中学生提供笔记本电脑，推动教育信息化。",
+        "source": "turn0search23"
+      },
+      {
+        "label": "#亚太地区安全合作的倡导者",
+        "definition": "在担任外交部长期间，陆克文推动将美国和俄罗斯纳入东亚峰会，倡导建立更广泛的亚太共同体，促进地区安全合作。",
+        "source": "turn0search4"
+      },
+      {
+        "label": "#外交政策的深思熟虑者",
+        "definition": "陆克文在外交事务中展现出深思熟虑的决策风格，注重战略布局，强调多边主义和国际合作。",
+        "source": "turn0search4"
+      },
+      {
+        "label": "#社交媒体的先行者",
+        "definition": "在2007年选举中，陆克文率先利用社交媒体与选民互动，建立了大量的在线支持者群体。",
+        "source": "turn0search7"
+      },
+      {
+        "label": "#健康改革的推动者",
+        "definition": "陆克文政府与各州政府合作，推动了国家健康和医院改革协议，实施了自Medicare以来最大的健康系统改革。",
+        "source": "turn0search10"
+      },
+      {
+        "label": "#教育公平的倡导者",
+        "definition": "陆克文政府关注教育公平，推动了多项教育改革，旨在为所有澳大利亚学生提供平等的教育机会。",
+        "source": "turn0search5"
+      },
+      {
+        "label": "#国际事务的积极参与者",
+        "definition": "陆克文在国际事务中积极参与，推动全球发展和贸易合作，特别关注气候变化和中美贸易紧张局势。",
+        "source": "turn0search6"
+      }
+    ]
+  },
+  {
+    "name": "Tulsi Gabbard",
+    "username": "@TulsiGabbard",
+    "field": "政治",
+    "taste_labels": [
+      {
+        "label": "#军事和平主义美学",
+        "definition": "强调和平与反战的价值观，拒绝暴力冲突，追求通过外交和对话解决问题的美学理念。"
+      },
+      {
+        "label": "#反建制直言风格",
+        "definition": "习惯直言不讳，敢于挑战主流政界和媒体的权威，表达对建制派的不满和批判，强调独立思考。"
+      },
+      {
+        "label": "#个人信念坚定",
+        "definition": "高度重视个人良知和信念的力量，视其为行动和决策的核心依据，不随波逐流，坚守价值底线。"
+      },
+      {
+        "label": "#草根亲民形象",
+        "definition": "塑造平易近人、接地气的公众形象，强调与普通民众的情感连接和共鸣，避免高高在上的官僚气息。"
+      },
+      {
+        "label": "#跨党派合作倾向",
+        "definition": "倾向于超越党派界限，推动政策共识和合作，强调务实主义和问题导向的政治操作风格。"
+      },
+      {
+        "label": "#宗教信仰影响力",
+        "definition": "宗教信仰深刻影响其世界观和价值观，体现出对道德、正义与宽容的追求，注重精神层面的力量。"
+      },
+      {
+        "label": "#女性领导力彰显",
+        "definition": "通过言行展现女性的坚韧与温柔并存的领导魅力，挑战传统性别角色和刻板印象，倡导性别平等。"
+      },
+      {
+        "label": "#外交现实主义视角",
+        "definition": "在外交和安全政策上持现实主义立场，强调国家利益和国际秩序的平衡，反对激进干预主义。"
+      },
+      {
+        "label": "#独立自主品牌构建",
+        "definition": "强调个性化的政治品牌，注重通过言论和行为建立独立自主的公众认知，区别于传统政客标签。"
+      },
+      {
+        "label": "#民粹主义与精英批判",
+        "definition": "批判传统政治精英和官僚体系，强调民众声音的重要性，诉诸基层利益和社会正义感。"
+      }
+    ]
+  },
+  {
+    "name": "Keir Starmer",
+    "username": "@Keir_Starmer",
+    "field": "政治",
+    "taste_labels": [
+      {
+        "label": "#法律理性主义",
+        "definition": "强调通过法律和制度来解决社会问题，信奉理性、程序正义和公平裁决的重要性。"
+      },
+      {
+        "label": "#务实中间派风格",
+        "definition": "追求政治上的中庸和平衡，避免极端立场，倾向于务实解决问题而非激烈对抗。"
+      },
+      {
+        "label": "#权威专家形象",
+        "definition": "塑造专业、可信赖的权威人物形象，强调自身法律和公共服务背景，赢得公众信任。"
+      },
+      {
+        "label": "#渐进改革思维",
+        "definition": "主张通过渐进式改革推动社会进步，避免激进变革，注重长期稳定与可持续发展。"
+      },
+      {
+        "label": "#公共服务优先",
+        "definition": "强调公共医疗、教育等基本服务的重要性，注重提升国家整体福祉和社会公平。"
+      },
+      {
+        "label": "#国际责任感",
+        "definition": "关注国际事务，倡导负责任的外交政策，致力于平衡国家利益与全球正义。"
+      },
+      {
+        "label": "#反极化修复者",
+        "definition": "致力于缓解社会分裂和政治极化，强调对话、合作与社会团结。"
+      },
+      {
+        "label": "#理性演讲风格",
+        "definition": "注重逻辑清晰、论据充分的表达，避免煽动性言辞，强调事实和数据支持。"
+      },
+      {
+        "label": "#形象管理精准",
+        "definition": "精细管理公众形象，保持稳重、专业的风范，避免争议和情绪化表现。"
+      },
+      {
+        "label": "#政策数据导向",
+        "definition": "注重通过数据和指标来衡量政策效果，强调科学决策和绩效评估。"
+      }
+    ]
+  },
+  {
+    "name": "Sanna Marin",
+    "username": "@MarinSanna",
+    "field": "政治",
+    "taste_labels": [
+      {
+        "label": "#未来女性主义",
+        "definition": "倡导性别平等与女性领导力，强调女性在政治和社会中的核心作用，打破传统性别角色束缚。"
+      },
+      {
+        "label": "#代际交替先锋",
+        "definition": "作为全球最年轻的女总理之一，代表着新一代政治领导人的崛起，推动政治生态的年轻化与多元化。"
+      },
+      {
+        "label": "#危机中的冷静决策",
+        "definition": "在全球疫情和地缘政治危机中，展现出冷静、果断的领导风格，迅速采取措施应对挑战。"
+      },
+      {
+        "label": "#绿色转型倡导者",
+        "definition": "推动芬兰成为全球首个实现碳中和的国家之一，强调可持续发展和环保政策的重要性。"
+      },
+      {
+        "label": "#民主价值捍卫者",
+        "definition": "在国际事务中，坚定支持民主、人权和法治，强调维护国际秩序与规则的重要性。"
+      },
+      {
+        "label": "#社交媒体亲和力",
+        "definition": "通过社交媒体与公众建立直接联系，展现个人魅力和亲民形象，打破传统政治沟通壁垒。"
+      },
+      {
+        "label": "#文化自信表达者",
+        "definition": "在个人生活和公共场合中，展现芬兰文化自信，强调本土文化在全球化中的独特价值。"
+      },
+      {
+        "label": "#跨国合作倡议者",
+        "definition": "积极推动国际合作，特别是在安全、气候和科技领域，强调多边主义和全球合作的重要性。"
+      },
+      {
+        "label": "#透明治理实践者",
+        "definition": "倡导政府透明度和责任制，推动政策制定过程的公开和公众参与，增强政府公信力。"
+      },
+      {
+        "label": "#个人生活公开者",
+        "definition": "在私人生活方面保持开放态度，勇于分享个人经历和挑战，展现真实、立体的公众形象。"
+      }
+    ]
+  }
+]

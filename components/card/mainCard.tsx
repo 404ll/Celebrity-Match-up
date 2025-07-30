@@ -1,18 +1,19 @@
 "use client";
 
 import React, { useRef } from "react";
-import { MainCardData } from "@/types/index";
+import { ShareCardData, TwitterUser } from "@/types/index";
 import { YouMindLogo } from "../icon/logo";
 import { generateShareUrl, generateTwitterShareUrl } from "@/utils/card-utils";
 import { DownloadButton } from "./downloadButton";
 
 interface MainCardProps {
-  data: MainCardData;
+  data: ShareCardData;
+  user: TwitterUser;
 }
 
-export const MainCard = ({ data }: MainCardProps) => {
+export const MainCard = ({ data, user }: MainCardProps) => {
   const cardContentRef = useRef<HTMLDivElement>(null);
-
+  console.log("mainCard", data);
   return (
     <div ref={cardContentRef} className="text-card-foreground shadow-lg overflow-hidden rounded-xl border border-gray-200 bg-white hover:shadow-xl transition-all duration-300">
       <div className="flex flex-col p-8 text-black">
@@ -20,15 +21,15 @@ export const MainCard = ({ data }: MainCardProps) => {
         <div className="flex flex-row justify-between items-start mb-6">
           <div className="flex items-center">
             <img
-              src={data.image}
-              alt={data.name}
+              src={user.profile_image_url}
+              alt={user.display_name}
               width={40}
               height={40}
               className="rounded-full border-2 border-gray-200 shadow-sm"
             />
             <div className="ml-4">
               <h1 className="text-sm font-semibold text-gray-900">
-                {data.name}
+                {user.display_name}
               </h1>
             </div>
           </div>
@@ -38,8 +39,8 @@ export const MainCard = ({ data }: MainCardProps) => {
             target="_blank"
             className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg shadow-sm hover:from-orange-600 hover:to-orange-700 transition-all duration-200 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
             href={generateTwitterShareUrl(
-              { name: data.name, analysis: data.analysis, id: data.id },
-              data.id ? generateShareUrl(data.id) : 'https://growth-kulpq3oxj-elemens-projects.vercel.app/twitter/' + data.name
+              { name: user.display_name, analysis: data.identity, id: user.username },
+              user.username ? generateShareUrl(user.username) : 'https://growth-kulpq3oxj-elemens-projects.vercel.app/twitter/' + user.username
             )}
           >
             <svg
@@ -62,11 +63,44 @@ export const MainCard = ({ data }: MainCardProps) => {
 
         <div className="flex flex-row justify-between items-start mb-6 w-full gap-4">
           {/* Analysis Content */}
-          <div className="bg-white border border-gray-200 rounded-lg p-6 mb-6 shadow-sm">
-            <p className="text-black leading-relaxed text-base">
-              {data.analysis}
-            </p>
+          <div className="bg-white border border-gray-200 rounded-lg p-6 mb-6 shadow-sm flex-1">
+            {/* 扫描结果标题 */}
+            <div className="mb-4">
+              <h2 className="text-lg font-semibold text-gray-800 mb-2">
+                经扫描，你的数字人格是以下三者的黄金共振体：
+              </h2>
+            </div>
+
+            {/* 匹配项 */}
+            <div className="space-y-4 mb-6">
+              {data.mix.map((item, index) => (
+                <div key={item.name} className="border-l-4 border-blue-500 pl-4">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="font-semibold text-gray-900">
+                      {item.name}
+                    </h3>
+                    <span className="text-sm text-green-500 bg-green-100 px-2 py-1 rounded">
+                      {item.percentage}%
+                    </span>
+                  </div>
+                  <p className="text-gray-700 text-sm">
+                    <span className="font-medium">「{item.trait}」</span>
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* 隐藏身份 */}
+            <div className="border-t border-gray-200 pt-4">
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                你的隐藏身份是：
+              </h3>
+              <p className="text-xl font-bold text-blue-600">
+                {data.identity}
+              </p>
+            </div>
           </div>
+
           <div>
             <img
               src={"/images/radar.png"}

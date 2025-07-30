@@ -1,25 +1,26 @@
 "use client";
 
 import React, { useRef, useState, useEffect } from "react";
-import { DeepMatchCardData } from "@/types/index";
+import { SoulFormulaData, TwitterUser } from "@/types/index";
 import Image from "next/image";
 import { YouMindLogo } from "../icon/logo";
 import { generateShareUrl, generateTwitterShareUrl } from "@/utils/card-utils";
 import { DownloadButton } from "./downloadButton";
 
 interface DeepMatchCardProps {
-  data: DeepMatchCardData;
+  analysisData: SoulFormulaData;
+  user: TwitterUser;
 }
 
-export const DeepMatchCard = ({ data }: DeepMatchCardProps) => {
+export const DeepMatchCard = ({ analysisData, user }: DeepMatchCardProps) => {
   const cardContentRef = useRef<HTMLDivElement>(null);
   const [shareUrl, setShareUrl] = useState('');
 
   useEffect(() => {
     // 在客户端设置shareUrl
-    setShareUrl(data.id ? generateShareUrl(data.id) : window.location.href);
-  }, [data.id]);
-
+    setShareUrl(user.username ? generateShareUrl(user.username) : window.location.href);
+  }, [user.username]);
+  console.log("deepMatchCard", analysisData);
   return (
     <div ref={cardContentRef} className="text-card-foreground shadow-lg overflow-hidden rounded-xl border border-gray-200 bg-white hover:shadow-xl transition-all duration-300">
       <div  className="flex flex-col p-8 text-black">
@@ -27,14 +28,14 @@ export const DeepMatchCard = ({ data }: DeepMatchCardProps) => {
         <div className="flex flex-row justify-between items-start mb-6">
           <div className="flex items-center">
             <Image
-              src={data.image}
-              alt={data.name}
+              src={user.profile_image_url}
+              alt={user.display_name}
               width={40}
               height={40}
               className="rounded-full border-2 border-gray-200 shadow-sm"
             />
             <div className="ml-4">
-              <h1 className="text-sm font-semibold text-gray-900">{data.name}</h1>
+              <h1 className="text-sm font-semibold text-gray-900">{user.display_name}</h1>
             </div>
           </div>
 
@@ -43,7 +44,7 @@ export const DeepMatchCard = ({ data }: DeepMatchCardProps) => {
             target="_blank"
             className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg shadow-sm hover:from-orange-600 hover:to-orange-700 transition-all duration-200 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
             href={generateTwitterShareUrl(
-              { name: data.name, analysis: data.deepMatch, id: data.id },
+              { name: user.display_name, analysis: analysisData.finalIdentity.identity, id: user.username },
               shareUrl
             )}
           >
@@ -67,7 +68,77 @@ export const DeepMatchCard = ({ data }: DeepMatchCardProps) => {
 
         {/* Analysis Content */}
         <div className="bg-gray-50 rounded-lg p-6 mb-6">
-          <p className="text-gray-700 leading-relaxed text-base">{data.deepMatch}</p>
+          {/* 灵魂配方标题 */}
+          <div className="mb-4">
+            <h2 className="text-lg font-semibold text-gray-800 mb-2">
+              {analysisData.title}
+            </h2>
+          </div>
+
+          {/* 警告提示 */}
+          <div className="mb-4 p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
+            <p className="text-yellow-800 text-sm font-medium">
+              ⚠️ {analysisData.alert}
+            </p>
+          </div>
+
+          {/* 引言 */}
+          <div className="mb-6">
+            <p className="text-gray-700 leading-relaxed text-base">
+              {analysisData.introduction}
+            </p>
+          </div>
+
+          {/* 灵魂标语 */}
+          <div className="mb-6 p-4 bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-lg">
+            <p className="text-center text-lg font-semibold text-blue-800">
+              "{analysisData.tagline}"
+            </p>
+          </div>
+
+          {/* 灵魂构成分析 */}
+          <div className="mb-6">
+            <h3 className="text-md font-semibold text-gray-800 mb-3">
+              灵魂构成分析：
+            </h3>
+            <div className="space-y-4">
+              {analysisData.matches.map((match, index) => (
+                <div key={index} className="border-l-4 border-indigo-500 pl-4">
+                  <div className="flex items-center justify-between mb-2">
+                    <h4 className="font-semibold text-gray-900">
+                      {match.name}
+                    </h4>
+                    <div className="flex items-center gap-2">
+                      <span className="text-sm text-indigo-500 bg-indigo-100 px-2 py-1 rounded">
+                        {match.percentage}%
+                      </span>
+                      <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
+                        {match.role}
+                      </span>
+                    </div>
+                  </div>
+                  <p className="text-gray-700 text-sm leading-relaxed">
+                    {match.explanation}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* 最终灵魂身份 */}
+          <div className="border-t border-gray-200 pt-4">
+            <h3 className="text-lg font-semibold text-gray-800 mb-2">
+              {analysisData.finalIdentity.title}
+            </h3>
+            <div className="text-center">
+              <p className="text-2xl font-bold text-indigo-600 mb-1">
+                {analysisData.finalIdentity.identity}
+              </p>
+              <p className="text-sm text-gray-500">
+                {analysisData.finalIdentity.identity_en}
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Footer */}
