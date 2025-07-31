@@ -19,7 +19,7 @@ export class TwitterService {
   }): Promise<ServiceResult<PaginatedResult<RawTwitterPost>>> {
     const cleanUsername = username.replace(/^@+/, "")
     
-    // 构建查询参数
+    // 构建查询参数 - 按照RapidAPI示例的格式
     const params = new URLSearchParams({
       username: cleanUsername,
       limit: (options?.limit || 40).toString(),
@@ -27,12 +27,14 @@ export class TwitterService {
       include_pinned: (options?.include_pinned ?? false).toString()
     })
     
+    // 如果有user_id，添加到参数中
     if (options?.user_id) {
-      params.append('user_id', options.user_id)
+      params.set('user_id', options.user_id)
     }
     
+    // 如果有continuation_token，添加到参数中
     if (options?.continuation_token) {
-      params.append('continuation_token', options.continuation_token)
+      params.set('continuation_token', options.continuation_token)
     }
 
     return new Promise((resolve) => {
@@ -60,13 +62,16 @@ export class TwitterService {
           if (res.statusCode && res.statusCode >= 200 && res.statusCode < 300) {
             try {
               const jsonData = JSON.parse(data)
+              // 客户端限制：确保不超过请求的limit
+              const requestedLimit = options?.limit || 40;
+              const limitedResults = jsonData.results?.slice(0, requestedLimit) || [];
               resolve({
                 // 请求成功
                 success: true,
                 data: {
-                  data: jsonData.results || [],
+                  data: limitedResults,
                   continuation_token: jsonData.continuation_token,
-                  total_count: jsonData.results?.length || 0
+                  total_count: limitedResults.length
                 }
               })
             } catch (parseError) {

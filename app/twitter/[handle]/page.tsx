@@ -3,15 +3,15 @@ import { Footer } from "@/components/footer";
 import { DetailNavbar } from "@/components/navbar/detailNavbar";
 import { YoumindCard } from "@/components/card/youmindCard";
 import { TwitterService } from "@/lib/twitter-service";
-// import { transformPostsForAI } from "@/utils/twitter-transformer";
-// import { AIAnalysisService } from "@/lib/ai-analysis-service";
+import { transformPostsForAI } from "@/utils/twitter-transformer";
 import { getTwitterHighQualityAvatar } from "@/lib/utils";
 import { notFound } from "next/navigation";
 import { MainCard } from "@/components/card/mainCard";
-import { TwitterUser } from "@/types/index";
+import { TwitterUser, UserInfo } from "@/types/index";
 import { DeepMatchCard } from "@/components/card/deepMatch";
 import { PersonalityCard } from "@/components/card/personalityCard";
-import { mockAnalysis } from "@/mock";
+// import { mockAnalysis } from "@/mock";
+import { AIAnalysisService } from "@/lib/ai-analysis-service";
 interface PageProps {
   params: Promise<{
     handle: string;
@@ -23,11 +23,11 @@ export default async function TwitterAnalysisPage({ params }: PageProps) {
 
   try {
     const twitterService = new TwitterService();
-    // const aiService = new AIAnalysisService();
+    const aiService = new AIAnalysisService();
 
     // 获取推文数据
     const tweetsResult = await twitterService.getUserPost(handle, {
-      limit: 20,
+      limit: 40,
       include_replies: false,
       include_pinned: true,
     });
@@ -38,7 +38,8 @@ export default async function TwitterAnalysisPage({ params }: PageProps) {
 
     // 从第一条推文中提取用户信息
     const userFromTweet = tweetsResult.data.data[0].user;
-    const avatar = await getTwitterHighQualityAvatar(userFromTweet.profile_pic_url);
+    //头像高清化
+    const avatar = getTwitterHighQualityAvatar(userFromTweet.profile_pic_url);
 
     // 构建用户信息
     const userDetails: TwitterUser = {
@@ -48,27 +49,30 @@ export default async function TwitterAnalysisPage({ params }: PageProps) {
       description: userFromTweet.description,
     };
 
-    // // 转换推文为自定义格式
-    // const transformedTweets = transformPostsForAI(tweetsResult.data.data);
-    // console.log("transformedTweets", transformedTweets);
-    // // 获取 推文 分析
-    // const tweetsAnalysis = await aiService.analyzeUserTweets(transformedTweets);
+    // 转换推文为自定义格式
+    const transformedTweets = transformPostsForAI(tweetsResult.data.data);
 
-    // // 检查分析是否成功
-    // if (!tweetsAnalysis.success || !tweetsAnalysis.analysis) {
-    //   throw new Error(tweetsAnalysis.error || "Analysis failed");
-    // }
+    const userinfo: UserInfo = {
+      description: userFromTweet.description,
+      tweets: transformedTweets,
+    };
 
-    // // 分解AI分析结果并转换为组件需要的类型
-    // const analysis = tweetsAnalysis.analysis;
+    // 获取 推文 分析
+    const tweetsAnalysis = await aiService.analyzeUserTweetsWithFieldAnalysis(userinfo);
 
-    // // 直接使用AI分析结果
-    // const shareCardData = analysis.shareCard;
-    // const deepDiveData = analysis.deepDive;
-    // const soulFormulaData = analysis.soulFormula;
-    const shareCardData = mockAnalysis.shareCard;
-    const deepDiveData = mockAnalysis.deepDive;
-    const soulFormulaData = mockAnalysis.soulFormula;
+    console.log("终极分析结果", tweetsAnalysis);
+    // 检查分析是否成功
+    if (!tweetsAnalysis.success || !tweetsAnalysis.analysis) {
+      throw new Error(tweetsAnalysis.error || "Analysis failed");
+    }
+
+    // 分解AI分析结果并转换为组件需要的类型
+    const analysis = tweetsAnalysis.analysis;
+
+    // 直接使用AI分析结果
+    const shareCardData = analysis.shareCard;
+    const deepDiveData = analysis.deepDive;
+    const soulFormulaData = analysis.soulFormula;
 
     // // 获取 用户 分析
     return (
@@ -105,7 +109,10 @@ export default async function TwitterAnalysisPage({ params }: PageProps) {
                 <PersonalityCard data={deepDiveData} user={userDetails} />
               </div>
               <div>
-                <DeepMatchCard analysisData={soulFormulaData} user={userDetails} />
+                <DeepMatchCard
+                  analysisData={soulFormulaData}
+                  user={userDetails}
+                />
               </div>
             </div>
 

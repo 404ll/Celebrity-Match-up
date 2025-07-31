@@ -1,0 +1,378 @@
+[
+  {
+    "name": "Elon Musk",
+    "username": "@elonmusk",
+    "field": "科技",
+    "taste_labels": [
+      {
+        "label": "#工程型浪漫主义 (Romanticism of Engineering)",
+        "definition": "相信最宏大的浪漫，不是诗或艺术，而是亲手把火箭送上太空。真正的梦想，必须能被制造出来。"
+      },
+      {
+        "label": "#激进实用主义 (Radical Pragmatism)",
+        "definition": "不信空谈，只信“能不能做出来”。任何宏愿若不能落地执行，都是浪费时间的幻想。"
+      },
+      {
+        "label": "#高维叙事控制术 (High-Dimensional Narrative Control)",
+        "definition": "同时操控科技愿景、媒体话语与资本想象，在多个舆论维度构建自己的“主宇宙”。"
+      },
+      {
+        "label": "#技术即权力 (Technology as Power)",
+        "definition": "将技术视作新的统治结构，不靠传统权威赢得世界，而是靠造出别人无法模仿的东西。"
+      },
+      {
+        "label": "#高噪点自我表达 (Noisy Self-Expression)",
+        "definition": "在信息洪流中不断发声、出奇、搞怪，是为了确保自己的信号从未消失，永远置顶世界的注意力。"
+      },
+      {
+        "label": "#硬核理想主义 (Hardcore Idealism)",
+        "definition": "理想主义不是空谈善意，而是用超强执行力去完成看似不可能的事，比如把人类变成多星球物种。"
+      },
+      {
+        "label": "#品牌即人类叙事节点 (Brand as Narrative Node)",
+        "definition": "将个体品牌推向人类科技叙事的中心，使“我是谁”与“世界将去向何方”形成绑定关系。"
+      },
+      {
+        "label": "#模因化领袖美学 (Meme Leadership Aesthetics)",
+        "definition": "用模因、玩笑和表情包构建统治力，领导不再是严肃而高冷，而是生动、有趣且病毒式传播。"
+      },
+      {
+        "label": "#系统级赌徒 (Systemic Gambler)",
+        "definition": "不押注小概率事件，而是一次性下注整个系统级问题，比如能源、交通、通信和行星迁徙。"
+      },
+      {
+        "label": "#控制混乱的游戏者 (Player of Controlled Chaos)",
+        "definition": "制造混乱以创造机会，在不可预测中游刃有余。真正的策略，是让一切看起来像是意外。"
+      }
+    ]
+  },
+  {
+    "name": "Jack Dorsey",
+    "username": "@jack",
+    "field": "科技",
+    "taste_labels": [
+      {
+        "label": "#极简即真理 (Minimalism as Truth)",
+        "definition": "在他眼中，复杂是腐败的温床。删减到只剩本质，是设计，也是哲学。"
+      },
+      {
+        "label": "#禅式技术审美 (Zen-Tech Aesthetic)",
+        "definition": "技术不该喧哗，它应像冥想般安静。代码、产品与心灵，应趋同为一种秩序。"
+      },
+      {
+        "label": "#去中心化浪漫主义 (Decentralized Romanticism)",
+        "definition": "对抗控制的浪漫不是情绪，而是架构。他相信权力的出路，是结构的瓦解。"
+      },
+      {
+        "label": "#匿名主义情结 (Anonymity Affection)",
+        "definition": "不迷恋个人身份，而崇尚去名化的表达。自由必须从去特征化开始。"
+      },
+      {
+        "label": "#沉默是领导力 (Silence-as-Leadership)",
+        "definition": "不争、不辩、不喊话。他的影响力来自沉默，在场但不发声的极致张力。"
+      },
+      {
+        "label": "#比特币即信仰 (Bitcoin as Faith)",
+        "definition": "他不是投资比特币，而是皈依比特币。它是货币，更是秩序、正义与救赎。"
+      },
+      {
+        "label": "#长时段意识 (Long-Timeframe Consciousness)",
+        "definition": "不追热点、不抢风口。他只看 50 年后的范式，行动节奏慢，却走在最前。"
+      },
+      {
+        "label": "#身份去特化 (De-Personalization Taste)",
+        "definition": "不靠外形、风格或标签建立身份。他的存在感来自结构，而非个体表演。"
+      },
+      {
+        "label": "#反抗形式权威 (Anti-Formal Authority)",
+        "definition": "对传统权威形式保持冷感。越去中心、越非正式，他越信任。"
+      },
+      {
+        "label": "#苦行主义美德 (Ascetic Virtue Code)",
+        "definition": "热衷断食、冷水澡、冥想与极简生活。他相信自我克制才是现代人的尊严感。"
+      }
+    ]
+  },
+  {
+    "name": "Balaji Srinivasan",
+    "username": "@balajis",
+    "field": "科技",
+    "taste_labels": [
+      {
+        "label": "#文明可编程论 (Programmable Civilization Belief)",
+        "definition": "认为社会不是注定混乱的，而是可以像软件一样被设计、迭代、升级的结构体。"
+      },
+      {
+        "label": "#网络国家构建美学 (Network State Aesthetic)",
+        "definition": "用互联网逻辑重写国家概念。地图边界失效，社区共识即领土，协议即宪法。"
+      },
+      {
+        "label": "#代码胜于法律 (Code > Law)",
+        "definition": "他不信传统法治能解决未来问题，信的只有智能合约——执行即正义。"
+      },
+      {
+        "label": "#链上真相崇拜 (On-Chain Truthism)",
+        "definition": "真相不应靠记者、专家或政府裁定。真相应上链，永久公开，抗审查。"
+      },
+      {
+        "label": "#预言式写作 (Prophetic Writing Style)",
+        "definition": "他的写作不是信息传递，而是社会架构图预发布。段落像算法，句子是协议。"
+      },
+      {
+        "label": "#加密即主权 (Crypto-as-Sovereignty)",
+        "definition": "钱包比护照重要，链上身份比国籍真实。主权将被技术重写，不由宪法赋予。"
+      },
+      {
+        "label": "#系统性偏执 (Systemic Paranoia)",
+        "definition": "不轻信任何中心化机构。他的世界模型自带防火墙，假设一切权威都可能腐败。"
+      },
+      {
+        "label": "#信息战争生存论 (Infowar Survivalism)",
+        "definition": "他把认知战视作现实战争的前奏。谁控制信息叙事，谁决定系统终局。"
+      },
+      {
+        "label": "#高维逃逸幻想 (Escape to Higher Order)",
+        "definition": "他的思想常常从国家级出逃，飞往网络文明、链上身份、数字城市等高维结构。"
+      },
+      {
+        "label": "#协议式信仰系统 (Protocolized Faith)",
+        "definition": "他的信仰是可部署的。他不是传播理想，而是创建模板、格式和运行机制。"
+      }
+    ]
+  },
+  {
+    "name": "Sam Altman",
+    "username": "@sama",
+    "field": "AI",
+    "taste_labels": [
+      {
+        "label": "#权力即工具主义 (Instrumental Power Ethos)",
+        "definition": "不沉迷权力本身，只在乎它是否足够“可用”来执行未来工程。实用比姿态重要。"
+      },
+      {
+        "label": "#温和型末日主义 (Soft Doomer Aesthetic)",
+        "definition": "深信世界可能崩溃，但语气始终温和。灾难是脚本之一，不是情绪主语。"
+      },
+      {
+        "label": "#构建者统治论 (Builder Supremacy)",
+        "definition": "世界应由造物者治理。写代码、造公司、部署模型的人，才应掌握话语权。"
+      },
+      {
+        "label": "#超长期演化意识 (Ultra-Long Horizon Thinking)",
+        "definition": "所有决策的视角都基于几十年后。创业不是盈利机器，而是文明输入点。"
+      },
+      {
+        "label": "#模糊型领导力 (Ambiguous Leadership Style)",
+        "definition": "他不是发号施令者，而是系统诱导者。不直接回答问题，却让方向清晰。"
+      },
+      {
+        "label": "#现实增强叙事 (Augmented Reality Framing)",
+        "definition": "对现实的认知自带一层建构语境。他不讨论当下，而默认系统可被重写。"
+      },
+      {
+        "label": "#理想主义冷启动 (Idealism with Cold Boot)",
+        "definition": "不靠热情或道德诉求启动未来，而靠资源调度、组织设计和资本运算冷启动理想。"
+      },
+      {
+        "label": "#通用智能即宿命 (AGI-as-Destiny)",
+        "definition": "AGI 不是是否的问题，而是何时的问题。他做的是准备工作，不是选择题。"
+      },
+      {
+        "label": "#人格抽象工程 (Abstracted Self-Brand)",
+        "definition": "他在品牌上做减法。抽象掉风格、情绪和立场，让自己成为中性操作系统。"
+      },
+      {
+        "label": "#信任即资源聚合器 (Trust as Capital Aggregator)",
+        "definition": "他的信用不是建立在亲和力上，而是“他知道自己在做什么”的集体判断逻辑。"
+      }
+    ]
+  },
+  {
+    "name": "Patrick Collison",
+    "username": "@patrickc",
+    "field": "科技",
+    "taste_labels": [
+      {
+        "label": "#极简至上主义 (Minimalist Supremacy)",
+        "definition": "崇尚极简设计和表达，认为复杂问题应通过最简洁的解决方案达成，摒弃冗余。"
+      },
+      {
+        "label": "#科学理性美学 (Scientific Rational Aesthetics)",
+        "definition": "以科学精神为核心，偏爱数据驱动和逻辑严密的决策方式，拒绝无根据的假设。"
+      },
+      {
+        "label": "#速度狂热 (Velocity Mania)",
+        "definition": "对快速执行和迭代有极度执着，认为速度是创业和创新的核心竞争力。"
+      },
+      {
+        "label": "#深度专注力 (Deep Focus Ethos)",
+        "definition": "高度强调专注力的重要性，抵制分心，追求长时间深度思考和工作。"
+      },
+      {
+        "label": "#全球视野驱动 (Global Vision Drive)",
+        "definition": "眼界不仅限于本土或行业，而是面向全球，思考如何改变整个世界。"
+      },
+      {
+        "label": "#技术赋能信仰 (Faith in Tech Empowerment)",
+        "definition": "坚信技术是解决复杂社会问题的关键动力，创业即为技术赋能社会的过程。"
+      },
+      {
+        "label": "#谦逊科学家心态 (Humble Scientist Mindset)",
+        "definition": "即使身处高位，依旧保持科学家般的谦逊，重视试错和持续学习。"
+      },
+      {
+        "label": "#反炫耀资本主义 (Anti-Showy Capitalism)",
+        "definition": "拒绝浮夸和炫耀财富，更注重实实在在的产品和价值创造。"
+      },
+      {
+        "label": "#未来架构师视角 (Future Architect Perspective)",
+        "definition": "不仅关注当前成功，更重视为未来社会和经济架构搭建基石。"
+      },
+      {
+        "label": "#无声影响力 (Quiet Influence)",
+        "definition": "通过稳健的成果和持续的贡献来影响世界，而非激烈表达和公开争论。"
+      }
+    ]
+  },
+  {
+    "name": "Jessica Lessin",
+    "username": "@jessicalessin",
+    "field": "科技媒体",
+    "taste_labels": [
+      {
+        "label": "#深度独立报道 (Deep Independent Reporting)",
+        "definition": "坚持独立思考和深入调查，拒绝浮于表面的新闻报道。"
+      },
+      {
+        "label": "#科技本质洞察 (Insight into Tech Essence)",
+        "definition": "善于捕捉科技行业背后的核心趋势和真实动因。"
+      },
+      {
+        "label": "#高标准新闻伦理 (High Standards of Journalism Ethics)",
+        "definition": "严守职业操守，确保报道准确、公正且可信赖。"
+      },
+      {
+        "label": "#创业者视角 (Entrepreneurial Perspective)",
+        "definition": "以创业者身份思考新闻媒体的未来与变革。"
+      },
+      {
+        "label": "#内容质感优先 (Content Quality Priority)",
+        "definition": "强调内容的深度与质感胜过数量和流量。"
+      },
+      {
+        "label": "#前瞻性行业判断 (Forward-Looking Industry Judgment)",
+        "definition": "具备预测科技行业发展趋势的敏锐洞察力。"
+      },
+      {
+        "label": "#受众信任构建 (Building Audience Trust)",
+        "definition": "致力于通过真实、透明的报道赢得读者的长期信赖。"
+      },
+      {
+        "label": "#平台独立运营 (Independent Platform Operation)",
+        "definition": "坚持新闻平台的自主性，拒绝外部干预和商业压力。"
+      },
+      {
+        "label": "#创新内容分发 (Innovative Content Distribution)",
+        "definition": "探索多渠道传播方式，提升内容的影响力和覆盖面。"
+      },
+      {
+        "label": "#女性科技领导力 (Female Leadership in Tech Media)",
+        "definition": "以女性视角推动科技新闻领域的多元化和包容性。"
+      }
+    ]
+  },
+  {
+    "name": "Emad Mustak",
+    "username": "@EMostaque",
+    "field": "AI",
+    "taste_labels": [
+      {
+        "label": "#开源信仰者 (Open Source Evangelist)",
+        "definition": "坚信 AI 应该是开放和共享的，致力于通过开源项目让技术普惠全球。"
+      },
+      {
+        "label": "#去中心化倡导者 (Decentralization Advocate)",
+        "definition": "主张 AI 的去中心化发展，认为集中化的 AI 模型可能带来权力滥用。"
+      },
+      {
+        "label": "#挑战传统巨头 (Challenger to Big Tech)",
+        "definition": "勇于挑战行业巨头，如 OpenAI 和 Google，推动 AI 领域的多元化竞争。"
+      },
+      {
+        "label": "#技术与人文融合 (Techno-Humanist)",
+        "definition": "将技术发展与人类福祉紧密结合，关注 AI 对社会的深远影响。"
+      },
+      {
+        "label": "#风险投资者 (Risk Taker)",
+        "definition": "敢于在高风险领域投资，如 AI 和开源项目，追求技术创新的边界。"
+      },
+      {
+        "label": "#企业家精神 (Entrepreneurial Spirit)",
+        "definition": "具备强烈的创业精神，能够在不确定的环境中发现机会并付诸实践。"
+      },
+      {
+        "label": "#全球视野 (Global Visionary)",
+        "definition": "拥有全球视野，致力于通过 AI 技术解决全球性问题，如气候变化和教育不平等。"
+      },
+      {
+        "label": "#批判性思维者 (Critical Thinker)",
+        "definition": "对 AI 发展中的伦理和社会问题持批判态度，强调技术应服务于全人类。"
+      },
+      {
+        "label": "#教育倡导者 (Education Advocate)",
+        "definition": "关注 AI 教育的普及，推动全球范围内的 AI 教育资源共享。"
+      },
+      {
+        "label": "#未来主义者 (Futurist)",
+        "definition": "以未来为导向，探索 AI 技术在未来社会中的潜在角色和影响。"
+      }
+    ]
+  },
+  {
+    "name": "Daniella Amodei",
+    "username": "@daniamodei",
+    "field": "AI",
+    "taste_labels": [
+      {
+        "label": "#人本AI守护者 (Human-Centric AI Guardian)",
+        "definition": "坚信 AI 应以人为本，致力于将人类价值观嵌入技术核心，确保 AI 的安全与可控。"
+      },
+      {
+        "label": "#开源透明倡导者 (Open & Transparent Advocate)",
+        "definition": "倡导 AI 研究的开放性和透明度，推动技术进步与社会责任并行。"
+      },
+      {
+        "label": "#伦理驱动决策者 (Ethics-Driven Decision Maker)",
+        "definition": "在 AI 发展中始终坚持伦理原则，确保技术发展不偏离人类福祉。"
+      },
+      {
+        "label": "#文化塑造者 (Culture Shaper)",
+        "definition": "在快速发展的企业中，注重建立和维护健康的公司文化，促进团队协作与创新。"
+      },
+      {
+        "label": "#技术与人文融合者 (Tech-Humanism Integrator)",
+        "definition": "将技术发展与人文学科相结合，关注 AI 对社会和人类的深远影响。"
+      },
+      {
+        "label": "#风险管理专家 (Risk Management Expert)",
+        "definition": "在 AI 研发中，注重识别和管理潜在风险，确保技术的安全性和可靠性。"
+      },
+      {
+        "label": "#女性科技领袖 (Female Tech Leader)",
+        "definition": "作为女性领导者，在科技领域中树立榜样，推动性别平衡与多样性。"
+      },
+      {
+        "label": "#战略远见者 (Strategic Visionary)",
+        "definition": "具备前瞻性的战略眼光，引领公司在 AI 领域稳步发展，面对未来挑战。"
+      },
+      {
+        "label": "#教育与知识传播者 (Educator & Knowledge Disseminator)",
+        "definition": "致力于 AI 知识的普及与教育，推动公众对 AI 技术的理解与接受。"
+      },
+      {
+        "label": "#社会责任践行者 (Social Responsibility Practitioner)",
+        "definition": "在 AI 发展中，始终关注社会责任，确保技术进步造福全人类。"
+      }
+    ]
+  }
+]

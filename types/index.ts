@@ -1,9 +1,9 @@
 export interface TwitterPost {
-  tweet_id: string;
+  tweet_id?: string;
   text: string;
-  retweet_status: { user: { username: string } } | null;
-  quoted_status: { user: { username: string } } | null;
-  language: string;
+  retweet_status: { username: string } | null;
+  quoted_status: { username: string } | null;
+  language?: string;
 }
 
 export interface TwitterUser {
@@ -11,6 +11,11 @@ export interface TwitterUser {
   display_name: string;
   profile_image_url: string;
   description: string;
+}
+
+export interface UserInfo {
+  description: string;
+  tweets: TwitterPost[];
 }
 
 // AI分析结果相关类型
@@ -55,6 +60,10 @@ export interface AIServiceResult {
   success: boolean;
   analysis?: AIAnalysisResult;
   error?: string;
+}
+
+export interface UserFieldResult {
+  domains: string[];
 }
 
 // Twitter API 响应类型

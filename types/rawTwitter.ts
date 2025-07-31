@@ -24,8 +24,8 @@
       description: string
       number_of_tweets: number
     }
-    retweet_status?: {user:string}
-    quoted_status?: {user:string}
+    retweet_status?: {user: {username: string}}
+    quoted_status?: {user: {username: string}}
     extended_entities?: {
       media: Array<{
         type: string
