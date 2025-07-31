@@ -28,7 +28,7 @@ export const MainCard = ({ data, user }: MainCardProps) => {
               className="rounded-full border-2 border-gray-200 shadow-sm"
             />
             <div className="ml-4">
-              <h1 className="text-sm font-semibold text-gray-900">
+              <h1 className="text-lg font-semibold text-gray-900">
                 {user.display_name}
               </h1>
             </div>
@@ -76,14 +76,14 @@ export const MainCard = ({ data, user }: MainCardProps) => {
               {data.mix.map((item, index) => (
                 <div key={item.name} className="border-l-4 border-blue-500 pl-4">
                   <div className="flex items-center justify-between mb-2">
-                    <h3 className="font-semibold text-gray-900">
+                    <h3 className="font-semibold text-gray-900 text-lg">
                       {item.name}
                     </h3>
-                    <span className="text-sm text-green-500 bg-green-100 px-2 py-1 rounded">
+                    <span className="text-lg text-green-500 bg-green-100 px-2 py-1 rounded">
                       {item.percentage}%
                     </span>
                   </div>
-                  <p className="text-gray-700 text-sm">
+                  <p className="text-gray-700 text-lg">
                     <span className="font-medium">「{item.trait}」</span>
                   </p>
                 </div>

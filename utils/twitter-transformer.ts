@@ -6,8 +6,8 @@ function transformPost(rawPost: RawTwitterPost): TwitterPost {
     tweet_id: rawPost.tweet_id,
     text: rawPost.text,
     language: rawPost.language,
-    retweet_status: rawPost.retweet_status ? {user:rawPost.retweet_status.user} : null,
-    quoted_status: rawPost.quoted_status ? {user:rawPost.quoted_status.user} : null
+    retweet_status: rawPost.retweet_status ? {user: {username: rawPost.retweet_status.user}} : null,
+    quoted_status: rawPost.quoted_status ? {user: {username: rawPost.quoted_status.user}} : null
   }
 }
 

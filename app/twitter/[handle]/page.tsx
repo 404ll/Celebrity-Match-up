@@ -48,9 +48,9 @@ export default async function TwitterAnalysisPage({ params }: PageProps) {
       description: userFromTweet.description,
     };
 
-    // 转换推文为自定义格式
-    const transformedTweets = transformPostsForAI(tweetsResult.data.data);
-
+    // // 转换推文为自定义格式
+    // const transformedTweets = transformPostsForAI(tweetsResult.data.data);
+    // console.log("transformedTweets", transformedTweets);
     // // 获取 推文 分析
     // const tweetsAnalysis = await aiService.analyzeUserTweets(transformedTweets);
 
@@ -72,12 +72,12 @@ export default async function TwitterAnalysisPage({ params }: PageProps) {
 
     // // 获取 用户 分析
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 px-4 py-28 sm:px-12 md:px-28 md:pt-24 to-purple-50">
         <div className="fixed top-0 left-0 right-0 z-50">
           <DetailNavbar />
         </div>
 
-        <div className="flex-1 flex flex-col pt-24 max-w-4xl mx-auto px-4">
+        <div className="flex-1 flex flex-col pt-24 w-full mx-auto px-4">
           {/* 主标题区域 */}
           <div className="text-center mb-12">
             <h1 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">

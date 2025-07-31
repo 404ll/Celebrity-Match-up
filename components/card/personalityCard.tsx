@@ -67,19 +67,6 @@ export const PersonalityCard = ({ data, user }: PersonalityCardProps) => {
 
         {/* Analysis Content */}
         <div className="bg-gray-50 rounded-lg p-6 mb-6">
-          {/* 深度解析标题 */}
-          <div className="mb-4">
-            <h2 className="text-lg font-semibold text-gray-800 mb-2">
-              {data.title}
-            </h2>
-          </div>
-
-          {/* 引言 */}
-          <div className="mb-6">
-            <p className="text-gray-700 leading-relaxed text-base italic">
-              {data.introduction}
-            </p>
-          </div>
 
           {/* 三个关键点 */}
           <div className="space-y-4 mb-6">

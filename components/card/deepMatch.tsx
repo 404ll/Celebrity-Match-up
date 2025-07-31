@@ -69,25 +69,25 @@ export const DeepMatchCard = ({ analysisData, user }: DeepMatchCardProps) => {
         {/* Analysis Content */}
         <div className="bg-gray-50 rounded-lg p-6 mb-6">
           {/* 灵魂配方标题 */}
-          <div className="mb-4">
+          {/* <div className="mb-4">
             <h2 className="text-lg font-semibold text-gray-800 mb-2">
               {analysisData.title}
             </h2>
-          </div>
+          </div> */}
 
           {/* 警告提示 */}
-          <div className="mb-4 p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
+          {/* <div className="mb-4 p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
             <p className="text-yellow-800 text-sm font-medium">
               ⚠️ {analysisData.alert}
             </p>
-          </div>
+          </div> */}
 
           {/* 引言 */}
-          <div className="mb-6">
+          {/* <div className="mb-6">
             <p className="text-gray-700 leading-relaxed text-base">
               {analysisData.introduction}
             </p>
-          </div>
+          </div> */}
 
           {/* 灵魂标语 */}
           <div className="mb-6 p-4 bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-lg">
@@ -122,21 +122,6 @@ export const DeepMatchCard = ({ analysisData, user }: DeepMatchCardProps) => {
                   </p>
                 </div>
               ))}
-            </div>
-          </div>
-
-          {/* 最终灵魂身份 */}
-          <div className="border-t border-gray-200 pt-4">
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">
-              {analysisData.finalIdentity.title}
-            </h3>
-            <div className="text-center">
-              <p className="text-2xl font-bold text-indigo-600 mb-1">
-                {analysisData.finalIdentity.identity}
-              </p>
-              <p className="text-sm text-gray-500">
-                {analysisData.finalIdentity.identity_en}
-              </p>
             </div>
           </div>
         </div>

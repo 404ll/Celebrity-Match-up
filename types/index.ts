@@ -1,8 +1,8 @@
 export interface TwitterPost {
   tweet_id: string;
   text: string;
-  retweet_status: { user: string } | null;
-  quoted_status: { user: string } | null;
+  retweet_status: { user: { username: string } } | null;
+  quoted_status: { user: { username: string } } | null;
   language: string;
 }
 
@@ -15,19 +15,15 @@ export interface TwitterUser {
 
 // AI分析结果相关类型
 export interface ShareCardData {
-  title: string;
   mix: Array<{
     name: string;
     percentage: number;
     trait: string;
   }>;
   identity: string;
-  callToAction: string;
 }
 
 export interface DeepDiveData {
-  title: string;
-  introduction: string;
   points: Array<{
     title: string;
     body: string;
@@ -36,9 +32,6 @@ export interface DeepDiveData {
 }
 
 export interface SoulFormulaData {
-  title: string;
-  alert: string;
-  introduction: string;
   tagline: string;
   matches: Array<{
     name: string;
@@ -47,7 +40,6 @@ export interface SoulFormulaData {
     explanation: string;
   }>;
   finalIdentity: {
-    title: string;
     identity: string;
     identity_en: string;
   };
