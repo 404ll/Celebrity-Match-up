@@ -7,12 +7,12 @@ import { YouMindLogo } from "../icon/logo";
 import { generateShareUrl, generateTwitterShareUrl } from "@/utils/card-utils";
 import { DownloadButton } from "./downloadButton";
 
-interface DeepMatchCardProps {
+interface SoulFormulaCardProps {
   analysisData: SoulFormulaData;
   user: TwitterUser;
 }
 
-export const DeepMatchCard = ({ analysisData, user }: DeepMatchCardProps) => {
+export const SoulFormulaCard = ({ analysisData, user }: SoulFormulaCardProps) => {
   const cardContentRef = useRef<HTMLDivElement>(null);
   const [shareUrl, setShareUrl] = useState('');
 
@@ -20,7 +20,8 @@ export const DeepMatchCard = ({ analysisData, user }: DeepMatchCardProps) => {
     // 在客户端设置shareUrl
     setShareUrl(user.username ? generateShareUrl(user.username) : window.location.href);
   }, [user.username]);
-  console.log("deepMatchCard", analysisData);
+
+  // console.log("deepMatchCard", analysisData);
   return (
     <div ref={cardContentRef} className="text-card-foreground shadow-lg overflow-hidden rounded-xl border border-gray-200 bg-white hover:shadow-xl transition-all duration-300">
       <div  className="flex flex-col p-8 text-black">
@@ -35,7 +36,7 @@ export const DeepMatchCard = ({ analysisData, user }: DeepMatchCardProps) => {
               className="rounded-full border-2 border-gray-200 shadow-sm"
             />
             <div className="ml-4">
-              <h1 className="text-sm font-semibold text-gray-900">{user.display_name}</h1>
+              <h1 className="text-lg font-bold text-gray-900">{user.display_name}</h1>
             </div>
           </div>
 
@@ -68,27 +69,7 @@ export const DeepMatchCard = ({ analysisData, user }: DeepMatchCardProps) => {
 
         {/* Analysis Content */}
         <div className="bg-gray-50 rounded-lg p-6 mb-6">
-          {/* 灵魂配方标题 */}
-          {/* <div className="mb-4">
-            <h2 className="text-lg font-semibold text-gray-800 mb-2">
-              {analysisData.title}
-            </h2>
-          </div> */}
-
-          {/* 警告提示 */}
-          {/* <div className="mb-4 p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
-            <p className="text-yellow-800 text-sm font-medium">
-              ⚠️ {analysisData.alert}
-            </p>
-          </div> */}
-
-          {/* 引言 */}
-          {/* <div className="mb-6">
-            <p className="text-gray-700 leading-relaxed text-base">
-              {analysisData.introduction}
-            </p>
-          </div> */}
-
+         
           {/* 灵魂标语 */}
           <div className="mb-6 p-4 bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-lg">
             <p className="text-center text-lg font-semibold text-blue-800">
@@ -127,7 +108,7 @@ export const DeepMatchCard = ({ analysisData, user }: DeepMatchCardProps) => {
         </div>
 
         {/* Footer */}
-        <div className="flex flex-row items-center justify-end pt-4 border-t border-gray-100">
+        <div className="flex flex-row items-center justify-end pt-2 border-t border-gray-100">
           <div className="flex items-center gap-2">
             <YouMindLogo/>
             <p className="text-sm text-gray-600 font-medium">Write something good.</p>

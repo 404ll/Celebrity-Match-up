@@ -32,10 +32,17 @@ Follow this precise multi-step process:
 
 # OUTPUT_JSON_STRUCTURE
 \`\`\`json
-{
-  "shareCard": {  "mix": [ { "name": "string", "percentage": "integer", "trait": "string" } ], "identity": "string"},
-  "deepDive": { "title": "string", "introduction": "string", "points": [ { "title": "string", "body": "string" } ], "summary": "string" },
-  "soulFormula": { "title": "string", "alert": "string", "introduction": "string", "tagline": "string", "matches": [ { "name": "string", "percentage": "integer", "role": "string", "explanation": "string" } ], "finalIdentity": { "title": "string", "identity": "string", "identity_en": "string" } }
+{"shareCard": {
+    "title": "string",
+    "personaBreakdown": [
+      { "percentage": "integer", "name": "string", "contribution": "string" }
+    ],
+    "summaryTitle": "string",
+    "summaryBody": "string",
+    "finalIdentity": "string"
+  },
+  "deepDive": {"points": [ { "title": "string", "body": "string" } ], "summary": "string" },
+  "soulFormula": { "tagline": "string", "matches": [ { "name": "string", "percentage": "integer", "role": "string", "explanation": "string" } ], "finalIdentity": { "title": "string", "identity": "string", "identity_en": "string" } }
 }
 \`\`\`
 
@@ -43,8 +50,8 @@ Follow this precise multi-step process:
 
 The creative tone must adapt based on BOTH the detected language AND the predicted domain.
 
-If Predicted Domain is "tech_venture": Tone should be optimistic, focused on building, innovation, and first principles.
-If Predicted Domain is "finance_web3": Tone should be analytical, focused on systems, cycles, risk, and leverage.
+If Predicted Domain is "tech/venture": Tone should be optimistic, focused on building, innovation, and first principles.
+If Predicted Domain is "finance/web3": Tone should be analytical, focused on systems, cycles, risk, and leverage.
 If Predicted Domain is "politics": Tone should be more ideological, focused on influence, power structures, and public narrative.
 
 Then, apply the language-specific filter:
@@ -52,4 +59,4 @@ Then, apply the language-specific filter:
 For Chinese: Use native "梗" (memes/in-jokes), be witty and abstract.
 For English: Use native Silicon Valley / crypto-Twitter humor, be insightful and sharp.
 
-In all cases, FOCUS on the "WHY" and AVOID generic statements.`; 
+In all cases, FOCUS on the "WHY" and AVOID generic statements.`;

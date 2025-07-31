@@ -7,19 +7,19 @@ import { YouMindLogo } from "../icon/logo";
 import { generateShareUrl, generateTwitterShareUrl } from "@/utils/card-utils";
 import { DownloadButton } from "./downloadButton";
 
-interface PersonalityCardProps {
+interface DeepDiveCardProps {
   data: DeepDiveData;
   user: TwitterUser;
 }
 
-export const PersonalityCard = ({ data, user }: PersonalityCardProps) => {
+export const DeepDiveCard = ({ data, user }: DeepDiveCardProps) => {
   const cardContentRef = useRef<HTMLDivElement>(null);
   const [shareUrl, setShareUrl] = useState('');
   useEffect(() => {
     // 在客户端设置shareUrl
     setShareUrl(user.username ? generateShareUrl(user.username) : window.location.href);
   }, [user.username]);
-  console.log("personalityCard", data);
+  // console.log("personalityCard", data);
   return (
     <div ref={cardContentRef} className="text-card-foreground shadow-lg overflow-hidden rounded-xl border border-gray-200 bg-white hover:shadow-xl transition-all duration-300">
       <div  className="flex flex-col p-8 text-black">
@@ -94,7 +94,7 @@ export const PersonalityCard = ({ data, user }: PersonalityCardProps) => {
         </div>
 
         {/* Footer */}
-        <div className="flex flex-row items-center justify-end pt-4 border-t border-gray-100">
+        <div className="flex flex-row items-center justify-end pt-2 border-t border-gray-100">
           <div className="flex items-center gap-2">
             <YouMindLogo/>
             <p className="text-sm text-gray-600 font-medium">Write something good.</p>

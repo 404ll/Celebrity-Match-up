@@ -1,3 +1,5 @@
+// growth/types/index.ts - 更新后的完整类型定义
+
 export interface TwitterPost {
   tweet_id?: string;
   text: string;
@@ -19,13 +21,18 @@ export interface UserInfo {
 }
 
 // AI分析结果相关类型
+export interface PersonaBreakdown {
+  percentage: number;
+  name: string;
+  contribution: string;
+}
+
 export interface ShareCardData {
-  mix: Array<{
-    name: string;
-    percentage: number;
-    trait: string;
-  }>;
-  identity: string;
+  title: string;
+  personaBreakdown: PersonaBreakdown[];
+  summaryTitle: string;
+  summaryBody: string;
+  finalIdentity: string;
 }
 
 export interface DeepDiveData {
@@ -36,18 +43,23 @@ export interface DeepDiveData {
   summary: string;
 }
 
+export interface SoulFormulaMatch {
+  name: string;
+  percentage: number;
+  role: string;
+  explanation: string;
+}
+
+export interface FinalIdentity {
+  title: string;
+  identity: string;
+  identity_en: string;
+}
+
 export interface SoulFormulaData {
   tagline: string;
-  matches: Array<{
-    name: string;
-    percentage: number;
-    role: string;
-    explanation: string;
-  }>;
-  finalIdentity: {
-    identity: string;
-    identity_en: string;
-  };
+  matches: SoulFormulaMatch[];
+  finalIdentity: FinalIdentity;
 }
 
 export interface AIAnalysisResult {

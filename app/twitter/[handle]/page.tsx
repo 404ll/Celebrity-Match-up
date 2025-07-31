@@ -6,11 +6,11 @@ import { TwitterService } from "@/lib/twitter-service";
 import { transformPostsForAI } from "@/utils/twitter-transformer";
 import { getTwitterHighQualityAvatar } from "@/lib/utils";
 import { notFound } from "next/navigation";
-import { MainCard } from "@/components/card/mainCard";
+import { MainCard } from "@/components/card/userCard";
 import { TwitterUser, UserInfo } from "@/types/index";
-import { DeepMatchCard } from "@/components/card/deepMatch";
-import { PersonalityCard } from "@/components/card/personalityCard";
-// import { mockAnalysis } from "@/mock";
+import { SoulFormulaCard } from "@/components/card/soulFormulaCard";
+import { DeepDiveCard } from "@/components/card/personalityCard";
+import { mockAnalysis, mockUser } from "@/mock";
 import { AIAnalysisService } from "@/lib/ai-analysis-service";
 interface PageProps {
   params: Promise<{
@@ -22,57 +22,62 @@ export default async function TwitterAnalysisPage({ params }: PageProps) {
   const { handle } = await params;
 
   try {
-    const twitterService = new TwitterService();
-    const aiService = new AIAnalysisService();
+    // const twitterService = new TwitterService();
+    // const aiService = new AIAnalysisService();
 
-    // 获取推文数据
-    const tweetsResult = await twitterService.getUserPost(handle, {
-      limit: 40,
-      include_replies: false,
-      include_pinned: true,
-    });
+    // // 获取推文数据
+    // const tweetsResult = await twitterService.getUserPost(handle, {
+    //   limit: 40,
+    //   include_replies: false,
+    //   include_pinned: true,
+    // });
 
-    if (!tweetsResult.success || !tweetsResult.data.data.length) {
-      notFound();
-    }
+    // if (!tweetsResult.success || !tweetsResult.data.data.length) {
+    //   notFound();
+    // }
 
-    // 从第一条推文中提取用户信息
-    const userFromTweet = tweetsResult.data.data[0].user;
-    //头像高清化
-    const avatar = getTwitterHighQualityAvatar(userFromTweet.profile_pic_url);
+    // // 从第一条推文中提取用户信息
+    // const userFromTweet = tweetsResult.data.data[0].user;
+    // //头像高清化
+    // const avatar = getTwitterHighQualityAvatar(userFromTweet.profile_pic_url);
 
-    // 构建用户信息
-    const userDetails: TwitterUser = {
-      username: userFromTweet.username,
-      display_name: userFromTweet.name,
-      profile_image_url: avatar,
-      description: userFromTweet.description,
-    };
+    // // 构建用户信息
+    // const userDetails: TwitterUser = {
+    //   username: userFromTweet.username,
+    //   display_name: userFromTweet.name,
+    //   profile_image_url: avatar,
+    //   description: userFromTweet.description,
+    // };
 
-    // 转换推文为自定义格式
-    const transformedTweets = transformPostsForAI(tweetsResult.data.data);
+    // // 转换推文为自定义格式
+    // const transformedTweets = transformPostsForAI(tweetsResult.data.data);
 
-    const userinfo: UserInfo = {
-      description: userFromTweet.description,
-      tweets: transformedTweets,
-    };
+    // const userinfo: UserInfo = {
+    //   description: userFromTweet.description,
+    //   tweets: transformedTweets,
+    // };
 
-    // 获取 推文 分析
-    const tweetsAnalysis = await aiService.analyzeUserTweetsWithFieldAnalysis(userinfo);
+    // // 获取 推文 分析
+    // const tweetsAnalysis = await aiService.analyzeUserTweetsWithFieldAnalysis(userinfo);
 
-    console.log("终极分析结果", tweetsAnalysis);
-    // 检查分析是否成功
-    if (!tweetsAnalysis.success || !tweetsAnalysis.analysis) {
-      throw new Error(tweetsAnalysis.error || "Analysis failed");
-    }
+    // console.log("终极分析结果", tweetsAnalysis);
+    // // 检查分析是否成功
+    // if (!tweetsAnalysis.success || !tweetsAnalysis.analysis) {
+    //   throw new Error(tweetsAnalysis.error || "Analysis failed");
+    // }
 
-    // 分解AI分析结果并转换为组件需要的类型
-    const analysis = tweetsAnalysis.analysis;
+    // // 分解AI分析结果并转换为组件需要的类型
+    // const analysis = tweetsAnalysis.analysis;
 
     // 直接使用AI分析结果
-    const shareCardData = analysis.shareCard;
-    const deepDiveData = analysis.deepDive;
-    const soulFormulaData = analysis.soulFormula;
+    // const shareCardData = analysis.shareCard;
+    // const deepDiveData = analysis.deepDive;
+    // const soulFormulaData = analysis.soulFormula;
+
+    const shareCardData = mockAnalysis.shareCard;
+    const deepDiveData = mockAnalysis.deepDive;
+    const soulFormulaData = mockAnalysis.soulFormula;
+    const userDetails = mockUser;
 
     // // 获取 用户 分析
     return (
@@ -94,26 +99,24 @@ export default async function TwitterAnalysisPage({ params }: PageProps) {
           </div>
 
           {/* 人格分析区域 */}
-          <div className="border-t border-gray-100 pt-4">
+          <div className="border-t border-gray-100 pt-4 max-w-6xl mx-auto">
             <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">
               人格特征分析
             </h3>
 
             <div className="mb-6">
-              <MainCard data={shareCardData} user={userDetails} />
-            </div>
-
-            {/* 其他card区域 */}
-            <div className="grid md:grid-cols-2 gap-6 mb-6 mt-6">
               <div>
-                <PersonalityCard data={deepDiveData} user={userDetails} />
-              </div>
-              <div>
-                <DeepMatchCard
+                <SoulFormulaCard
                   analysisData={soulFormulaData}
                   user={userDetails}
                 />
               </div>
+            </div>
+
+            {/* 其他card区域 */}
+            <div className="flex flex-col gap-6 mb-6 mt-6">
+              <MainCard data={shareCardData} user={userDetails} />
+              <DeepDiveCard data={deepDiveData} user={userDetails} />
             </div>
 
             {/* YouMind 卡片 */}
