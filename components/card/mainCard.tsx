@@ -73,7 +73,7 @@ export const MainCard = ({ data, user }: MainCardProps) => {
 
             {/* 匹配项 */}
             <div className="space-y-4 mb-6">
-              {data.mix.map((item, index) => (
+              {data.mix.map((item) => (
                 <div key={item.name} className="border-l-4 border-blue-500 pl-4">
                   <div className="flex items-center justify-between mb-2">
                     <h3 className="font-semibold text-gray-900 text-lg">

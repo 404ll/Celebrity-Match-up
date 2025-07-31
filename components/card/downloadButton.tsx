@@ -27,7 +27,26 @@ export const DownloadButton = ({ cardRef, fileName }: DownloadButtonProps) => {
       // 等待一小段时间确保样式应用
       await new Promise(resolve => setTimeout(resolve, 100));
 
-      const dataUrl = await toPng(cardRef.current, { cacheBust: true });
+      const dataUrl = await toPng(cardRef.current, { 
+        cacheBust: true,
+        width: 400, // 固定宽度400px，优化移动端导出
+        // height: undefined, // 不设置高度，让其自动适应内容高度
+        pixelRatio: 2, // 保持高清晰度
+        skipAutoScale: true, // 避免自动缩放
+        style: {
+          borderRadius: '8px',
+          overflow: 'hidden',
+          border: 'none',
+        },
+        filter: (node: HTMLElement) => {
+          // 过滤掉不需要的元素
+          const hasScrollbar = node.classList && node.classList.contains('scrollbar');
+          const isStyleOrScript = node.tagName === 'STYLE' || node.tagName === 'SCRIPT';
+          const isVideo = node.tagName === 'VIDEO';
+          const isAudio = node.tagName === 'AUDIO';
+          return !hasScrollbar && !isStyleOrScript && !isVideo && !isAudio;
+        },
+      });
       download(dataUrl, `${fileName}.png`);
 
       // 恢复按钮显示

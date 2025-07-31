@@ -3,8 +3,8 @@ import { Footer } from "@/components/footer";
 import { DetailNavbar } from "@/components/navbar/detailNavbar";
 import { YoumindCard } from "@/components/card/youmindCard";
 import { TwitterService } from "@/lib/twitter-service";
-import { transformPostsForAI } from "@/utils/twitter-transformer";
-import { AIAnalysisService } from "@/lib/ai-analysis-service";
+// import { transformPostsForAI } from "@/utils/twitter-transformer";
+// import { AIAnalysisService } from "@/lib/ai-analysis-service";
 import { getTwitterHighQualityAvatar } from "@/lib/utils";
 import { notFound } from "next/navigation";
 import { MainCard } from "@/components/card/mainCard";
@@ -23,7 +23,7 @@ export default async function TwitterAnalysisPage({ params }: PageProps) {
 
   try {
     const twitterService = new TwitterService();
-    const aiService = new AIAnalysisService();
+    // const aiService = new AIAnalysisService();
 
     // 获取推文数据
     const tweetsResult = await twitterService.getUserPost(handle, {

@@ -1,7 +1,6 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 
 export async function GET(
-  request: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
   try {
@@ -27,9 +26,10 @@ export async function GET(
       },
     });
   } catch (error) {
+    console.error(error)
     return NextResponse.json(
       { error: 'Failed to generate avatar' },
-      { status: 500 }
+      { status: 500 },
     );
   }
 } 
