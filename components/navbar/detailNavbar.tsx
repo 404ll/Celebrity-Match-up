@@ -2,8 +2,7 @@
 
 import { ChevronLeft, Globe } from "lucide-react";
 import Link from "next/link";
-import { CustomIcon } from "@/components/icon/icon";
-import { YouMindLogo, YouMindLogoWithText } from "@/components/icon/logo";
+import { YouMindLogoWithText } from "@/components/icon/logo";
 import { useState } from "react";
 
 export function DetailNavbar() {

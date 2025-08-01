@@ -3,7 +3,7 @@
 import { Globe } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
-import { YouMindLogoWithText, YouMindLogo } from "../icon/logo";
+import { YouMindLogo } from "../icon/logo";
 
 export function LandingNavbar() {
   const [language, setLanguage] = useState("en");

@@ -1,9 +1,6 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
-import { Button } from "../ui/button";
-import { CustomIcon } from "../icon/icon";
 
 export const YoumindCard = () => {
   return (
@@ -24,7 +21,7 @@ export const YoumindCard = () => {
           来YouMind，写一段只属于你的文字。
         </h3>
        
-        <a
+        <Link
           href="https://youmind.ai/overview"
           target="_blank"
           rel="noopener noreferrer"
@@ -34,7 +31,7 @@ export const YoumindCard = () => {
           <svg className="ml-2 w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
           </svg>
-        </a>
+        </Link>
       </div>
     </div>
   );

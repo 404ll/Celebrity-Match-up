@@ -25,7 +25,7 @@ export const DownloadButton = ({ cardRef, fileName }: DownloadButtonProps) => {
       
       console.log(`找到 ${buttons.length} 个按钮需要隐藏`);
       
-      buttons.forEach((button, index) => {
+      buttons.forEach((button) => {
         const element = button as HTMLElement;
         originalDisplays.push(element.style.display);
         element.style.display = 'none';

@@ -7,7 +7,7 @@ import { LandingNavbar } from "@/components/navbar/landingNavbar";
 import { YoumindCard } from "@/components/card/YoumindCard";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Sparkles, Users, Zap, ArrowRight, Twitter, Star } from "lucide-react";
+import { Sparkles, ArrowRight } from "lucide-react";
 
 export default function Home() {
   const [twitterHandle, setTwitterHandle] = useState("");

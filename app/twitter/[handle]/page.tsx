@@ -10,7 +10,7 @@ import { LaunchCard } from "@/components/card/LaunchCard";
 import { TwitterUser, UserInfo } from "@/types/index";
 import { SoulFormulaCard } from "@/components/card/SoulFormulaCard";
 import { GrowthCard } from "@/components/card/GrowthCard";
-import { mockAnalysis, mockUser } from "@/mock";
+// import { mockAnalysis, mockUser } from "@/mock";
 import { AIAnalysisService } from "@/lib/ai-analysis-service";
 interface PageProps {
   params: Promise<{
