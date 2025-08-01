@@ -6,6 +6,7 @@ import Image from "next/image";
 import { YouMindLogo } from "../icon/logo";
 import { generateShareUrl, generateTwitterShareUrl } from "@/utils/card-utils";
 import { DownloadButton } from "./downloadButton";
+import Link from "next/link";
 
 interface SoulFormulaCardProps {
   analysisData: SoulFormulaData;
@@ -17,101 +18,125 @@ export const SoulFormulaCard = ({ analysisData, user }: SoulFormulaCardProps) =>
   const [shareUrl, setShareUrl] = useState('');
 
   useEffect(() => {
-    // 在客户端设置shareUrl
     setShareUrl(user.username ? generateShareUrl(user.username) : window.location.href);
   }, [user.username]);
 
-  // console.log("deepMatchCard", analysisData);
   return (
-    <div ref={cardContentRef} className="text-card-foreground shadow-lg overflow-hidden rounded-xl border border-gray-200 bg-white hover:shadow-xl transition-all duration-300">
-      <div  className="flex flex-col p-8 text-black">
+    <div ref={cardContentRef} className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-white via-purple-50 to-pink-50 border border-purple-200 shadow-xl hover:shadow-2xl transition-all duration-500">
+      {/* 装饰性背景元素 */}
+      <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-400/20 to-pink-400/20 rounded-full -translate-y-16 translate-x-16"></div>
+      <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full translate-y-12 -translate-x-12"></div>
+      
+      <div className="relative p-8">
         {/* Header Section */}
-        <div className="flex flex-row justify-between items-start mb-6">
-          <div className="flex items-center">
-            <Image
-              src={user.profile_image_url}
-              alt={user.display_name}
-              width={40}
-              height={40}
-              className="rounded-full border-2 border-gray-200 shadow-sm"
-            />
-            <div className="ml-4">
-              <h1 className="text-lg font-bold text-gray-900">{user.display_name}</h1>
+        <div className="flex justify-between items-start mb-8">
+          <div className="flex items-center space-x-4">
+            <div className="relative">
+              <Image
+                src={user.profile_image_url}
+                alt={user.display_name}
+                width={48}
+                height={48}
+                className="rounded-full border-3 border-white shadow-lg ring-2 ring-purple-200"
+              />
+            </div>
+            <div>
+              <h1 className="text-xl font-bold text-gray-900">{user.display_name}</h1>
             </div>
           </div>
-
-          <div className="flex gap-2">
-          <a
-            target="_blank"
-            className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg shadow-sm hover:from-orange-600 hover:to-orange-700 transition-all duration-200 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
-            href={generateTwitterShareUrl(
-              { name: user.display_name, analysis: analysisData.finalIdentity.identity, id: user.username },
-              shareUrl
-            )}
-          >
-            <svg
-              stroke="currentColor"
-              fill="currentColor"
-              strokeWidth="0"
-              viewBox="0 0 256 256"
-              height="1em"
-              width="1em"
-              className="mr-2"
-              xmlns="http://www.w3.org/2000/svg"
+          
+          <div className="flex space-x-3">
+            <a
+              target="_blank"
+              className="inline-flex items-center px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl shadow-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 transform hover:scale-105"
+              href={generateTwitterShareUrl(
+                { name: user.display_name, analysis: analysisData.finalIdentity.identity, id: user.username },
+                shareUrl
+              )}
             >
-              <path d="M214.75,211.71l-62.6-98.38,61.77-67.95a8,8,0,0,0-11.84-10.76L143.24,99.34,102.75,35.71A8,8,0,0,0,96,32H48a8,8,0,0,0-6.75,12.3l62.6,98.37-61.77,68a8,8,0,1,0,11.84,10.76l58.84-64.72,40.49,63.63A8,8,0,0,0,160,224h48a8,8,0,0,0,6.75-12.29ZM164.39,208,62.57,48h29L193.43,208Z"></path>
-            </svg>
-            Share
-          </a>
-          <DownloadButton cardRef={cardContentRef} fileName={"deepMatch"} />
+              <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+              Share
+            </a>
+            <DownloadButton cardRef={cardContentRef} fileName={"soulMatch"} />
           </div>
         </div>
 
-        {/* Analysis Content */}
-        <div className="bg-gray-50 rounded-lg p-6 mb-6">
-         
-          {/* 灵魂标语 */}
-          <div className="mb-6 p-4 bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-lg">
-            <p className="text-center text-lg font-semibold text-blue-800">
+        {/* Card Title */}
+        <div className="mb-8">
+          <div className="flex items-center space-x-4 mb-6">
+            <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center shadow-lg">
+              <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                {analysisData.cardTitle}
+              </h2>
+            </div>
+          </div>
+        </div>
+
+        {/* Tagline */}
+        <div className="mb-8">
+          <div className="bg-gradient-to-r from-purple-100 to-pink-100 border border-purple-200 rounded-2xl p-6 shadow-inner">
+            <p className="text-lg font-medium text-purple-800 leading-relaxed text-center">
               "{analysisData.tagline}"
             </p>
           </div>
+        </div>
 
-          {/* 灵魂构成分析 */}
-          <div className="mb-6">
-            <h3 className="text-md font-semibold text-gray-800 mb-3">
-              灵魂构成分析：
-            </h3>
-            <div className="space-y-4">
-              {analysisData.matches.map((match, index) => (
-                <div key={index} className="border-l-4 border-indigo-500 pl-4">
-                  <div className="flex items-center justify-between mb-2">
-                    <h4 className="font-semibold text-gray-900">
-                      {match.name}
-                    </h4>
-                    <div className="flex items-center gap-2">
-                      <span className="text-sm text-indigo-500 bg-indigo-100 px-2 py-1 rounded">
+        {/* Soul Composition Analysis */}
+        <div className="mb-8">
+          
+          <div className="space-y-6">
+            {analysisData.matches.map((match, index) => (
+              <div key={index} className="relative">
+                <div className="bg-white rounded-2xl p-6 shadow-lg border border-purple-100 hover:shadow-xl transition-all duration-300">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold">
                         {match.percentage}%
-                      </span>
-                      <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
-                        {match.role}
-                      </span>
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-gray-900 text-lg">{match.name}</h4>
+                        <span className="text-sm text-purple-600 bg-purple-100 px-3 py-1 rounded-full font-medium">
+                          {match.role}
+                        </span>
+                      </div>
                     </div>
                   </div>
-                  <p className="text-gray-700 text-sm leading-relaxed">
+                  <p className="text-gray-700 leading-relaxed">
                     {match.explanation}
                   </p>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
 
+        {/* Final Identity */}
+        <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl p-6 text-white shadow-lg">
+          <div className="flex items-center space-x-3 mb-3">
+            <div className="w-2 h-2 bg-white rounded-full"></div>
+            <span className="text-sm font-semibold opacity-90">{analysisData.finalIdentity.title}</span>
+          </div>
+          <p className="text-lg font-bold leading-relaxed">
+            {analysisData.finalIdentity.identity}
+          </p>
+        </div>
+
         {/* Footer */}
-        <div className="flex flex-row items-center justify-end pt-2 border-t border-gray-100">
-          <div className="flex items-center gap-2">
-            <YouMindLogo/>
-            <p className="text-sm text-gray-600 font-medium">Write something good.</p>
+        <div className="flex items-center justify-between mt-8 pt-6 border-t border-purple-200">
+          <div className="flex items-center space-x-3">
+            <Link href="https://www.youmind.ai" target="_blank">
+              <YouMindLogo />
+            </Link>
+            <div>
+              <p className="text-sm font-semibold text-gray-700">Write something good.</p>
+            </div>
           </div>
         </div>
       </div>

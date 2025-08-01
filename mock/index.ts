@@ -3,74 +3,68 @@
 import { AIAnalysisResult, TwitterUser } from "@/types";
 
 export const mockAnalysis: AIAnalysisResult = {
-  shareCard: {
-    title: "你的灵魂代码：理想主义Builder的Web3蓝图",
-    personaBreakdown: [
+  LaunchCard: {
+    cardTitle: "出发指令",
+    title: "从潜力Builder到赛博世界奠基人",
+    suggestions: [
       {
-        percentage: 45,
-        name: "Hayden Adams",
-        contribution: "从个人痛点出发，用代码硬磕出解决方案。"
+        title: "先发一个'能跑就行'的土狗项目",
+        body: "别总想着搞个惊天动地的'完整产品'，那玩意儿容易把自己卷死。学学Hayden Adams老哥，失业了都能鼓捣出Uniswap。你先从解决'自己今天好无聊'这个痛点开始，写个能一键发币的玩具，或者一个能自动转发KOL金句的bot。记住，Web3第一定律：先跑起来，再想着怎么 rug... 啊不是，怎么迭代。"
       },
       {
-        percentage: 35,
-        name: "Vitalik Buterin",
-        contribution: "超越代码执行，思考系统背后的价值与哲学。"
-      },
-      {
-        percentage: 20,
-        name: "Anatoly Yakovenko",
-        contribution: "从第一性原理出发，追求极致的系统性能与效率。"
+        title: "把'摸鱼'升级为'学术性发呆'",
+        body: "刷小文章谁不会啊，但V神之所以是V神，因为他能把发呆变成思考。下次再摸鱼，别光看热闹，试着把一个协议当成乐高一样拆开：它解决了啥问题？为啥这么设计？有没有更骚的操作？把这些想通了，以后跟人PVP或者在群里吹水，你就是最有文化的那个仔。认知，才是最强的Alpha。"
       }
     ],
-    summaryTitle: "从'无头苍蝇'到'理想构造家'",
-    summaryBody: "你正走在一条典型的Web3成长之路上：从初入校园的迷茫，到投身黑客松和社区的坚定。你渴望的不是用AI跑几个demo，而是真正'拆解'和'创造'一个完整的产品。这种脚踏实地的学习心态和对行业现状的清醒反思，是你最宝贵的资产。",
-    finalIdentity: "脚踏实地的Web3理想构造家"
+    closingThought: "你的下一行代码，要么改变世界，要么变成MEME。"
   },
 
-  deepDive: {
+  GrowthCard: {
+    cardTitle: "成长画像",
     points: [
       {
-        title: "代码不只是Demo，是产品哲学",
-        body: "你很早就意识到，能跑起来的小demo没有意义，真正的成长在于'拆解'和'维护'一个完整的产品逻辑。这说明你天生就具备产品思维，追求的不是浅尝辄止的'创造'，而是深入骨髓的'构建'。"
+        title: "Web3 学徒与建设者",
+        body: "你正处在从理论到实践的关键跃迁期。从参加黑客松、学习数据分析，到渴望'完成一整套的产品逻辑'，你的轨迹清晰地指向一个目标：成为一名真正的Builder。你对浅尝辄止的学习方式感到不满，这种对深度的追求是你最宝贵的资产。"
       },
       {
-        title: "社区，不是背景板而是充电桩",
-        body: "你大量的时间线都与CUITBCA和各种Web3社区活动绑定。对你而言，社区不是履历上的点缀，而是知识和能量的核心来源。你在这里找到同路人，也在这里完成了从学生到Builder的身份认同。"
+        title: "社区积极参与者",
+        body: "你不是一个孤独的学习者。通过转发行业动态、参与CUITBCA等高校社群活动，你已经将自己织入中文Web3社区的网络中。这不仅为你提供了信息源，更重要的是构建了归属感和潜在的协作网络，这是Web3世界的核心精神。"
       },
       {
-        title: "锐利的自省，拒绝沦为叙事燃料",
-        body: "'还差得远呢'、'web3用户快枯竭了'——这些清醒的判断让你与狂热的Degen区别开来。你能在市场噪音中保持独立思考，渴望用努力和时间填补认知差距，这种自省精神是穿越牛熊周期的关键。"
+        title: "自省的理想主义者",
+        body: "你具备一种宝贵的抽离感。在埋头学习的同时，你也在抬头看路，思考着'Web3用户枯竭'、'应用炒冷饭'等宏观问题。这种自省让你免于成为纯粹的技术工具人，而是有望成为能定义问题、引领方向的思考者。"
       }
     ],
-    summary: "你是一位罕见的'在场'的思考者。既是深入一线的Builder，又是跳出系统反思的观察家。保持这份对技术的热忱和对社区的忠诚，你的未来不只是写代码，更是定义下一代协议的价值。"
+    summary: "你是一位脚踏实地的Web3学徒，渴望用代码构建有价值的产品；同时，你又是一个心怀远方的理想主义者，在社区的喧嚣中保持着对行业未来的冷静思考和对个人成长的深刻焦虑。这种'既要又要'的张力，正是你未来突破的动力源泉。"
   },
 
-  soulFormula: {
-    tagline: "你的品味，是代码与社区共识的混合体。",
+  SoulFormula: {
+    cardTitle: "人格共鸣",
+    tagline: "你对 Web3 的探索，不仅是技术的学习，更是一场关于信念与成长的自我修行。",
     matches: [
       {
         name: "Hayden Adams",
         percentage: 45,
-        role: "自学成才的DeFi筑梦师",
-        explanation: "你的成长轨迹与他高度重合——从零基础自学，到渴望打造真正有价值的产品。你对代码'就是一坨'的自嘲，正是他当年面对Solidity时的心声。这种'Just build it'的信念是你的核心驱动力。"
+        role: "实践精神的同路人",
+        explanation: "他的自学成才之路与你当下的努力高度重合。他证明了，一个执着的开发者，凭借一个好点子和强大的执行力，完全可以从零开始，构建出行业的关键基础设施。"
       },
       {
         name: "Vitalik Buterin",
         percentage: 35,
-        role: "极客理想主义布道者",
-        explanation: "你对'炒冷饭'项目的厌倦和对行业'用户枯竭'的担忧，与V神对生态健康和公共利益的关注不谋而合。你不只满足于技术实现，更在乎它背后的价值与哲学，这是你区别于普通Degen的思考深度。"
+        role: "理想主义的引路灯",
+        explanation: "你对行业本质的思考，与V神用技术重构社会的极客理想主义一脉相承。他提醒你，代码的最终目的是服务于一个更公平、更开放的系统，而不仅仅是功能实现。"
       },
       {
         name: "Anatoly Yakovenko",
         percentage: 20,
-        role: "性能至上的硬核工程师",
-        explanation: "你对Aptos、Sui、Solana的广泛关注，暴露了你对高性能公链的浓厚兴趣。你渴望'拆解'和'优化'，这种深入系统底层的冲动，正是Anatoly解决区块链性能瓶颈的初心。"
+        role: "工程能力的终极向往",
+        explanation: "当你苦恼于'写的代码其实就是一坨'时，Anatoly代表了你渴望成为的样子——一个能从底层优化性能、构建复杂系统的工程大师。他是你技术成长道路上遥远但清晰的灯塔。"
       }
     ],
     finalIdentity: {
-      title: "你的灵魂角色",
-      identity: "脚踏实地的Web3理想构造家",
-      identity_en: "The Pragmatic Web3 Ideal Architect"
+      title: "你的灵魂原型",
+      identity: "自学成才的 Web3 架构师，心怀纯粹的去中心化理想",
+      identity_en: "A Self-Taught Web3 Architect with a Pure, Decentralized Ideal at Heart"
     }
   }
 };

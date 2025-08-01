@@ -37,6 +37,7 @@ export class TwitterService {
       params.set('continuation_token', options.continuation_token)
     }
 
+    //这是一个异步操作，委托给Node.js的HTTP模块处理
     return new Promise((resolve) => {
       //构造请求参数
       const requestOptions = {
@@ -50,15 +51,18 @@ export class TwitterService {
       }
 
       // 发送请求
+     
       const req = https.request(requestOptions, (res) => {
         let data = ''
         // 获取数据
         res.on('data', (chunk) => {
           data += chunk
         })
+
         // 数据获取完毕
         res.on('end', () => {
           // 请求成功
+          // 这是一个回调函数，当数据获取完毕时，会调用这个函数
           if (res.statusCode && res.statusCode >= 200 && res.statusCode < 300) {
             try {
               const jsonData = JSON.parse(data)
@@ -92,6 +96,7 @@ export class TwitterService {
         })
       })
 
+      //这是一个回调函数，当请求失败时，会调用这个函数
       req.on('error', (error) => {
         // 请求错误
         resolve({

@@ -21,21 +21,20 @@ export interface UserInfo {
 }
 
 // AI分析结果相关类型
-export interface PersonaBreakdown {
-  percentage: number;
-  name: string;
-  contribution: string;
-}
-
-export interface ShareCardData {
+export interface Suggestion {
   title: string;
-  personaBreakdown: PersonaBreakdown[];
-  summaryTitle: string;
-  summaryBody: string;
-  finalIdentity: string;
+  body: string;
 }
 
-export interface DeepDiveData {
+export interface LaunchCardData {
+  cardTitle: "出发指令";
+  title: string;
+  suggestions: Suggestion[];
+  closingThought: string;
+}
+
+export interface GrowthCardData {
+  cardTitle: "成长画像";
   points: Array<{
     title: string;
     body: string;
@@ -57,15 +56,16 @@ export interface FinalIdentity {
 }
 
 export interface SoulFormulaData {
+  cardTitle: string;
   tagline: string;
   matches: SoulFormulaMatch[];
   finalIdentity: FinalIdentity;
 }
 
 export interface AIAnalysisResult {
-  shareCard: ShareCardData;
-  deepDive: DeepDiveData;
-  soulFormula: SoulFormulaData;
+  LaunchCard: LaunchCardData;
+  GrowthCard: GrowthCardData;
+  SoulFormula: SoulFormulaData;
 }
 
 export interface AIServiceResult {

@@ -2,7 +2,7 @@
 
 import { Footer } from "@/components/footer";
 import { LandingNavbar } from "@/components/navbar/landingNavbar";
-import { YoumindCard } from "@/components/card/youmindCard";
+import { YoumindCard } from "@/components/card/YoumindCard";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
  

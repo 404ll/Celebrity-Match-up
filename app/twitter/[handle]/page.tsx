@@ -1,15 +1,15 @@
 import { Metadata } from "next";
 import { Footer } from "@/components/footer";
 import { DetailNavbar } from "@/components/navbar/detailNavbar";
-import { YoumindCard } from "@/components/card/youmindCard";
+import { YoumindCard } from "@/components/card/YoumindCard";
 import { TwitterService } from "@/lib/twitter-service";
 import { transformPostsForAI } from "@/utils/twitter-transformer";
 import { getTwitterHighQualityAvatar } from "@/lib/utils";
 import { notFound } from "next/navigation";
-import { MainCard } from "@/components/card/userCard";
+import { LaunchCard } from "@/components/card/LaunchCard";
 import { TwitterUser, UserInfo } from "@/types/index";
-import { SoulFormulaCard } from "@/components/card/soulFormulaCard";
-import { DeepDiveCard } from "@/components/card/personalityCard";
+import { SoulFormulaCard } from "@/components/card/SoulFormulaCard";
+import { GrowthCard } from "@/components/card/GrowthCard";
 import { mockAnalysis, mockUser } from "@/mock";
 import { AIAnalysisService } from "@/lib/ai-analysis-service";
 interface PageProps {
@@ -74,9 +74,9 @@ export default async function TwitterAnalysisPage({ params }: PageProps) {
     // const deepDiveData = analysis.deepDive;
     // const soulFormulaData = analysis.soulFormula;
 
-    const shareCardData = mockAnalysis.shareCard;
-    const deepDiveData = mockAnalysis.deepDive;
-    const soulFormulaData = mockAnalysis.soulFormula;
+    const launchCardData = mockAnalysis.LaunchCard;
+    const growthCardData = mockAnalysis.GrowthCard;
+    const soulFormulaData = mockAnalysis.SoulFormula;
     const userDetails = mockUser;
 
     // // 获取 用户 分析
@@ -115,8 +115,8 @@ export default async function TwitterAnalysisPage({ params }: PageProps) {
 
             {/* 其他card区域 */}
             <div className="flex flex-col gap-6 mb-6 mt-6">
-              <MainCard data={shareCardData} user={userDetails} />
-              <DeepDiveCard data={deepDiveData} user={userDetails} />
+              <LaunchCard data={launchCardData} user={userDetails} />
+              <GrowthCard data={growthCardData} user={userDetails} />
             </div>
 
             {/* YouMind 卡片 */}
