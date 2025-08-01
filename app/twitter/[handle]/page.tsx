@@ -12,10 +12,20 @@ import { SoulFormulaCard } from "@/components/card/SoulFormulaCard";
 import { GrowthCard } from "@/components/card/GrowthCard";
 // import { mockAnalysis, mockUser } from "@/mock";
 import { AIAnalysisService } from "@/lib/ai-analysis-service";
+import { generateTwitterAnalysisMetadata } from "@/utils/metadata-utils";
 interface PageProps {
   params: Promise<{
     handle: string;
   }>;
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ handle: string }>;
+}): Promise<Metadata> {
+  const { handle } = await params;
+  return generateTwitterAnalysisMetadata({ handle });
 }
 
 export default async function TwitterAnalysisPage({ params }: PageProps) {
@@ -177,40 +187,4 @@ export default async function TwitterAnalysisPage({ params }: PageProps) {
   }
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ handle: string }>;
-}): Promise<Metadata> {
-  const { handle } = await params;
 
-  // 获取当前域名
-  const baseUrl = process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
-    : process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-
-  // 动态生成图片 URL，默认使用main类型
-  const imageUrl = `${baseUrl}/api/generate-card/${handle}?type=main`;
-
-  return {
-    title: `${handle} - Twitter Personality Analysis`,
-    description: `AI-powered personality analysis for @${handle} based on Twitter activity patterns`,
-    openGraph: {
-      title: `${handle} - Twitter Personality Analysis`,
-      description: `AI-powered personality analysis for @${handle} based on Twitter activity patterns`,
-      images: [
-        {
-          url: imageUrl,
-          width: 1200,
-          height: 630,
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: `${handle} - Twitter Personality Analysis`,
-      description: `AI-powered personality analysis for @${handle} based on Twitter activity patterns`,
-      images: [imageUrl],
-    },
-  };
-}

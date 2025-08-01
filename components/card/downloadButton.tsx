@@ -17,13 +17,13 @@ export const DownloadButton = ({ cardRef, fileName }: DownloadButtonProps) => {
     }
 
     try {
-      console.log("开始下载流程...");
+      // console.log("开始下载流程...");
       
       // 隐藏所有按钮
       const buttons = cardRef.current.querySelectorAll('button, a[target="_blank"]');
       const originalDisplays: string[] = [];
       
-      console.log(`找到 ${buttons.length} 个按钮需要隐藏`);
+      // console.log(`找到 ${buttons.length} 个按钮需要隐藏`);
       
       buttons.forEach((button) => {
         const element = button as HTMLElement;
@@ -34,31 +34,75 @@ export const DownloadButton = ({ cardRef, fileName }: DownloadButtonProps) => {
       // 等待一小段时间确保样式应用
       await new Promise(resolve => setTimeout(resolve, 200));
 
+      // 临时设置卡片样式以确保完整显示
+      const originalStyle = cardRef.current.style.cssText;
+      cardRef.current.style.width = '800px';
+      cardRef.current.style.height = 'auto';
+      cardRef.current.style.overflow = 'visible';
+      cardRef.current.style.position = 'relative';
+
+      // 等待样式应用
+      await new Promise(resolve => setTimeout(resolve, 100));
+
       console.log("开始生成图片...");
       
-      const dataUrl = await toPng(cardRef.current, { 
-        cacheBust: true,
-        width: 800, // 增加到800px，提供更好的显示效果
-        pixelRatio: 2,
-        skipAutoScale: true,
-        style: {
-          borderRadius: '8px',
-          overflow: 'hidden',
-          border: 'none',
-        },
-        filter: (node: HTMLElement) => {
-          const hasScrollbar = node.classList && node.classList.contains('scrollbar');
-          const isStyleOrScript = node.tagName === 'STYLE' || node.tagName === 'SCRIPT';
-          const isVideo = node.tagName === 'VIDEO';
-          const isAudio = node.tagName === 'AUDIO';
-          return !hasScrollbar && !isStyleOrScript && !isVideo && !isAudio;
-        },
-      });
+      try {
+        // 尝试使用更宽松的配置
+        const dataUrl = await toPng(cardRef.current, { 
+          cacheBust: true,
+          width: 400,
+          skipAutoScale: true,
+          backgroundColor: '#ffffff', // 确保背景色
+          style: {
+            borderRadius: '8px',
+            overflow: 'visible',
+            border: 'none',
+            padding: '20px', // 添加内边距确保内容不被裁剪
+          },
+          filter: (node: HTMLElement) => {
+            const hasScrollbar = node.classList && node.classList.contains('scrollbar');
+            const isStyleOrScript = node.tagName === 'STYLE' || node.tagName === 'SCRIPT';
+            const isVideo = node.tagName === 'VIDEO';
+            const isAudio = node.tagName === 'AUDIO';
+            return !hasScrollbar && !isStyleOrScript && !isVideo && !isAudio;
+          },
+        });
+        
+        console.log("图片生成成功，开始下载..."); 
+        download(dataUrl, `${fileName}.png`);
+        console.log("下载完成");
+      } catch (pngError) {
+        console.error("PNG生成失败，尝试其他方法:", pngError);
+        
+        // 如果PNG失败，尝试使用JPEG格式
+        try {
+          const { toJpeg } = await import('html-to-image');
+          const jpegDataUrl = await toJpeg(cardRef.current, { 
+            cacheBust: true,
+            width: 800,
+            pixelRatio: 1.5,
+            skipAutoScale: false,
+            backgroundColor: '#ffffff',
+            style: {
+              borderRadius: '8px',
+              overflow: 'visible',
+              border: 'none',
+              padding: '20px',
+            },
+          });
+          
+          console.log("JPEG生成成功，开始下载..."); 
+          download(jpegDataUrl, `${fileName}.jpg`);
+          console.log("下载完成");
+        } catch (jpegError) {
+          console.error("JPEG生成也失败:", jpegError);
+          throw jpegError;
+        }
+      }
       
-      console.log("图片生成成功，开始下载...");
-      download(dataUrl, `${fileName}.png`);
-      console.log("下载完成");
-
+      // 恢复原始样式
+      cardRef.current.style.cssText = originalStyle;
+      
       // 恢复按钮显示
       buttons.forEach((button, index) => {
         const element = button as HTMLElement;
