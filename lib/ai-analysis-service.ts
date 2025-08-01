@@ -80,9 +80,7 @@ async analyzeUserTweetsWithFieldAnalysis(
         ...userInfo,
         tweets: tweets,
       };
-      console.log("领域分析推文长度", userInfoForFieldAnalysis.tweets.length);
       const fieldResult = await this.analyzeUserField(userInfoForFieldAnalysis);
-      console.log('用户领域分析结果:', fieldResult);
       
       if (!fieldResult.domains || !Array.isArray(fieldResult.domains)) {
         return {
@@ -100,7 +98,6 @@ async analyzeUserTweetsWithFieldAnalysis(
           error: '没有找到对应的数据库文件'
         };
       }
-      console.log("databases 长度", Object.keys(databases).length);
       
       // 3. 进行推文分析
       return await this.analyzeUserTweets(userInfo.tweets, databases);

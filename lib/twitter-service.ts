@@ -78,6 +78,7 @@ export class TwitterService {
                   total_count: limitedResults.length
                 }
               })
+              console.log("推文数量", limitedResults.length);
             } catch (parseError) {
               // 解析错误
               console.error("JSON parse error:", parseError)

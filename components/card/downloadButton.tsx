@@ -85,22 +85,22 @@ export const DownloadButton = ({ cardRef, fileName }: DownloadButtonProps) => {
   return (
     <button
       onClick={handleDownload}
-      className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow-sm"
+      className="inline-flex items-center justify-center px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium text-white bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 rounded-xl shadow-lg transition-all duration-200 transform hover:scale-105"
     >
       <svg
         stroke="currentColor"
         fill="currentColor"
         strokeWidth="0"
         viewBox="0 0 24 24"
-        height="1.5em"
         width="1.5em"
-        className="mr-2"
+        height="1.5em"
+        className="mr-2 w-4 h-4 sm:w-5 sm:h-5"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path d="M12 16l-5-5h3V4h4v7h3l-5 5z"></path>
         <path d="M20 18H4v-2h16v2z"></path>
       </svg>
-      Save
+      <span className="sm:block hidden">Save</span>
     </button>
   );
 };
