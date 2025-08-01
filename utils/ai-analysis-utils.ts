@@ -5,20 +5,25 @@ import { AIAnalysisResult } from "@/types";
  */
 export function formatAIAnalysisResult(rawData: any): AIAnalysisResult {
   return {
-    shareCard: {
-      mix: rawData.shareCard?.mix || [],
-      identity: rawData.shareCard?.identity || "",
+    LaunchCard: {
+      cardTitle: rawData.LaunchCard?.cardTitle || "出发指令",
+      title: rawData.LaunchCard?.title || "",
+      suggestions: rawData.LaunchCard?.suggestions || [],
+      closingThought: rawData.LaunchCard?.closingThought || "",
     },
-    deepDive: {
-      points: rawData.deepDive?.points || [],
-      summary: rawData.deepDive?.summary || "",
+    GrowthCard: {
+      cardTitle: rawData.GrowthCard?.cardTitle || "成长画像",
+      points: rawData.GrowthCard?.points || [],
+      summary: rawData.GrowthCard?.summary || "",
     },
-    soulFormula: {
-      tagline: rawData.soulFormula?.tagline || "",
-      matches: rawData.soulFormula?.matches || [],
+    SoulFormula: {
+      cardTitle: rawData.SoulFormula?.cardTitle || "灵魂匹配",
+      tagline: rawData.SoulFormula?.tagline || "",
+      matches: rawData.SoulFormula?.matches || [],
       finalIdentity: {
-        identity: rawData.soulFormula?.finalIdentity?.identity || "",
-        identity_en: rawData.soulFormula?.finalIdentity?.identity_en || ""
+        title: rawData.SoulFormula?.finalIdentity?.title || "",
+        identity: rawData.SoulFormula?.finalIdentity?.identity || "",
+        identity_en: rawData.SoulFormula?.finalIdentity?.identity_en || ""
       }
     }
   };
@@ -29,14 +34,16 @@ export function formatAIAnalysisResult(rawData: any): AIAnalysisResult {
  */
 export function validateAIAnalysisResult(data: any): boolean {
   const requiredFields = [
-    'shareCard.title',
-    'shareCard.mix',
-    'shareCard.identity',
-    'deepDive.title',
-    'deepDive.points',
-    'soulFormula.title',
-    'soulFormula.matches',
-    'soulFormula.finalIdentity'
+    'LaunchCard.cardTitle',
+    'LaunchCard.title',
+    'LaunchCard.suggestions',
+    'LaunchCard.closingThought',
+    'GrowthCard.cardTitle',
+    'GrowthCard.points',
+    'GrowthCard.summary',
+    'SoulFormula.cardTitle',
+    'SoulFormula.matches',
+    'SoulFormula.finalIdentity'
   ];
 
   for (const field of requiredFields) {
@@ -54,8 +61,8 @@ export function validateAIAnalysisResult(data: any): boolean {
  * 生成AI分析结果的摘要
  */
 export function generateAnalysisSummary(data: AIAnalysisResult): string {
-  const topMatch = data.shareCard.mix[0];
-  const identity = data.soulFormula.finalIdentity.identity;
+  const topMatch = data.SoulFormula.matches[0];
+  const identity = data.SoulFormula.finalIdentity.identity;
   
   return `${topMatch?.name || 'Unknown'} (${topMatch?.percentage || 0}%) - ${identity}`;
 }
