@@ -81,7 +81,7 @@ export default async function TwitterAnalysisPage({ params }: PageProps) {
 
     // // 获取 用户 分析
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 px-4 py-28 sm:px-12 md:px-28 md:pt-24 to-purple-50">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 px-4 py-12 sm:px-12 md:px-28 md:pt-24 to-purple-50">
         <div className="fixed top-0 left-0 right-0 z-50">
           <DetailNavbar />
         </div>
@@ -124,7 +124,9 @@ export default async function TwitterAnalysisPage({ params }: PageProps) {
               <YoumindCard />
             </div>
 
-            <div className="flex-1 flex items-center justify-center py-8">
+            <div className="w-full border-t border-gray-300 mt-8"></div>
+
+            <div className="flex-1 flex items-center justify-center">
               <Footer />
             </div>
           </div>
