@@ -10,7 +10,7 @@ import { LaunchCard } from "@/components/card/LaunchCard";
 import { TwitterUser, UserInfo } from "@/types/index";
 import { SoulFormulaCard } from "@/components/card/SoulFormulaCard";
 import { GrowthCard } from "@/components/card/GrowthCard";
-// import { mockAnalysis, mockUser } from "@/mock";
+import { mockAnalysis, mockUser } from "@/mock";
 import { AIAnalysisService } from "@/lib/ai-analysis-service";
 import { generateTwitterAnalysisMetadata } from "@/utils/metadata-utils";
 interface PageProps {
@@ -32,62 +32,62 @@ export default async function TwitterAnalysisPage({ params }: PageProps) {
   const { handle } = await params;
 
   try {
-    const twitterService = new TwitterService();
-    const aiService = new AIAnalysisService();
+    // const twitterService = new TwitterService();
+    // const aiService = new AIAnalysisService();
 
-    // 获取推文数据
-    const tweetsResult = await twitterService.getUserPost(handle, {
-      limit: 40,
-      include_replies: false,
-      include_pinned: true,
-    });
+    // // 获取推文数据
+    // const tweetsResult = await twitterService.getUserPost(handle, {
+    //   limit: 40,
+    //   include_replies: false,
+    //   include_pinned: true,
+    // });
 
-    if (!tweetsResult.success || !tweetsResult.data.data.length) {
-      notFound();
-    }
+    // if (!tweetsResult.success || !tweetsResult.data.data.length) {
+    //   notFound();
+    // }
 
-    // 从第一条推文中提取用户信息
-    const userFromTweet = tweetsResult.data.data[0].user;
-    //头像高清化
-    const avatar = getTwitterHighQualityAvatar(userFromTweet.profile_pic_url);
+    // // 从第一条推文中提取用户信息
+    // const userFromTweet = tweetsResult.data.data[0].user;
+    // //头像高清化
+    // const avatar = getTwitterHighQualityAvatar(userFromTweet.profile_pic_url);
 
-    // 构建用户信息
-    const userDetails: TwitterUser = {
-      username: userFromTweet.username,
-      display_name: userFromTweet.name,
-      profile_image_url: avatar,
-      description: userFromTweet.description,
-    };
+    // // 构建用户信息
+    // const userDetails: TwitterUser = {
+    //   username: userFromTweet.username,
+    //   display_name: userFromTweet.name,
+    //   profile_image_url: avatar,
+    //   description: userFromTweet.description,
+    // };
 
-    // 转换推文为自定义格式
-    const transformedTweets = transformPostsForAI(tweetsResult.data.data);
+    // // 转换推文为自定义格式
+    // const transformedTweets = transformPostsForAI(tweetsResult.data.data);
 
-    const userinfo: UserInfo = {
-      description: userFromTweet.description,
-      tweets: transformedTweets,
-    };
+    // const userinfo: UserInfo = {
+    //   description: userFromTweet.description,
+    //   tweets: transformedTweets,
+    // };
 
-    // 获取 推文 分析
-    const tweetsAnalysis = await aiService.analyzeUserTweetsWithFieldAnalysis(userinfo);
+    // // 获取 推文 分析
+    // const tweetsAnalysis = await aiService.analyzeUserTweetsWithFieldAnalysis(userinfo);
 
-    console.log("终极分析结果", tweetsAnalysis);
-    // 检查分析是否成功
-    if (!tweetsAnalysis.success || !tweetsAnalysis.analysis) {
-      throw new Error(tweetsAnalysis.error || "Analysis failed");
-    }
+    // console.log("终极分析结果", tweetsAnalysis);
+    // // 检查分析是否成功
+    // if (!tweetsAnalysis.success || !tweetsAnalysis.analysis) {
+    //   throw new Error(tweetsAnalysis.error || "Analysis failed");
+    // }
 
-    // 分解AI分析结果并转换为组件需要的类型
-    const analysis = tweetsAnalysis.analysis;
+    // // 分解AI分析结果并转换为组件需要的类型
+    // const analysis = tweetsAnalysis.analysis;
 
-    // 直接使用AI分析结果
-    const launchCardData = analysis.LaunchCard;
-    const growthCardData = analysis.GrowthCard;
-    const soulFormulaData = analysis.SoulFormula;
+    // // 直接使用AI分析结果
+    // const launchCardData = analysis.LaunchCard;
+    // const growthCardData = analysis.GrowthCard;
+    // const soulFormulaData = analysis.SoulFormula;
 
-    // const launchCardData = mockAnalysis.LaunchCard;
-    // const growthCardData = mockAnalysis.GrowthCard;
-    // const soulFormulaData = mockAnalysis.SoulFormula;
-    // const userDetails = mockUser;
+    const launchCardData = mockAnalysis.LaunchCard;
+    const growthCardData = mockAnalysis.GrowthCard;
+    const soulFormulaData = mockAnalysis.SoulFormula;
+    const userDetails = mockUser;
 
     // // 获取 用户 分析
     return (

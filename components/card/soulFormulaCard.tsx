@@ -51,6 +51,7 @@ export const SoulFormulaCard = ({ analysisData, user }: SoulFormulaCardProps) =>
                   <h1 className="text-sm font-bold text-gray-900 truncate">{user.display_name}</h1>
                 </div>
               </div>
+              
               {/* 移动端按钮组 */}
               <div className="flex space-x-2 flex-shrink-0">
                 <a

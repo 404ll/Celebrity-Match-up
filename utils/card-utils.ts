@@ -16,7 +16,7 @@ export function generateShareUrl(cardId: string, baseUrl?: string): string {
     process.env.NEXT_PUBLIC_BASE_URL ||
     (typeof window !== "undefined" && window.location.hostname !== "localhost"
       ? `https://${window.location.hostname}`
-      : "https://growth-dobteqp73-elemens-projects.vercel.app");
+      : "https://taset.vercel.app/");
 
   // 如果cardId包含用户名，直接使用
   if (cardId && !cardId.includes("-")) {
