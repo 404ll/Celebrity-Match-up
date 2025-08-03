@@ -1,18 +1,18 @@
 import { Metadata } from "next";
 import { Footer } from "@/components/footer";
 import { DetailNavbar } from "@/components/navbar/detailNavbar";
-import { YoumindCard } from "@/components/card/YoumindCard";
+import { YoumindCard } from "../../../components/card/YoumindCard";
 // import { TwitterService } from "@/lib/twitter-service";
 // import { transformPostsForAI } from "@/utils/twitter-transformer";
 // import { getTwitterHighQualityAvatar } from "@/lib/utils";
 // import { notFound } from "next/navigation";
-import { LaunchCard } from "@/components/card/LaunchCard";
+import { LaunchCard } from "../../../components/card/LaunchCard";
 // import { TwitterUser, UserInfo } from "@/types/index";
-import { SoulFormulaCard } from "@/components/card/soulFormulaCard";
-import { GrowthCard } from "@/components/card/GrowthCard";
-import { mockAnalysis, mockUser } from "@/mock";
+import { SoulFormulaCard } from "../../../components/card/SoulFormulaCard";
+import { GrowthCard } from "../../../components/card/GrowthCard";
+import { mockAnalysis, mockUser } from "../../../mock";
 // import { AIAnalysisService } from "@/lib/ai-analysis-service";
-import { generateTwitterAnalysisMetadata } from "@/utils/metadata-utils";
+import { generateTwitterAnalysisMetadata } from "../../../utils/metadata-utils";
 interface PageProps {
   params: Promise<{
     handle: string;

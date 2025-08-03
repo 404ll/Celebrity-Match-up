@@ -3,7 +3,7 @@
 import React from "react";
 import { Footer } from "@/components/footer";
 import { LandingNavbar } from "@/components/navbar/landingNavbar";
-import { YoumindCard } from "@/components/card/YoumindCard";
+import { YoumindCard } from "../components/card/YoumindCard";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Sparkles, ArrowRight } from "lucide-react";
