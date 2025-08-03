@@ -4,7 +4,7 @@ import { DetailNavbar } from "@/components/navbar/detailNavbar";
 import { YoumindCard } from "@/components/card/YoumindCard";
 import { TwitterService } from "@/lib/twitter-service";
 import { transformPostsForAI } from "@/utils/twitter-transformer";
-import { getTwitterHighQualityAvatar } from "@/lib/utils";
+import { getTwitterHighQualityAvatar } from "@/lib/twitterAvatar";
 import { notFound } from "next/navigation";
 import { LaunchCard } from "@/components/card/LaunchCard";
 import { TwitterUser, UserInfo } from "@/types/index";
@@ -12,27 +12,18 @@ import { SoulFormulaCard } from "@/components/card/SoulFormulaCard";
 import { GrowthCard } from "@/components/card/GrowthCard";
 import { mockAnalysis, mockUser } from "@/mock";
 import { AIAnalysisService } from "@/lib/ai-analysis-service";
-import { generateTwitterAnalysisMetadata } from "@/utils/metadata-utils";
 interface PageProps {
   params: Promise<{
     handle: string;
   }>;
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ handle: string }>;
-}): Promise<Metadata> {
-  const { handle } = await params;
-  return generateTwitterAnalysisMetadata({ handle });
-}
 
 export default async function TwitterAnalysisPage({ params }: PageProps) {
   const { handle } = await params;
 
   try {
-    // const twitterService = new TwitterService();
+    const twitterService = new TwitterService();
     // const aiService = new AIAnalysisService();
 
     // // 获取推文数据

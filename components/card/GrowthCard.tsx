@@ -4,7 +4,6 @@ import { useRef, useState, useEffect } from "react"
 import type { GrowthCardData, TwitterUser } from "@/types/index"
 import Image from "next/image"
 import { YouMindLogo } from "../icon/logo"
-import { generateShareUrl, generateTwitterShareUrl } from "@/utils/card-utils"
 import { DownloadButton } from "./downloadButton"
 import Link from "next/link"
 
@@ -15,12 +14,7 @@ interface GrowthCardProps {
 
 export const GrowthCard = ({ data, user }: GrowthCardProps) => {
   const cardContentRef = useRef<HTMLDivElement>(null)
-  const [shareUrl, setShareUrl] = useState("")
-
-  useEffect(() => {
-    setShareUrl(user.username ? generateShareUrl(user.username) : window.location.href)
-  }, [user.username])
-
+ 
   return (
     <div
       ref={cardContentRef}
@@ -57,14 +51,7 @@ export const GrowthCard = ({ data, user }: GrowthCardProps) => {
                 <a
                   target="_blank"
                   className="inline-flex items-center px-2 py-1.5 text-xs font-semibold text-white bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg shadow-lg hover:from-indigo-600 hover:to-purple-600 transition-all duration-200"
-                  href={generateTwitterShareUrl(
-                    {
-                      name: user.display_name,
-                      analysis: data.summary,
-                      id: user.username,
-                    },
-                    shareUrl,
-                  )}
+                
                   rel="noreferrer"
                 >
                   <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
@@ -145,14 +132,7 @@ export const GrowthCard = ({ data, user }: GrowthCardProps) => {
                 <a
                   target="_blank"
                   className="inline-flex items-center px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl shadow-lg hover:from-indigo-600 hover:to-purple-600 transition-all duration-200 transform hover:scale-105"
-                  href={generateTwitterShareUrl(
-                    {
-                      name: user.display_name,
-                      analysis: data.summary,
-                      id: user.username,
-                    },
-                    shareUrl,
-                  )}
+                 
                   rel="noreferrer"
                 >
                   <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">

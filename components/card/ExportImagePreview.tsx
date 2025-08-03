@@ -129,8 +129,18 @@ const ExportImagePreview = forwardRef<
       scale = 2,
     } = options;
 
+    // 等待组件完全渲染
+    await new Promise(resolve => setTimeout(resolve, 100));
+
     if (!wrapperRef.current) {
       onExportError?.(new Error("Export failed: no wrapper element found"));
+      return;
+    }
+
+    // 检查目标元素是否存在
+    const targetElement = getTargetElement();
+    if (!targetElement) {
+      onExportError?.(new Error("Export failed: target element not found"));
       return;
     }
 

@@ -18,11 +18,22 @@ export const DownloadButton = ({ cardRef, fileName }: DownloadButtonProps) => {
   }
 
   const handleDownload = async () => {
-    if (!exportRef.current) return
+    if (!exportRef.current) {
+      alert("导出组件未准备好，请稍后重试")
+      return
+    }
+
+    if (!cardRef.current) {
+      alert("目标元素未找到，请确保页面已完全加载")
+      return
+    }
 
     setIsDownloading(true)
 
     try {
+      // 等待一下确保元素完全渲染
+      await new Promise(resolve => setTimeout(resolve, 200))
+      
       await exportRef.current.exportImage({
         filename: fileName,
         needDownload: true,
