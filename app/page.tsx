@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { Footer } from "@/components/footer";
 import { LandingNavbar } from "@/components/navbar/landingNavbar";
 import { YoumindCard } from "@/components/card/YoumindCard";

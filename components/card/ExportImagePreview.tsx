@@ -299,26 +299,6 @@ const ExportImagePreview = forwardRef<
           dangerouslySetInnerHTML={{ __html: clonedElement.outerHTML }}
         />
         
-        {/* 水印 */}
-        {watermarkOptions?.show && (
-          <div 
-            className={`watermark watermark-${watermarkOptions.position || 'top-right'}`}
-            style={{
-              position: 'absolute',
-              fontSize: `${watermarkOptions.size || 16}px`,
-              color: 'rgba(0,0,0,0.3)',
-              pointerEvents: 'none',
-              ...(watermarkOptions.position === 'top-left' && { top: '8px', left: '8px' }),
-              ...(watermarkOptions.position === 'top-right' && { top: '8px', right: '8px' }),
-              ...(watermarkOptions.position === 'bottom-left' && { bottom: '8px', left: '8px' }),
-              ...(watermarkOptions.position === 'bottom-right' && { bottom: '8px', right: '8px' }),
-            }}
-          >
-            {watermarkOptions.type === 'logo-only' ? '🎯' : 
-             watermarkOptions.type === 'text-only' ? 'YouMind' :
-             '🎯 YouMind'}
-          </div>
-        )}
       </div>
     );
   };

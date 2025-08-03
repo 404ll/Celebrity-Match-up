@@ -1,6 +1,6 @@
 "use client"
 
-import type React from "react"
+import React from "react"
 import { useRef, useState } from "react"
 import ExportImagePreview, { type ExportImagePreviewRef } from "./ExportImagePreview"
 
@@ -38,10 +38,10 @@ export const DownloadButton = ({ cardRef, fileName }: DownloadButtonProps) => {
     }
   }
 
-  const handleExportError = (error: Error) => {
-    console.error("导出错误:", error)
-    alert(`导出失败: ${error.message}`)
-  }
+  // const handleExportError = (error: Error) => {
+  //   console.error("导出错误:", error)
+  //   alert(`导出失败: ${error.message}`)
+  // }
 
   return (
     <>
@@ -77,7 +77,7 @@ export const DownloadButton = ({ cardRef, fileName }: DownloadButtonProps) => {
         <ExportImagePreview
           ref={exportRef}
           selector={getSelector()}
-          onExportError={handleExportError}
+          // onExportError={handleExportError}
           offscreen={true}
           title={fileName}
           watermarkOptions={{

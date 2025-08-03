@@ -4,12 +4,12 @@ import type {
   AIAnalysisResult,
   AIServiceResult,
   UserFieldResult,
+  UserInfo,
 } from "@/types/index";
 import { SOUL_MATCHMAKER_PROMPT } from "./match-prompt";
 import { USER_FIELD_PROMPT } from "./field-prompt";
 import fs from "fs";
 import path from "path";
-import { UserInfo } from "@/types/index";
 
 interface DatabaseEntry {
   name: string;

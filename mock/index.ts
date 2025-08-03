@@ -70,7 +70,7 @@ export const mockAnalysis: AIAnalysisResult = {
 };
 
 export const mockUser: TwitterUser = {
-  username: "v",
+  username: "111",
   display_name: "Vitalik Buterin",
   profile_image_url: "/images/youmindCardTest.JPG",
   description: "I'm a software engineer and the co-founder of Ethereum.",

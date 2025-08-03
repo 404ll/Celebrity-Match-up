@@ -22,10 +22,11 @@ export async function generateTwitterAnalysisMetadata({
     : process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
   const finalBaseUrl = baseUrl || defaultBaseUrl;
+  console.log("finalBaseUrl", finalBaseUrl);
 
   // 动态生成图片 URL
   const imageUrl = `${finalBaseUrl}/api/generate-card/${handle}?type=${type}`;
-
+  console.log("imageUrl", imageUrl);
   return {
     title: `${handle} - Twitter Personality Analysis`,
     description: `AI-powered personality analysis for @${handle} based on Twitter activity patterns`,
