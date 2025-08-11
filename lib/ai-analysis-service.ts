@@ -1,15 +1,20 @@
-import OpenAI from "openai";
-import type {
-  TwitterPost,
-  AIAnalysisResult,
-  AIServiceResult,
-  UserFieldResult,
-} from "@/types/index";
-import { SOUL_MATCHMAKER_PROMPT } from "./match-prompt";
-import { USER_FIELD_PROMPT } from "./field-prompt";
-import fs from "fs";
-import path from "path";
-import { UserInfo } from "@/types/index";
+import type { TwitterPost, UserFieldResult } from '../types/index';
+import { UserInfo } from '../types/index';
+import { cleanMarkdownJson } from '../utils/markdown-utils';
+import { USER_FIELD_PROMPT } from './field-prompt';
+import { SOUL_MATCHMAKER_PROMPT } from './prompt';
+
+// 流式数据类型定义
+export interface StreamData {
+  type: 'status' | 'progress' | 'partial_content' | 'complete' | 'error';
+  message?: string;
+  content?: string;
+  accumulated?: string;
+  timestamp: number;
+  error?: string;
+  step?: string;
+  data?: any;
+}
 
 interface DatabaseEntry {
   name: string;
@@ -26,198 +31,569 @@ interface Databases {
 }
 
 export class AIAnalysisService {
-  private openai: OpenAI;
+  private apiKey: string;
+  private baseUrl: string;
 
   constructor() {
-    const apiKey = process.env.AIHUBMIX_API_KEY || "";
+    this.apiKey = process.env.AIHUBMIX_API_KEY || '';
+    this.baseUrl ='http://localhost:3000';
 
-    this.openai = new OpenAI({
-      baseURL: "https://aihubmix.com/v1",
-      apiKey: apiKey,
+    // 添加调试信息
+    console.log('🔧 AIAnalysisService 初始化:', {
+      hasApiKey: !!this.apiKey,
+      baseUrl: this.baseUrl,
+      environment: process.env.NODE_ENV,
+      platform: typeof globalThis !== 'undefined' && 'caches' in globalThis ? 'cloudflare' : 'node',
     });
   }
 
-  /**
-   * 根据用户领域标签加载对应的数据库
-   */
-  private async loadDatabasesByTags(tags: string[]): Promise<Databases> {
-    const databases: Databases = {};
-    
-    try {
-      const dataPath = path.join(process.cwd(), 'public', 'data');
-      
-      for (const tag of tags) {
-        const filePath = path.join(dataPath, `${tag}.json`);
-        
-        if (fs.existsSync(filePath)) {
-          const data = JSON.parse(fs.readFileSync(filePath, 'utf-8')) as DatabaseEntry[];
-          databases[tag] = data;
-          console.log(`✅ 加载数据库: ${tag} (${data.length} 条记录)`);
-        } else {
-          console.warn(`⚠️  数据库文件不存在: ${tag}.json`);
+  // 流式分析
+  async analyzeUserTweetsWithFieldAnalysisStream(
+    userInfo: UserInfo,
+  ): Promise<ReadableStream<Uint8Array>> {
+    const tweets = userInfo.tweets.slice(0, 10);
+    const self = this; // 保存对服务实例的引用
+
+    return new ReadableStream<Uint8Array>({
+      async start(controller) {
+        try {
+          const encoder = new TextEncoder();
+
+          // 步骤1: 领域分析
+          controller.enqueue(
+            encoder.encode(
+              `data: ${JSON.stringify({
+                type: 'progress',
+                step: 'field-analysis',
+                message: '开始领域分析...',
+                timestamp: Date.now(),
+              })}\n\n`,
+            ),
+          );
+
+          const fieldResult = await self.analyzeUserField({ ...userInfo, tweets });
+
+          if (!fieldResult.domains || !Array.isArray(fieldResult.domains)) {
+            controller.enqueue(
+              encoder.encode(
+                `data: ${JSON.stringify({
+                  type: 'error',
+                  error: '用户领域分析失败或格式错误',
+                  timestamp: Date.now(),
+                })}\n\n`,
+              ),
+            );
+            controller.close();
+            return;
+          }
+
+          controller.enqueue(
+            encoder.encode(
+              `data: ${JSON.stringify({
+                type: 'progress',
+                step: 'field-analysis',
+                message: '领域分析完成',
+                data: { domains: fieldResult.domains },
+                timestamp: Date.now(),
+              })}\n\n`,
+            ),
+          );
+
+          // 步骤2: 数据库加载
+          controller.enqueue(
+            encoder.encode(
+              `data: ${JSON.stringify({
+                type: 'progress',
+                step: 'database-loading',
+                message: '开始加载数据库...',
+                timestamp: Date.now(),
+              })}\n\n`,
+            ),
+          );
+
+          const databases = await self.loadDatabasesByTags(fieldResult.domains);
+
+          if (Object.keys(databases).length === 0) {
+            controller.enqueue(
+              encoder.encode(
+                `data: ${JSON.stringify({
+                  type: 'error',
+                  error: '没有找到对应的数据库文件',
+                  timestamp: Date.now(),
+                })}\n\n`,
+              ),
+            );
+            controller.close();
+            return;
+          }
+
+          controller.enqueue(
+            encoder.encode(
+              `data: ${JSON.stringify({
+                type: 'progress',
+                step: 'database-loading',
+                message: '数据库加载完成',
+                data: {
+                  loadedCount: Object.keys(databases).length,
+                  domains: Object.keys(databases),
+                },
+                timestamp: Date.now(),
+              })}\n\n`,
+            ),
+          );
+
+          // 步骤3: AI分析
+          controller.enqueue(
+            encoder.encode(
+              `data: ${JSON.stringify({
+                type: 'progress',
+                step: 'ai-analysis',
+                message: '开始AI分析...',
+                timestamp: Date.now(),
+              })}\n\n`,
+            ),
+          );
+
+          // 继续原有的AI分析流
+          const prompt = self.buildSoulMatchmakerPrompt(tweets, databases);
+          const apiKey = self.apiKey;
+
+          console.log('🔑 准备发送AI请求:', {
+            apiKeyLength: apiKey.length,
+            apiKeyPrefix: apiKey.substring(0, 10) + '...',
+            promptLength: prompt.length,
+            model: 'gemini-2.5-pro',
+          });
+
+          const response = await fetch('https://aihubmix.com/v1/chat/completions', {
+            method: 'POST',
+            headers: {
+              Authorization: `Bearer ${apiKey}`,
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              model: 'gemini-2.5-pro',
+              messages: [{ role: 'user', content: prompt }],
+              stream: true,
+            }),
+          });
+
+          if (!response.ok) {
+            controller.enqueue(
+              encoder.encode(
+                `data: ${JSON.stringify({
+                  type: 'error',
+                  error: `HTTP error! status: ${response.status}`,
+                  timestamp: Date.now(),
+                })}\n\n`,
+              ),
+            );
+            controller.close();
+            return;
+          }
+
+          if (!response.body) {
+            controller.error(new Error('No response body'));
+            return;
+          }
+
+          const reader = response.body.getReader();
+          const decoder = new TextDecoder();
+          let accumulatedContent = '';
+          let buffer = ''; // 添加缓冲区来处理分割的数据
+
+          while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+
+            if (value) {
+              const chunk = decoder.decode(value, { stream: true });
+              buffer += chunk; // 将新数据添加到缓冲区
+
+              // 按行分割并处理
+              const lines = buffer.split('\n');
+              // 保留最后一行（可能不完整）
+              buffer = lines.pop() || '';
+
+              for (const line of lines) {
+                if (line.trim() && line.startsWith('data: ')) {
+                  const data = line.slice(6);
+                  if (data === '[DONE]') {
+                    controller.enqueue(
+                      encoder.encode(
+                        `data: ${JSON.stringify({
+                          type: 'complete',
+                          content: accumulatedContent,
+                          timestamp: Date.now(),
+                        })}\n\n`,
+                      ),
+                    );
+                    controller.close();
+                    return;
+                  }
+
+                  try {
+                    // 验证数据是否为有效的JSON
+                    if (!data.trim() || !data.includes('{')) {
+                      continue; // 跳过无效数据
+                    }
+
+                    const parsed = JSON.parse(data);
+
+                    // 验证解析后的数据结构
+                    if (!parsed || typeof parsed !== 'object') {
+                      continue;
+                    }
+
+                    if (
+                      parsed.choices &&
+                      Array.isArray(parsed.choices) &&
+                      parsed.choices[0] &&
+                      parsed.choices[0].delta &&
+                      parsed.choices[0].delta.content
+                    ) {
+                      const content = parsed.choices[0].delta.content;
+                      accumulatedContent += content;
+
+                      controller.enqueue(
+                        encoder.encode(
+                          `data: ${JSON.stringify({
+                            type: 'partial_content',
+                            content: content,
+                            accumulated: accumulatedContent,
+                            timestamp: Date.now(),
+                          })}\n\n`,
+                        ),
+                      );
+                    }
+                  } catch (e) {
+                    // 只有在数据看起来像JSON但解析失败时才记录警告
+                    if (data.trim() && (data.includes('{') || data.includes('['))) {
+                      console.warn('解析AI流数据失败:', e, '数据:', data.substring(0, 100));
+                    }
+                    // 不发送错误，继续处理下一个数据块
+                  }
+                }
+              }
+            }
+          }
+
+          // 处理缓冲区中剩余的数据
+          if (buffer.trim()) {
+            try {
+              const data = buffer.trim();
+              if (data.startsWith('data: ')) {
+                const jsonData = data.slice(6);
+                if (jsonData !== '[DONE]' && jsonData.trim() && jsonData.includes('{')) {
+                  const parsed = JSON.parse(jsonData);
+                  if (
+                    parsed.choices &&
+                    Array.isArray(parsed.choices) &&
+                    parsed.choices[0] &&
+                    parsed.choices[0].delta &&
+                    parsed.choices[0].delta.content
+                  ) {
+                    const content = parsed.choices[0].delta.content;
+                    accumulatedContent += content;
+
+                    controller.enqueue(
+                      encoder.encode(
+                        `data: ${JSON.stringify({
+                          type: 'partial_content',
+                          content: content,
+                          accumulated: accumulatedContent,
+                          timestamp: Date.now(),
+                        })}\n\n`,
+                      ),
+                    );
+                  }
+                }
+              }
+            } catch (e) {
+              console.warn('处理缓冲区数据失败:', e);
+            }
+          }
+
+          controller.close();
+        } catch (error) {
+          const encoder = new TextEncoder();
+          controller.enqueue(
+            encoder.encode(
+              `data: ${JSON.stringify({
+                type: 'error',
+                error: error instanceof Error ? error.message : '未知错误',
+                timestamp: Date.now(),
+              })}\n\n`,
+            ),
+          );
+          controller.close();
         }
-      }
-      
-      return databases;
-    } catch (error) {
-      console.error('加载数据库失败:', error);
-      throw new Error(`Failed to load databases: ${error instanceof Error ? error.message : 'Unknown error'}`);
-    }
+      },
+    });
   }
 
-  /**
-   * 根据用户领域分析结果进行推文分析
-   */
-async analyzeUserTweetsWithFieldAnalysis(
-    userInfo: UserInfo
-  ): Promise<AIServiceResult> {
-    try {
+  // 加载数据库
+  async loadDatabasesByTags(tags: string[]): Promise<Databases> {
+    const databases: Databases = {};
+    const startAll = Date.now();
 
-      // 1. 先分析用户领域
-      //切割前10条推文，用于用户领域分析
-      const tweets = userInfo.tweets.slice(0, 10);
-      const userInfoForFieldAnalysis = {
-        ...userInfo,
-        tweets: tweets,
-      };
-      const fieldResult = await this.analyzeUserField(userInfoForFieldAnalysis);
-      
-      if (!fieldResult.domains || !Array.isArray(fieldResult.domains)) {
-        return {
-          success: false,
-          error: '用户领域分析失败或结果格式错误'
-        };
+    for (const tag of tags) {
+      try {
+        const start = Date.now();
+        const url = `${this.baseUrl}/celebrityData/${tag}.json`;
+        const response = await fetch(url);
+        const duration = Date.now() - start;
+
+        if (response.ok) {
+          const data = (await response.json()) as DatabaseEntry[];
+          databases[tag] = data;
+          console.log(`✅ 加载数据库: ${tag} (${data.length} 条记录) - 用时 ${duration}ms`);
+        } else {
+          console.warn(`⚠️ 数据库文件不存在: ${tag}.json (${response.status}) - 用时 ${duration}ms`);
+        }
+      } catch (error) {
+        console.warn(`⚠️ 加载数据库失败: ${tag}.json`, error);
       }
-      
-      // 2. 根据领域标签加载对应的数据库
-      const databases = await this.loadDatabasesByTags(fieldResult.domains);
-      
-      if (Object.keys(databases).length === 0) {
-        return {
-          success: false,
-          error: '没有找到对应的数据库文件'
-        };
-      }
-      
-      // 3. 进行推文分析
-      return await this.analyzeUserTweets(userInfo.tweets, databases);
-      
-    } catch (error) {
-      console.error('分析失败:', error);
-      return {
-        success: false,
-        error: error instanceof Error ? error.message : '分析失败'
-      };
     }
+
+    console.log(`📦 数据库加载总用时: ${Date.now() - startAll}ms`);
+    return databases;
   }
 
-  /**
-   * 分析用户的推文内容并生成品味匹配结果
-   */
-  private async analyzeUserTweets(
-    tweets: TwitterPost[],
-    databases: Databases
-  ): Promise<AIServiceResult> {
-    try {
-      // 验证输入
-      if (!tweets || tweets.length === 0) {
-        return {
-          success: false,
-          error: "No tweets provided for analysis",
-        };
-      }
+  // 流式分析
+  analyzeUserTweetsStream(tweets: TwitterPost[], databases: Databases): ReadableStream<Uint8Array> {
+    const prompt = this.buildSoulMatchmakerPrompt(tweets, databases);
+    const apiKey = this.apiKey;
 
-      // 构建分析提示
-      const prompt = this.buildSoulMatchmakerPrompt(tweets, databases);
+    return new ReadableStream<Uint8Array>({
+      async start(controller) {
+        try {
+          const encoder = new TextEncoder();
 
-      const completion = await this.openai.chat.completions.create({
-        model: "gemini-2.5-pro",
+          // 发送开始状态
+          controller.enqueue(
+            encoder.encode(
+              `data: ${JSON.stringify({
+                type: 'status',
+                message: '开始AI分析...',
+                timestamp: Date.now(),
+              })}\n\n`,
+            ),
+          );
+
+          const response = await fetch('https://aihubmix.com/v1/chat/completions', {
+            method: 'POST',
+            headers: {
+              Authorization: `Bearer ${apiKey}`,
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              model: 'gemini-2.5-pro',
+              messages: [{ role: 'user', content: prompt }],
+              stream: true,
+            }),
+          });
+
+          if (!response.ok) {
+            // 发送错误状态
+            controller.enqueue(
+              encoder.encode(
+                `data: ${JSON.stringify({
+                  type: 'error',
+                  error: `HTTP error! status: ${response.status}`,
+                  timestamp: Date.now(),
+                })}\n\n`,
+              ),
+            );
+            controller.close();
+            return;
+          }
+
+          if (!response.body) {
+            controller.error(new Error('No response body'));
+            return;
+          }
+
+          const reader = response.body.getReader();
+          const decoder = new TextDecoder();
+          let accumulatedContent = '';
+          let buffer = ''; // 添加缓冲区来处理分割的数据
+
+          while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+
+            if (value) {
+              const chunk = decoder.decode(value, { stream: true });
+              buffer += chunk; // 将新数据添加到缓冲区
+
+              // 按行分割并处理
+              const lines = buffer.split('\n');
+              // 保留最后一行（可能不完整）
+              buffer = lines.pop() || '';
+
+              for (const line of lines) {
+                if (line.trim() && line.startsWith('data: ')) {
+                  const data = line.slice(6);
+                  if (data === '[DONE]') {
+                    // 发送完成状态
+                    controller.enqueue(
+                      encoder.encode(
+                        `data: ${JSON.stringify({
+                          type: 'complete',
+                          content: accumulatedContent,
+                          timestamp: Date.now(),
+                        })}\n\n`,
+                      ),
+                    );
+                    controller.close();
+                    return;
+                  }
+
+                  try {
+                    const parsed = JSON.parse(data);
+                    if (
+                      parsed.choices &&
+                      parsed.choices[0] &&
+                      parsed.choices[0].delta &&
+                      parsed.choices[0].delta.content
+                    ) {
+                      const content = parsed.choices[0].delta.content;
+                      accumulatedContent += content;
+
+                      // 发送部分内容
+                      controller.enqueue(
+                        encoder.encode(
+                          `data: ${JSON.stringify({
+                            type: 'partial_content',
+                            content: content,
+                            accumulated: accumulatedContent,
+                            timestamp: Date.now(),
+                          })}\n\n`,
+                        ),
+                      );
+                    }
+                  } catch (e) {
+                    // 只有在数据看起来像JSON但解析失败时才记录警告
+                    if (data.trim() && (data.includes('{') || data.includes('['))) {
+                      console.warn('解析AI流数据失败:', e, '数据:', data.substring(0, 100));
+                    }
+                    // 不发送错误，继续处理下一个数据块
+                  }
+                }
+              }
+            }
+          }
+
+          // 处理缓冲区中剩余的数据
+          if (buffer.trim()) {
+            try {
+              const data = buffer.trim();
+              if (data.startsWith('data: ')) {
+                const jsonData = data.slice(6);
+                if (jsonData !== '[DONE]') {
+                  const parsed = JSON.parse(jsonData);
+                  if (
+                    parsed.choices &&
+                    parsed.choices[0] &&
+                    parsed.choices[0].delta &&
+                    parsed.choices[0].delta.content
+                  ) {
+                    const content = parsed.choices[0].delta.content;
+                    accumulatedContent += content;
+
+                    controller.enqueue(
+                      encoder.encode(
+                        `data: ${JSON.stringify({
+                          type: 'partial_content',
+                          content: content,
+                          accumulated: accumulatedContent,
+                          timestamp: Date.now(),
+                        })}\n\n`,
+                      ),
+                    );
+                  }
+                }
+              }
+            } catch (e) {
+              console.warn('处理缓冲区数据失败:', e);
+            }
+          }
+
+          controller.close();
+        } catch (error) {
+          // 发送错误状态
+          const encoder = new TextEncoder();
+          controller.enqueue(
+            encoder.encode(
+              `data: ${JSON.stringify({
+                type: 'error',
+                error: error instanceof Error ? error.message : '未知错误',
+                timestamp: Date.now(),
+              })}\n\n`,
+            ),
+          );
+          controller.close();
+        }
+      },
+    });
+  }
+
+  async analyzeUserField(userInfo: UserInfo): Promise<UserFieldResult> {
+    const prompt = this.buildUserFieldPrompt(userInfo);
+    const start = Date.now();
+
+    const response = await fetch('https://aihubmix.com/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${this.apiKey}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        model: 'gemini-2.5-flash-nothink',
         messages: [
           {
-            role: "user",
+            role: 'user',
             content: prompt,
           },
         ],
-        response_format: { type: "json_object" },
-      });
-
-      const analysisContent = completion.choices[0].message.content;
-      if (!analysisContent) {
-        throw new Error("No response content from AI");
-      }
-
-      const analysis = JSON.parse(analysisContent) as AIAnalysisResult;
-
-      return {
-        success: true,
-        analysis,
-      };
-    } catch (error) {
-      console.error("AI Analysis Error:", error);
-      return {
-        success: false,
-        error: error instanceof Error ? error.message : "AI analysis failed",
-      };
-    }
-  }
-
-  private  async analyzeUserField(userInfo: UserInfo): Promise<any> {
-    const prompt = this.buildUserFieldPrompt(userInfo);
-    const completion = await this.openai.chat.completions.create({
-      model: "gemini-2.5-pro",
-      messages: [
-        {
-          role: "user",
-          content: prompt,
-        },
-      ],
-      response_format: { type: "json_object" },
+      }),
     });
 
-    const analysisContent = completion.choices[0].message.content;
-    if (!analysisContent) {
-      throw new Error("No response content from AI");
+    const duration = Date.now() - start;
+    console.log(`🧠 analyzeUserField 请求耗时: ${duration}ms`);
+
+    const data = (await response.json()) as any;
+    const content = data?.choices?.[0]?.message?.content;
+
+    if (!content) {
+      throw new Error('AI 返回内容为空');
     }
 
-    const analysis = JSON.parse(analysisContent) as UserFieldResult;
-    console.log("analysis", analysis);
-    return analysis;
+    const cleanContent = cleanMarkdownJson(content);
+    return JSON.parse(cleanContent) as UserFieldResult;
   }
 
-  /**
-   * 构建Soul Matchmaker分析提示
-   */
-  private buildSoulMatchmakerPrompt(
-    tweets: TwitterPost[],
-    databases: Databases
-  ): string {
-    const tweetsInfo = JSON.stringify(tweets, null, 2);
-    const databasesInfo = JSON.stringify(databases, null, 2);
-
+  private buildSoulMatchmakerPrompt(tweets: TwitterPost[], databases: Databases): string {
     return `${SOUL_MATCHMAKER_PROMPT}
 
 # INPUT_USER_TWEETS
-${tweetsInfo}
+${JSON.stringify(tweets, null, 2)}
 
 # INPUT_DATABASES
-${databasesInfo}
+${JSON.stringify(databases, null, 2)}
 
 请按照上述步骤进行分析，并返回符合OUTPUT_JSON_STRUCTURE格式的JSON结果。
 `;
   }
 
-  /**
-   * 构建用户领域分析提示
-   */
   private buildUserFieldPrompt(userInfo: UserInfo): string {
-    const userInfoJson = JSON.stringify(userInfo, null, 2);
-
     return `${USER_FIELD_PROMPT}
 
 请分析以下用户信息：
 
 # INPUT_USER_INFO
-${userInfoJson}
+${JSON.stringify(userInfo, null, 2)}
 
 请返回JSON格式的结果，包含选中的领域标签数组。
 `;

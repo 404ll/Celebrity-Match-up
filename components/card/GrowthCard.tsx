@@ -1,20 +1,20 @@
-"use client"
+'use client';
 
-import { useRef, useState, useEffect } from "react"
-import type { GrowthCardData, TwitterUser } from "@/types/index"
-import Image from "next/image"
-import { YouMindLogo } from "../icon/logo"
-import { DownloadButton } from "./downloadButton"
-import Link from "next/link"
+import Link from 'next/link';
+import { useRef } from 'react';
+import type { PersonalTasteDeepDiveData, TwitterUser } from '../../types/index';
+import { getTwitterHighQualityAvatar } from '../../utils/twitterAvatar';
+import { YouMindLogo } from '../icon/logo';
+import { DownloadButton } from './downloadButton';
 
-interface GrowthCardProps {
-  data: GrowthCardData
-  user: TwitterUser
+interface PersonalTasteDeepDiveCardProps {
+  data: PersonalTasteDeepDiveData;
+  user: TwitterUser;
 }
 
-export const GrowthCard = ({ data, user }: GrowthCardProps) => {
-  const cardContentRef = useRef<HTMLDivElement>(null)
- 
+export const PersonalTasteDeepDiveCard = ({ data, user }: PersonalTasteDeepDiveCardProps) => {
+  const cardContentRef = useRef<HTMLDivElement>(null);
+
   return (
     <div
       ref={cardContentRef}
@@ -33,32 +33,31 @@ export const GrowthCard = ({ data, user }: GrowthCardProps) => {
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-3">
                 <div className="relative flex-shrink-0">
-                  <Image
-                    src={user.profile_image_url || "/placeholder.svg"}
+                  <img
+                    src={getTwitterHighQualityAvatar(user.profile_image_url) || '/placeholder.svg'}
                     alt={user.display_name}
                     width={36}
                     height={36}
-                    className="rounded-full border-2 border-white shadow-lg ring-2 ring-indigo-200"
+                    className="rounded-full border-2 border-white shadow-lg ring-2 ring-blue-200"
                   />
                 </div>
                 <div className="min-w-0 flex-1">
                   <h1 className="text-sm font-bold text-gray-900 truncate">{user.display_name}</h1>
                 </div>
               </div>
-              
+
               {/* 移动端按钮组 */}
               <div className="flex space-x-2 flex-shrink-0">
                 <a
                   target="_blank"
                   className="inline-flex items-center px-2 py-1.5 text-xs font-semibold text-white bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg shadow-lg hover:from-indigo-600 hover:to-purple-600 transition-all duration-200"
-                
                   rel="noreferrer"
                 >
                   <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.80l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                   </svg>
                 </a>
-                <DownloadButton cardRef={cardContentRef} fileName={"growthCard"} />
+                <DownloadButton cardRef={cardContentRef} fileName={'growthCard'} />
               </div>
             </div>
 
@@ -81,7 +80,7 @@ export const GrowthCard = ({ data, user }: GrowthCardProps) => {
               </div>
               <div className="min-w-0 flex-1">
                 <h2 className="text-lg font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                  {data.cardTitle}
+                  品味深潜
                 </h2>
               </div>
             </div>
@@ -91,8 +90,8 @@ export const GrowthCard = ({ data, user }: GrowthCardProps) => {
           <div className="hidden sm:flex sm:justify-between sm:items-start">
             <div className="flex items-center space-x-4">
               <div className="relative flex-shrink-0">
-                <Image
-                  src={user.profile_image_url || "/placeholder.svg"}
+                <img
+                  src={getTwitterHighQualityAvatar(user.profile_image_url) || '/placeholder.svg'}
                   alt={user.display_name}
                   width={48}
                   height={48}
@@ -123,7 +122,7 @@ export const GrowthCard = ({ data, user }: GrowthCardProps) => {
                 </div>
                 <div>
                   <h2 className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                    {data.cardTitle}
+                    品味深潜
                   </h2>
                 </div>
               </div>
@@ -132,48 +131,70 @@ export const GrowthCard = ({ data, user }: GrowthCardProps) => {
                 <a
                   target="_blank"
                   className="inline-flex items-center px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl shadow-lg hover:from-indigo-600 hover:to-purple-600 transition-all duration-200 transform hover:scale-105"
-                 
                   rel="noreferrer"
+                  href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
+                    `Check out ${user.display_name}'s analysis on @YouMind`,
+                  )}&url=${encodeURIComponent(
+                    `https://twitter.wordware.ai/${user.display_name}?section=Growth`,
+                  )}`}
                 >
                   <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.80l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                   </svg>
                   Share
                 </a>
-                <DownloadButton cardRef={cardContentRef} fileName={"growthCard"} />
+                <DownloadButton cardRef={cardContentRef} fileName={'growthCard'} />
               </div>
             </div>
           </div>
         </div>
 
-        {/* Analysis Points - 改为文字列表 */}
-        <div className="mb-6">
-          <div className="bg-white/50 rounded-xl p-4 sm:p-5 border border-indigo-100">
-            <h3 className="text-base sm:text-lg font-semibold text-indigo-800 mb-3 sm:mb-4">关键洞察</h3>
-            <div className="space-y-3 sm:space-y-4">
-              {data.points.map((point, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <div className="w-6 h-6 sm:w-7 sm:h-7 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0 mt-0.5">
-                    {index + 1}
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h4 className="font-semibold text-gray-900 text-sm sm:text-base mb-1">{point.title}</h4>
-                    <p className="text-gray-700 text-sm sm:text-base leading-relaxed">{point.body}</p>
-                  </div>
-                </div>
-              ))}
+        {/* Tagline */}
+        {data.title && (
+          <div className="mb-5">
+            <div className="bg-gradient-to-r from-indigo-100 to-purple-100 border border-indigo-200 rounded-xl p-3 sm:p-4">
+              <p className="text-sm sm:text-base font-medium text-indigo-800 leading-relaxed text-center italic">
+                "{data.title}"
+              </p>
             </div>
           </div>
-        </div>
+        )}
+
+        {/* Analysis Points - 改为文字列表 */}
+        {data.points && data.points.length > 0 && (
+          <div className="mb-6">
+            <div className="bg-white/50 rounded-xl p-4 sm:p-5 border border-indigo-100">
+              <div className="space-y-3 sm:space-y-4">
+                {data.points.map((point, index) => (
+                  <div key={index} className="flex items-start space-x-3">
+                    <div className="w-6 h-6 sm:w-7 sm:h-7 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0 mt-0.5">
+                      {index + 1}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h4 className="font-semibold text-gray-900 text-sm sm:text-base mb-1">
+                        {point.title || '分析点'}
+                      </h4>
+                      <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+                        {point.body || '正在分析中...'}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Summary */}
-        <div className="bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl p-4 sm:p-5 text-white shadow-lg">
-          <div className="flex items-center space-x-2 mb-2 sm:mb-3">
-            <div className="w-2 h-2 bg-white rounded-full"></div>
-            <span className="text-xs sm:text-sm font-semibold opacity-90">Summary</span>
+        {data.summary && (
+          <div className="bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl p-4 sm:p-5 text-white shadow-lg">
+            <div className="flex items-center space-x-2 mb-2 sm:mb-3">
+              <div className="w-2 h-2 bg-white rounded-full"></div>
+              <span className="text-xs sm:text-sm font-semibold opacity-90">Summary</span>
+            </div>
+            <p className="text-base sm:text-lg font-bold leading-relaxed">{data.summary}</p>
           </div>
-          <p className="text-base sm:text-lg font-bold leading-relaxed">{data.summary}</p>
-        </div>
+        )}
 
         {/* Footer */}
         <div className="flex items-center justify-center mt-4 pt-3 border-t border-indigo-200">
@@ -187,5 +208,5 @@ export const GrowthCard = ({ data, user }: GrowthCardProps) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};

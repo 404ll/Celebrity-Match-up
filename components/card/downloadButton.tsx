@@ -1,58 +1,58 @@
-"use client"
+'use client';
 
-import type React from "react"
-import { useRef, useState } from "react"
-import ExportImagePreview, { type ExportImagePreviewRef } from "./ExportImagePreview"
+import type React from 'react';
+import { useRef, useState } from 'react';
+import ExportImagePreview, { type ExportImagePreviewRef } from './ExportImagePreview';
 
 interface DownloadButtonProps {
-  cardRef: React.RefObject<HTMLDivElement | null>
-  fileName: string
+  cardRef: React.RefObject<HTMLDivElement | null>;
+  fileName: string;
 }
 
 export const DownloadButton = ({ cardRef, fileName }: DownloadButtonProps) => {
-  const [isDownloading, setIsDownloading] = useState(false)
-  const exportRef = useRef<ExportImagePreviewRef>(null)
+  const [isDownloading, setIsDownloading] = useState(false);
+  const exportRef = useRef<ExportImagePreviewRef>(null);
 
   const getSelector = () => {
-    return () => cardRef.current
-  }
+    return () => cardRef.current;
+  };
 
   const handleDownload = async () => {
     if (!exportRef.current) {
-      alert("导出组件未准备好，请稍后重试")
-      return
+      alert('导出组件未准备好，请稍后重试');
+      return;
     }
 
     if (!cardRef.current) {
-      alert("目标元素未找到，请确保页面已完全加载")
-      return
+      alert('目标元素未找到，请确保页面已完全加载');
+      return;
     }
 
-    setIsDownloading(true)
+    setIsDownloading(true);
 
     try {
       // 等待一下确保元素完全渲染
-      await new Promise(resolve => setTimeout(resolve, 200))
-      
+      await new Promise((resolve) => setTimeout(resolve, 200));
+
       await exportRef.current.exportImage({
         filename: fileName,
         needDownload: true,
-        format: "png",
+        format: 'png',
         scale: 2, // 提高图片质量
-      })
-      console.log("下载完成")
+      });
+      console.log('下载完成');
     } catch (error) {
-      console.error("下载失败:", error)
-      alert("下载失败，请重试")
+      console.error('下载失败:', error);
+      alert('下载失败，请重试');
     } finally {
-      setIsDownloading(false)
+      setIsDownloading(false);
     }
-  }
+  };
 
   const handleExportError = (error: Error) => {
-    console.error("导出错误:", error)
-    alert(`导出失败: ${error.message}`)
-  }
+    console.error('导出错误:', error);
+    alert(`导出失败: ${error.message}`);
+  };
 
   return (
     <>
@@ -78,9 +78,7 @@ export const DownloadButton = ({ cardRef, fileName }: DownloadButtonProps) => {
             <path d="M20 18H4v-2h16v2z"></path>
           </svg>
         )}
-        <span className="sm:block hidden">
-          {isDownloading ? "导出中..." : "Save"}
-        </span>
+        <span className="sm:block hidden">{isDownloading ? '导出中...' : 'Save'}</span>
       </button>
 
       {/* 隐藏的ExportImagePreview组件，用于导出功能 */}
@@ -93,12 +91,12 @@ export const DownloadButton = ({ cardRef, fileName }: DownloadButtonProps) => {
           title={fileName}
           watermarkOptions={{
             show: true,
-            type: "logo-text",
-            position: "bottom-right",
+            type: 'logo-text',
+            position: 'bottom-right',
             size: 14,
           }}
         />
       </div>
     </>
-  )
-}
+  );
+};

@@ -1,12 +1,7 @@
-"use client";
+'use client';
 
-import { toPng } from "html-to-image";
-import React, {
-  forwardRef,
-  useImperativeHandle,
-  useRef,
-  useState,
-} from "react";
+import { toPng } from 'html-to-image';
+import React, { forwardRef, useImperativeHandle, useRef, useState } from 'react';
 
 /**
  * 导出图片预览组件的引用接口
@@ -27,7 +22,7 @@ export interface ExportOptions {
   /** 是否需要自动下载 */
   needDownload?: boolean;
   /** 导出格式：PNG 或 JPEG */
-  format?: "png" | "jpeg";
+  format?: 'png' | 'jpeg';
   /** 图片质量（仅对 JPEG 有效，0-1） */
   quality?: number;
   /** 缩放比例，用于提高导出图片的清晰度 */
@@ -51,8 +46,8 @@ export interface ExportImagePreviewProps {
   /** 水印配置 */
   watermarkOptions?: {
     show?: boolean;
-    type?: "logo-text" | "logo-only" | "text-only";
-    position?: "top-left" | "top-right" | "bottom-left" | "bottom-right";
+    type?: 'logo-text' | 'logo-only' | 'text-only';
+    position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
     size?: number;
   };
 }
@@ -60,303 +55,336 @@ export interface ExportImagePreviewProps {
 /**
  * 导出图片预览组件
  */
-const ExportImagePreview = forwardRef<
-  ExportImagePreviewRef,
-  ExportImagePreviewProps
->(({ 
-  selector, 
-  onExportSuccess, 
-  onExportError,
-  offscreen = false,
-  title,
-  watermarkOptions,
-}, ref) => {
-  // 导出容器引用，用于获取整个导出区域
-  const wrapperRef = useRef<HTMLDivElement>(null);
-  // 导出状态，用于显示加载动画
-  const [isExporting, setIsExporting] = useState(false);
+const ExportImagePreview = forwardRef<ExportImagePreviewRef, ExportImagePreviewProps>(
+  (
+    { selector, onExportSuccess, onExportError, offscreen = false, title, watermarkOptions },
+    ref,
+  ) => {
+    // 导出容器引用，用于获取整个导出区域
+    const wrapperRef = useRef<HTMLDivElement>(null);
+    // 导出状态，用于显示加载动画
+    const [isExporting, setIsExporting] = useState(false);
 
-  /**
-   * 获取目标元素
-   */
-  const getTargetElement = (): HTMLElement | null => {
-    if (typeof selector === "function") {
-      return selector();
-    }
-    return document.querySelector(selector);
-  };
+    /**
+     * 获取目标元素
+     */
+    const getTargetElement = (): HTMLElement | null => {
+      if (typeof selector === 'function') {
+        return selector();
+      }
+      return document.querySelector(selector);
+    };
 
-  /**
-   * 等待所有资源加载完成
-   */
-  const waitForResources = async (element: HTMLElement): Promise<void> => {
-    // 等待所有图片加载完成
-    const images = element.querySelectorAll("img");
-    const imagePromises = Array.from(images).map((img) => {
-      return new Promise<void>((resolve) => {
-        if (img.complete && img.naturalHeight !== 0) {
-          resolve();
-        } else {
-          const loadHandler = () => {
-            img.removeEventListener("load", loadHandler);
-            img.removeEventListener("error", loadHandler);
+    /**
+     * 等待所有资源加载完成
+     */
+    const waitForResources = async (element: HTMLElement): Promise<void> => {
+      // 等待所有图片加载完成
+      const images = element.querySelectorAll('img');
+      const imagePromises = Array.from(images).map((img) => {
+        return new Promise<void>((resolve) => {
+          if (img.complete && img.naturalHeight !== 0) {
             resolve();
-          };
-          img.addEventListener("load", loadHandler);
-          img.addEventListener("error", loadHandler);
-          setTimeout(resolve, 3000);
-        }
+          } else {
+            const loadHandler = () => {
+              img.removeEventListener('load', loadHandler);
+              img.removeEventListener('error', loadHandler);
+              resolve();
+            };
+            img.addEventListener('load', loadHandler);
+            img.addEventListener('error', loadHandler);
+            // 设置合理的超时时间
+            setTimeout(resolve, 3000);
+          }
+        });
       });
-    });
 
-    // 等待字体加载完成
-    if (document.fonts) {
-      await document.fonts.ready;
-    }
+      // 等待字体加载完成
+      if (document.fonts) {
+        await document.fonts.ready;
+      }
 
-    await Promise.all(imagePromises);
-    await new Promise((resolve) => setTimeout(resolve, 100));
-  };
+      // 等待所有图片处理完成
+      await Promise.all(imagePromises);
 
-  /**
-   * 导出图片的核心方法
-   */
-  const exportImage = async (options: ExportOptions = {}) => {
-    const {
-      filename = title || `export-${new Date().getTime()}`,
-      needDownload = true,
-      format = "png",
-      scale = 2,
-    } = options;
+      // 给一点时间让 DOM 稳定
+      await new Promise((resolve) => setTimeout(resolve, 300));
+    };
 
-    // 等待组件完全渲染
-    await new Promise(resolve => setTimeout(resolve, 100));
+    /**
+     * 导出图片的核心方法
+     */
+    const exportImage = async (options: ExportOptions = {}) => {
+      const {
+        filename = title || `export-${new Date().getTime()}`,
+        needDownload = true,
+        format = 'png',
+        scale = 2,
+      } = options;
 
-    if (!wrapperRef.current) {
-      onExportError?.(new Error("Export failed: no wrapper element found"));
-      return;
-    }
+      // 等待组件完全渲染
+      await new Promise((resolve) => setTimeout(resolve, 100));
 
-    // 检查目标元素是否存在
-    const targetElement = getTargetElement();
-    if (!targetElement) {
-      onExportError?.(new Error("Export failed: target element not found"));
-      return;
-    }
+      if (!wrapperRef.current) {
+        onExportError?.(new Error('Export failed: no wrapper element found'));
+        return;
+      }
 
-    setIsExporting(true);
-    
-    try {
-      const element = wrapperRef.current;
-      await waitForResources(element);
+      // 检查目标元素是否存在
+      const targetElement = getTargetElement();
+      if (!targetElement) {
+        onExportError?.(new Error('Export failed: target element not found'));
+        return;
+      }
 
-      const exportOptions = {
-        pixelRatio: scale,
-        backgroundColor: "transparent",
-        cacheBust: true,
-        skipAutoScale: true,
-        width: element.scrollWidth,
-        height: element.scrollHeight,
-        style: {
-          margin: "0",
-          padding: "0",
-          border: "none",
-          outline: "none",
-          position: "static",
-          left: "0",
-          top: "0",
-          transform: "none",
-        },
-        filter: (node: HTMLElement) => {
-          if (
-            node.nodeType === Node.COMMENT_NODE ||
-            node.tagName === "SCRIPT" ||
-            node.tagName === "STYLE" ||
-            node.tagName === "NOSCRIPT"
-          )
-            return false;
-          if (
-            node.classList &&
-            (node.classList.contains("no-export") ||
-              node.classList.contains("export-ignore"))
-          )
-            return false;
-          return true;
-        },
-        includeQueryParams: true,
+      setIsExporting(true);
+
+      try {
+        const element = wrapperRef.current;
+        await waitForResources(element);
+
+        const exportOptions = {
+          pixelRatio: scale,
+          backgroundColor: 'transparent',
+          cacheBust: false,
+          skipAutoScale: true,
+          width: element.scrollWidth,
+          height: element.scrollHeight,
+          style: {
+            margin: '0',
+            padding: '0',
+            border: 'none',
+            outline: 'none',
+            position: 'static',
+            left: '0',
+            top: '0',
+            transform: 'none',
+          },
+          filter: (node: HTMLElement) => {
+            if (
+              node.nodeType === Node.COMMENT_NODE ||
+              node.tagName === 'SCRIPT' ||
+              node.tagName === 'STYLE' ||
+              node.tagName === 'NOSCRIPT'
+            )
+              return false;
+            if (
+              node.classList &&
+              (node.classList.contains('no-export') || node.classList.contains('export-ignore'))
+            )
+              return false;
+
+            return true;
+          },
+          includeQueryParams: false,
+          useCORS: true,
+          allowTaint: true,
+          foreignObjectRendering: true,
+        };
+
+        const dataUrl = await toPng(element, exportOptions);
+
+        if (!dataUrl || dataUrl.length < 100) {
+          throw new Error('Generated image appears to be empty or corrupted');
+        }
+
+        if (needDownload) {
+          const a = document.createElement('a');
+          a.href = dataUrl;
+          a.download = `${filename}.${format}`;
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+        }
+
+        onExportSuccess?.(dataUrl);
+        return dataUrl;
+      } catch (error) {
+        console.error('Export error details:', error);
+        let errorMessage = 'Export failed';
+
+        if (error instanceof Error) {
+          // 避免重复包装错误信息
+          if (error.message.includes('Export failed')) {
+            errorMessage = error.message;
+          } else {
+            errorMessage = `Export failed: ${error.message}`;
+          }
+        }
+
+        const finalError = new Error(errorMessage);
+        onExportError?.(finalError);
+        throw finalError;
+      } finally {
+        setIsExporting(false);
+      }
+    };
+
+    // 暴露方法给父组件
+    useImperativeHandle(
+      ref,
+      () => ({
+        exportImage,
+        isExporting,
+      }),
+      [isExporting],
+    );
+
+    /**
+     * 渲染预览内容
+     */
+    const renderContent = () => {
+      const targetElement = getTargetElement();
+      if (!targetElement) {
+        return <div className="text-gray-500">No content found</div>;
+      }
+
+      // 创建目标元素的深度克隆
+      const clonedElement = targetElement.cloneNode(true) as HTMLElement;
+
+      // 复制计算样式到克隆元素
+      const copyComputedStyles = (source: Element, target: Element) => {
+        const sourceStyles = window.getComputedStyle(source);
+        const targetElement = target as HTMLElement;
+
+        const importantStyles = [
+          'width',
+          'height',
+          'padding',
+          'margin',
+          'border',
+          'font-family',
+          'font-size',
+          'font-weight',
+          'line-height',
+          'color',
+          'background-color',
+          'background-image',
+          'display',
+          'position',
+          'top',
+          'left',
+          'right',
+          'bottom',
+          'transform',
+          'opacity',
+          'z-index',
+        ];
+
+        importantStyles.forEach((prop) => {
+          targetElement.style.setProperty(prop, sourceStyles.getPropertyValue(prop));
+        });
       };
 
-      const dataUrl = await toPng(element, exportOptions);
+      const copyStylesRecursively = (source: Element, target: Element) => {
+        copyComputedStyles(source, target);
 
-      if (!dataUrl || dataUrl.length < 100) {
-        throw new Error("Generated image appears to be empty or corrupted");
-      }
+        const sourceChildren = source.children;
+        const targetChildren = target.children;
 
-      if (needDownload) {
-        const a = document.createElement("a");
-        a.href = dataUrl;
-        a.download = `${filename}.${format}`;
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-      }
+        for (let i = 0; i < sourceChildren.length && i < targetChildren.length; i++) {
+          const sourceChild = sourceChildren[i];
+          const targetChild = targetChildren[i];
+          if (sourceChild && targetChild) {
+            copyStylesRecursively(sourceChild, targetChild);
+          }
+        }
+      };
 
-      onExportSuccess?.(dataUrl);
-      return dataUrl;
-    } catch (error) {
-      onExportError?.(error instanceof Error ? error : new Error("Export failed"));
-      throw error;
-    } finally {
-      setIsExporting(false);
-    }
-  };
+      copyStylesRecursively(targetElement, clonedElement);
 
-  // 暴露方法给父组件
-  useImperativeHandle(
-    ref,
-    () => ({
-      exportImage,
-      isExporting,
-    }),
-    [isExporting]
-  );
-
-  /**
-   * 渲染预览内容
-   */
-  const renderContent = () => {
-    const targetElement = getTargetElement();
-    if (!targetElement) {
-      return <div className="text-gray-500">No content found</div>;
-    }
-
-    // 创建目标元素的深度克隆
-    const clonedElement = targetElement.cloneNode(true) as HTMLElement;
-    
-    // 复制计算样式到克隆元素
-    const copyComputedStyles = (source: Element, target: Element) => {
-      const sourceStyles = window.getComputedStyle(source);
-      const targetElement = target as HTMLElement;
-
-      const importantStyles = [
-        "width", "height", "padding", "margin", "border",
-        "font-family", "font-size", "font-weight", "line-height",
-        "color", "background-color", "background-image",
-        "display", "position", "top", "left", "right", "bottom",
-        "transform", "opacity", "z-index",
-      ];
-
-      importantStyles.forEach((prop) => {
-        targetElement.style.setProperty(
-          prop,
-          sourceStyles.getPropertyValue(prop)
-        );
+      // 移除不需要导出的元素
+      const elementsToHide = clonedElement.querySelectorAll(
+        'button, a[target="_blank"], a[href*="twitter"], a[href*="share"], .no-export, .export-ignore, [data-no-export="true"]',
+      );
+      elementsToHide.forEach((element) => {
+        (element as HTMLElement).style.display = 'none';
       });
-    };
 
-    const copyStylesRecursively = (source: Element, target: Element) => {
-      copyComputedStyles(source, target);
-
-      const sourceChildren = source.children;
-      const targetChildren = target.children;
-
-      for (
-        let i = 0;
-        i < sourceChildren.length && i < targetChildren.length;
-        i++
-      ) {
-        copyStylesRecursively(sourceChildren[i], targetChildren[i]);
-      }
-    };
-
-    copyStylesRecursively(targetElement, clonedElement);
-
-    // 移除不需要导出的元素
-    const elementsToHide = clonedElement.querySelectorAll(
-      'button, a[target="_blank"], a[href*="twitter"], a[href*="share"], .no-export, .export-ignore, [data-no-export="true"]'
-    );
-    elementsToHide.forEach((element) => {
-      (element as HTMLElement).style.display = "none";
-    });
-
-    return (
-      <div
-        ref={wrapperRef}
-        style={{
-          width: "fit-content",
-          minWidth: "400px",
-          overflow: "visible",
-          padding: "0",
-          margin: "0",
-          position: "static",
-          left: "0",
-          top: "0",
-          transform: "none",
-          background: "transparent",
-        }}
-      >
+      return (
         <div
+          ref={wrapperRef}
           style={{
-            width: "100%",
-            height: "100%",
-            padding: "0",
-            margin: "0",
-            position: "static",
-            left: "0",
-            top: "0",
-            transform: "none",
+            width: 'fit-content',
+            minWidth: '400px',
+            overflow: 'visible',
+            padding: '0',
+            margin: '0',
+            position: 'static',
+            left: '0',
+            top: '0',
+            transform: 'none',
+            background: 'transparent',
           }}
-          dangerouslySetInnerHTML={{ __html: clonedElement.outerHTML }}
-        />
-        
-        {/* 水印 */}
-        {watermarkOptions?.show && (
-          <div 
-            className={`watermark watermark-${watermarkOptions.position || 'top-right'}`}
+        >
+          <div
             style={{
-              position: 'absolute',
-              fontSize: `${watermarkOptions.size || 16}px`,
-              color: 'rgba(0,0,0,0.3)',
-              pointerEvents: 'none',
-              ...(watermarkOptions.position === 'top-left' && { top: '8px', left: '8px' }),
-              ...(watermarkOptions.position === 'top-right' && { top: '8px', right: '8px' }),
-              ...(watermarkOptions.position === 'bottom-left' && { bottom: '8px', left: '8px' }),
-              ...(watermarkOptions.position === 'bottom-right' && { bottom: '8px', right: '8px' }),
+              width: '100%',
+              height: '100%',
+              padding: '0',
+              margin: '0',
+              position: 'static',
+              left: '0',
+              top: '0',
+              transform: 'none',
             }}
-          >
-            {watermarkOptions.type === 'logo-only' ? '🎯' : 
-             watermarkOptions.type === 'text-only' ? 'YouMind' :
-             '🎯 YouMind'}
+            dangerouslySetInnerHTML={{ __html: clonedElement.outerHTML }}
+          />
+
+          {/* 水印 */}
+          {watermarkOptions?.show && (
+            <div
+              className={`watermark watermark-${watermarkOptions.position || 'top-right'}`}
+              style={{
+                position: 'absolute',
+                fontSize: `${watermarkOptions.size || 16}px`,
+                color: 'rgba(0,0,0,0.3)',
+                pointerEvents: 'none',
+                ...(watermarkOptions.position === 'top-left' && { top: '8px', left: '8px' }),
+                ...(watermarkOptions.position === 'top-right' && { top: '8px', right: '8px' }),
+                ...(watermarkOptions.position === 'bottom-left' && { bottom: '8px', left: '8px' }),
+                ...(watermarkOptions.position === 'bottom-right' && {
+                  bottom: '8px',
+                  right: '8px',
+                }),
+              }}
+            >
+              {watermarkOptions.type === 'logo-only'
+                ? '🎯'
+                : watermarkOptions.type === 'text-only'
+                  ? 'YouMind'
+                  : '🎯 YouMind'}
+            </div>
+          )}
+        </div>
+      );
+    };
+
+    // 渲染组件
+    return (
+      <div className="export-preview-container">
+        {/* 导出加载遮罩层 */}
+        {isExporting && (
+          <div className="absolute inset-0 bg-white bg-opacity-75 flex items-center justify-center z-10">
+            <div className="text-center">
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-500 mx-auto mb-2"></div>
+              <p className="text-sm text-gray-600">正在导出图片...</p>
+            </div>
+          </div>
+        )}
+        {/* 渲染预览内容 */}
+        {!offscreen && renderContent()}
+        {/* 屏幕外渲染的内容 */}
+        {offscreen && (
+          <div style={{ position: 'absolute', left: '-9999px', top: '-9999px' }}>
+            {renderContent()}
           </div>
         )}
       </div>
     );
-  };
+  },
+);
 
-  // 渲染组件
-  return (
-    <div className="export-preview-container">
-      {/* 导出加载遮罩层 */}
-      {isExporting && (
-        <div className="absolute inset-0 bg-white bg-opacity-75 flex items-center justify-center z-10">
-          <div className="text-center">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-500 mx-auto mb-2"></div>
-            <p className="text-sm text-gray-600">正在导出图片...</p>
-          </div>
-        </div>
-      )}
-      {/* 渲染预览内容 */}
-      {!offscreen && renderContent()}
-      {/* 屏幕外渲染的内容 */}
-      {offscreen && (
-        <div style={{ position: 'absolute', left: '-9999px', top: '-9999px' }}>
-          {renderContent()}
-        </div>
-      )}
-    </div>
-  );
-});
-
-ExportImagePreview.displayName = "ExportImagePreview";
+ExportImagePreview.displayName = 'ExportImagePreview';
 
 export default ExportImagePreview;

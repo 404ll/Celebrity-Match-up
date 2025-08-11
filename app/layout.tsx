@@ -1,35 +1,25 @@
-import React from "react";
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import React from 'react';
+// import { NextI18nProvider } from '../i18n/factory';
+import './globals.css';
+export const revalidate = 604800; // 7天
+export const dynamic = 'force-static';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-export const metadata: Metadata = {
-  title: "Taste Match",
-  description: "Taste Match",
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{
+interface Props {
   children: React.ReactNode;
-}>) {
+}
+
+export default function RootLayout({ children }: Props) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body>
         {children}
       </body>
     </html>
   );
 }
+
+export const metadata = {
+  title: 'YouMind - Celebrity Taste Match',
+  description:
+    'Based on your unique way of expressing yourself, our AI will match you with public figures who share a similar sense of taste and personality.',
+};

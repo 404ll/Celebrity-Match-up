@@ -27,14 +27,13 @@ export interface Suggestion {
 }
 
 export interface LaunchCardData {
-  cardTitle: "出发指令";
   title: string;
   suggestions: Suggestion[];
   closingThought: string;
 }
 
-export interface GrowthCardData {
-  cardTitle: "成长画像";
+export interface PersonalTasteDeepDiveData {
+  title: string;
   points: Array<{
     title: string;
     body: string;
@@ -44,8 +43,9 @@ export interface GrowthCardData {
 
 export interface SoulFormulaMatch {
   name: string;
+  identity_intro: string;
   percentage: number;
-  role: string;
+  coreTaste: string;
   explanation: string;
 }
 
@@ -55,23 +55,31 @@ export interface FinalIdentity {
   identity_en: string;
 }
 
-export interface SoulFormulaData {
-  cardTitle: string;
+export interface TasteProfileData {
   tagline: string;
+
   matches: SoulFormulaMatch[];
   finalIdentity: FinalIdentity;
 }
 
 export interface AIAnalysisResult {
+  TasteProfile: TasteProfileData;
+  PersonalTasteDeepDive: PersonalTasteDeepDiveData;
   LaunchCard: LaunchCardData;
-  GrowthCard: GrowthCardData;
-  SoulFormula: SoulFormulaData;
 }
 
 export interface AIServiceResult {
   success: boolean;
   analysis?: AIAnalysisResult;
   error?: string;
+}
+
+export interface UserData {
+  success: boolean;
+  data: {
+    tweets: TwitterPost[];
+    userDetails: TwitterUser;
+  };
 }
 
 export interface UserFieldResult {
@@ -93,6 +101,21 @@ export interface TwitterAPIErrorResponse {
   error: string;
   user?: TwitterUser;
   tweets?: TwitterPost[];
+}
+
+export interface CachedUser {
+  userDetails: TwitterUser;
+  analysis: AIAnalysisResult;
+  tweets: TwitterPost[];
+}
+
+// 简化的时间感知状态
+export interface AnalysisStatus {
+  currentStep: string;
+  elapsedTime: number;
+  estimatedTime: number;
+  isDelayed: boolean;
+  message: string;
 }
 
 // 联合类型，表示可能的响应

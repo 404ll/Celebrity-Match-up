@@ -1,25 +1,25 @@
-"use client";
+'use client';
 
-import { Footer } from "@/components/footer";
-import { LandingNavbar } from "@/components/navbar/landingNavbar";
-import { YoumindCard } from "@/components/card/YoumindCard";
-import { useState } from "react";
-import { useRouter } from "next/navigation";
-import { Sparkles, ArrowRight } from "lucide-react";
+import { ArrowRight, Sparkles } from 'lucide-react';
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
+import { YoumindCard } from '../components/card/YoumindCard';
+import { Footer } from '../components/footer';
+import { LandingNavbar } from '../components/navbar/landingNavbar';
 
-export default function Home() {
-  const [twitterHandle, setTwitterHandle] = useState("");
+export default function CelebrityTasteMatchPage() {
+  const [twitterHandle, setTwitterHandle] = useState('');
   const router = useRouter();
-
+  // const t = useTranslations('CelebrityTasteMatch');
   const handleStartAnalysis = () => {
     if (twitterHandle.trim()) {
-      const cleanHandle = twitterHandle.replace(/^@/, "");
-      router.push(`/twitter/${cleanHandle}`);
+      const cleanHandle = twitterHandle.replace(/^@/, '').toLowerCase();
+      router.push(`/${cleanHandle}`);
     }
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter") {
+    if (e.key === 'Enter') {
       handleStartAnalysis();
     }
   };
@@ -46,31 +46,25 @@ export default function Home() {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-6 border border-blue-200/50 mt-8">
               <Sparkles className="w-4 h-4" />
-              AI-Powered Personality Matching
+              {/* {t('badge')} */}
             </div>
 
             {/* Main headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                Discover Your
-              </span>
-
-              <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                Celebrity Twin
+                {/* {t('mainTitle')} */}
               </span>
             </h1>
 
             {/* Subtitle */}
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12 leading-relaxed">
-              Based on your unique way of expressing yourself, our AI will match
-              you with public figures who share a similar sense of taste and
-              personality.
+              {/* {t('subtitle')} */}
             </p>
 
             {/* Tagline */}
             <div className="text-center mb-6">
               <h2 className="text-2xl md:text-3xl font-semibold text-gray-700 mb-4">
-                Different on the outside, kindred in spirit.
+                {/* {t('tagline')} */}
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
             </div>
@@ -100,7 +94,7 @@ export default function Home() {
                     className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 hover:shadow-lg flex items-center gap-2 min-w-[180px] justify-center"
                     onClick={handleStartAnalysis}
                   >
-                    Start Matching
+                    {/* {t('startButton')} */}
                     <ArrowRight className="w-5 h-5" />
                   </button>
                 </div>
