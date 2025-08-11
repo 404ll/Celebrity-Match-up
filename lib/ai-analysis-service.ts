@@ -36,7 +36,11 @@ export class AIAnalysisService {
 
   constructor() {
     this.apiKey = process.env.AIHUBMIX_API_KEY || '';
-    this.baseUrl ='http://localhost:3000';
+    this.baseUrl = process.env.NODE_ENV === 'development' 
+  ? 'http://localhost:3000' 
+  : process.env.VERCEL_URL 
+    ? `https://${process.env.VERCEL_URL}` 
+    : '';
 
     // 添加调试信息
     console.log('🔧 AIAnalysisService 初始化:', {
