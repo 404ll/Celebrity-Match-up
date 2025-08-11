@@ -1,13 +1,12 @@
 'use client';
 
-import { use } from 'react';
-import { Footer } from '../../components/footer';
-import { AnalysisLoading } from '../../components/AnalysisLoading';
-import { YoumindCard } from '../../components/card/YoumindCard';
-import { DetailNavbar } from '../../components/navbar/detailNavbar';
-import { RealtimeCard } from '../../components/RealtimeCard';
-import { useAnalysisStatus } from '../../hooks/useAnalysisStatus';
-import { useStreamAnalysis } from '../../hooks/useStreamAnalysis';
+import { Footer } from '@/components/footer';
+import { AnalysisLoading } from '@/components/AnalysisLoading';
+import { YoumindCard } from '@/components/card/YoumindCard';
+import { DetailNavbar } from '@/components/navbar/detailNavbar';
+import { RealtimeCard } from '@/components/RealtimeCard';
+import { useAnalysisStatus } from '@/hooks/useAnalysisStatus';
+import { useStreamAnalysis } from '@/hooks/useStreamAnalysis';
 
 interface TwitterAnalysisClientProps {
   handle: string;

@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
-import { notFound } from 'next/navigation';
-import { AIAnalysisResult } from '../../types';
-import { getCachedAnalysisKV } from '../../cache/cache';
+import { AIAnalysisResult } from '@/types';
+import { getCachedAnalysisKV } from '@/cache/cache';
 import { TwitterAnalysisClient } from './TwitterAnalysisClient';
 
 interface PageProps {

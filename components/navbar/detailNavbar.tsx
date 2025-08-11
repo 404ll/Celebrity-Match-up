@@ -4,7 +4,7 @@ import { ChevronLeft, Globe } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 
-import { YouMindLogoWithText } from '../icon/logo';
+import { YouMindLogoWithText } from '@/components/icon/logo';
 
 export function DetailNavbar() {
   const router = useRouter();

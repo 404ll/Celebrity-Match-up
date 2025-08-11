@@ -3,9 +3,9 @@
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
-import { YoumindCard } from '../components/card/YoumindCard';
-import { Footer } from '../components/footer';
-import { LandingNavbar } from '../components/navbar/landingNavbar';
+import { YoumindCard } from '@/components/card/YoumindCard';
+import { Footer } from '@/components/footer';
+import { LandingNavbar } from '@/components/navbar/landingNavbar';
 
 export default function CelebrityTasteMatchPage() {
   const [twitterHandle, setTwitterHandle] = useState('');

@@ -1,12 +1,12 @@
 'use client';
 
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { useStreamAnalysis } from '../hooks/useStreamAnalysis';
-import { mockUser } from '../mock';
-import { AIAnalysisResult } from '../types';
-import { PersonalTasteDeepDiveCard } from './card/GrowthCard';
-import { LaunchCard } from './card/LaunchCard';
-import { TasteProfileCard } from './card/SoulFormulaCard';
+import { useStreamAnalysis } from '@/hooks/useStreamAnalysis';
+import { mockUser } from '@/mock';
+import { AIAnalysisResult } from '@/types';
+import { PersonalTasteDeepDiveCard } from '@/components/card/GrowthCard';
+import { LaunchCard } from '@/components/card/LaunchCard';
+import { TasteProfileCard } from '@/components/card/SoulFormulaCard';
 
 interface RealtimeCardProps {
   handle: string;

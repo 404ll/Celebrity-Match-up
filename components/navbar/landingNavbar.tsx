@@ -3,7 +3,7 @@
 import { Globe } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { YouMindLogo } from '../icon/logo';
+import { YouMindLogo } from '@/components/icon/logo';
 
 export function LandingNavbar() {
   const router = useRouter();

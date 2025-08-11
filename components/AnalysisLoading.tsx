@@ -1,5 +1,5 @@
 import { Brain, Database, Sparkles, Users, Zap } from 'lucide-react';
-import { AnalysisStatus } from '../types';
+import { AnalysisStatus } from '@/types';
 
 interface AnalysisLoadingProps {
   status: AnalysisStatus;

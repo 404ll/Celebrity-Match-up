@@ -1,12 +1,12 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { PersonalTasteDeepDiveCard } from '../../components/card/GrowthCard';
-import { LaunchCard } from '../../components/card/LaunchCard';
-import { TasteProfileCard } from '../../components/card/SoulFormulaCard';
-import { mockUser } from '../../mock';
-import type { AIAnalysisResult } from '../../types';
-import { extractJsonFromMarkdown } from '../../utils/markdown-utils';
+import { PersonalTasteDeepDiveCard } from '@/components/card/GrowthCard';
+import { LaunchCard } from '@/components/card/LaunchCard';
+import { TasteProfileCard } from '@/components/card/SoulFormulaCard';
+import { mockUser } from '@/mock';
+import type { AIAnalysisResult } from '@/types';
+import { extractJsonFromMarkdown } from '@/utils/markdown-utils';
 
 interface SimpleRealtimeCardProps {
   content: string;
