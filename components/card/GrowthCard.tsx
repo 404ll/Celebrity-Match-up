@@ -135,7 +135,7 @@ export const PersonalTasteDeepDiveCard = ({ data, user }: PersonalTasteDeepDiveC
                   href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
                     `Check out ${user.display_name}'s analysis on @YouMind`,
                   )}&url=${encodeURIComponent(
-                    `https://growth-atu2pqc22-elemens-projects.vercel.app/${user.display_name}?section=Growth`,
+                    `${process.env.NODE_ENV === 'test' ? 'https://em2025-preview.youmind.com/' : 'https://growth-f2yqtlcz5-elemens-projects.vercel.app'}/${user.username}?section=Growth`,
                   )}`}
                 >
                   <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">

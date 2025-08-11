@@ -135,7 +135,7 @@ export const LaunchCard = ({ data, user }: LaunchCardProps) => {
                   href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
                     `Check out ${user.display_name}'s analysis on @YouMind`,
                   )}&url=${encodeURIComponent(
-                    `https://growth-atu2pqc22-elemens-projects.vercel.app/${user.username}?section=Launch`,
+                    `${process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : ''}/${user.username}?section=Launch`,
                   )}`}
                 >
                   <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">

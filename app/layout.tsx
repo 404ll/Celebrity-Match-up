@@ -1,6 +1,7 @@
 import React from 'react';
-// import { NextI18nProvider } from '../i18n/factory';
 import './globals.css';
+import { getURL } from '@/lib/config';
+import siteMetadata from './metadata';
 export const revalidate = 604800; // 7天
 export const dynamic = 'force-static';
 
@@ -19,7 +20,35 @@ export default function RootLayout({ children }: Props) {
 }
 
 export const metadata = {
-  title: 'YouMind - Celebrity Taste Match',
-  description:
-    'Based on your unique way of expressing yourself, our AI will match you with public figures who share a similar sense of taste and personality.',
+  metadataBase: new URL(getURL()),
+  title: {
+    template: `%s’s Twitter Personality Analysis by AI Agent`,
+    default: siteMetadata.title,
+  },
+  description: siteMetadata.description,
+  openGraph: {
+    title: siteMetadata.title,
+    description: siteMetadata.description,
+    url: siteMetadata.siteUrl,
+    siteName: siteMetadata.title,
+    images: [siteMetadata.socialBanner],
+    locale: 'en_US',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: false,
+      noimageindex: true,
+    },
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteMetadata.title,
+    description: siteMetadata.description,
+    creator: 'wordware',
+    images: [siteMetadata.socialBanner],
+  },
 };

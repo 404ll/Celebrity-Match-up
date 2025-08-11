@@ -6,58 +6,11 @@ const CACHE_EXPIRY_KEY = 'cache_expiry';
 // 临时内存缓存作为fallback
 const tempCache = new Map<string, CachedUser>();
 
-// 临时测试数据
-const tempTestData: CachedUser = {
-  userDetails: {
-    username: 'elemen_7',
-    display_name: 'Elemen',
-    profile_image_url: 'https://pbs.twimg.com/profile_images/1234567890/elemen_400x400.jpg',
-    description: 'Developer and creator',
-  },
-  analysis: {
-    TasteProfile: {
-      tagline: '用社区的热闹，对抗个人成长的焦虑；用代码的构建，实现对资本的野心。',
-      matches: [
-        {
-          name: 'Paul Graham',
-          identity_intro: 'Y Combinator 创始人，用《黑客与画家》等雄文定义了创业方法论。',
-          percentage: 47,
-          coreTaste: '#构想实体化冲动',
-          explanation: '你对自己代码的执着渴望，正是驱动所有顶级黑客的核心燃料。',
-        },
-      ],
-      finalIdentity: {
-        title: '你的最终身份画像',
-        identity: '在社区地图上寻找宝藏的未来架构师',
-        identity_en: 'Future Architect Questing on a Community Map',
-      },
-    },
-    PersonalTasteDeepDive: {
-      title: '你的灵魂代码解剖报告',
-      points: [
-        {
-          title: '知识的仓鼠，行动的起点',
-          body: '你的推特就像一个勤劳的仓鼠洞，塞满了各种Web3教程、工具指南。',
-        },
-      ],
-      summary: '停止自我怀疑。你是一个已经完成了"侦察和情报收集"阶段的未来玩家。',
-    },
-    LaunchCard: {
-      title: '别再焦虑了，你的偶像喊你立刻动手！',
-      suggestions: [
-        {
-          title: '来自PG的拷问：你的用户在哪儿？',
-          body: '现在最没意义的事，就是对着镜子里的自己说我的代码是一坨。',
-        },
-      ],
-      closingThought: '别怕代码是一坨屎，所有伟大的系统，都是从一坨能跑的屎开始的。',
-    },
-  },
-  tweets: [],
-};
+// 清理测试数据，使用真实数据
+// const tempTestData: CachedUser = { ... }; // 已删除测试数据
 
-// 初始化临时测试数据
-tempCache.set('elemen_7', tempTestData);
+// 不再预填充测试数据
+// tempCache.set('elemen_7', tempTestData);
 
 // 检查localStorage是否可用
 function isLocalStorageAvailable(): boolean {

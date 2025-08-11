@@ -10,9 +10,10 @@ interface PageProps {
   searchParams: Promise<{ section?: string }>;
 }
 
-export default async function CelebrityTasteMatchPage({ params, searchParams }: PageProps) {
+export const dynamic = 'force-dynamic';
+
+export default async function CelebrityTasteMatchPage({ params }: PageProps) {
   const { handle } = await params;
-  const { section } = await searchParams;
   console.log('Node_env', process.env.NODE_ENV);
   // // 从Cloudflare KV获取缓存数据
   // const user = await getCachedAnalysisKV(handle);
@@ -55,6 +56,7 @@ export async function generateMetadata({
   const section = (sectionParam || 'TasteProfile') as keyof AIAnalysisResult;
   const content = user.analysis?.[section];
 
+  console.log('picture', picture);
   const imageParams = new URLSearchParams();
   imageParams.set('name', name);
   imageParams.set('username', username);
@@ -62,6 +64,7 @@ export async function generateMetadata({
   imageParams.set('section', String(section));
   imageParams.set('content', typeof content === 'string' ? content : JSON.stringify(content ?? ''));
 
+  // 正常相对路径
   const image = {
     alt: `${name} — ${String(section)}`,
     url: `/api/card?${imageParams.toString()}`,
@@ -69,18 +72,23 @@ export async function generateMetadata({
     height: 630,
   };
 
+  console.log('image', image);
+
   return {
-    title: `${name}`,
-    description: `Check out ${name}'s analysis.`,
+    title: `${name} - YouMind Analysis`,
+    description: `Check out ${name}'s celebrity taste match analysis on YouMind.`,
     openGraph: {
-      url: section
-        ? `/campaign/celebrity-taste-match/${handle}?section=${section}`
-        : `/campaign/celebrity-taste-match/${handle}`,
-      images: image,
+      title: `${name} - YouMind Analysis`,
+      description: `Check out ${name}'s celebrity taste match analysis on YouMind.`,
+      type: 'website',
+      url: section ? `/${handle}?section=${section}` : `/${handle}`,
+      images: [image],
     },
     twitter: {
-      description: `Check out ${name}'s analysis.`,
-      images: image,
+      card: 'summary_large_image',
+      title: `${name} - YouMind Analysis`,
+      description: `Check out ${name}'s celebrity taste match analysis on YouMind.`,
+      images: [image.url],
     },
     robots: {
       index: false,
