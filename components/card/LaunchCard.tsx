@@ -52,8 +52,15 @@ export const LaunchCard = ({ data, user }: LaunchCardProps) => {
                   target="_blank"
                   className="inline-flex items-center px-2 py-1.5 text-xs font-semibold text-white bg-gradient-to-r from-blue-500 to-green-500 rounded-lg shadow-lg hover:from-blue-600 hover:to-green-600 transition-all duration-200"
                   rel="noreferrer"
+                  href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
+                    `Check out ${user.display_name}'s analysis on @YouMind`,
+                  )}&url=${encodeURIComponent(
+                    `${process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://growth-ny1y2765u-elemens-projects.vercel.app'}/${user.username}?section=Launch`,
+                  )}`}
                 >
+                  <title>分享</title>
                   <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+                    <title>分享</title>
                     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.80l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                   </svg>
                 </a>
@@ -71,6 +78,7 @@ export const LaunchCard = ({ data, user }: LaunchCardProps) => {
                   strokeWidth="2"
                   viewBox="0 0 24 24"
                 >
+                  <title>出发指令</title>
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -97,6 +105,7 @@ export const LaunchCard = ({ data, user }: LaunchCardProps) => {
                   height={48}
                   className="rounded-full border-2 border-white shadow-lg ring-2 ring-blue-200"
                 />
+                <title>用户头像</title>
               </div>
               <div className="min-w-0">
                 <h1 className="text-xl font-bold text-gray-900 truncate">{user.display_name}</h1>
@@ -113,6 +122,7 @@ export const LaunchCard = ({ data, user }: LaunchCardProps) => {
                     strokeWidth="2"
                     viewBox="0 0 24 24"
                   >
+                    <title>出发指令</title>
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -135,10 +145,11 @@ export const LaunchCard = ({ data, user }: LaunchCardProps) => {
                   href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
                     `Check out ${user.display_name}'s analysis on @YouMind`,
                   )}&url=${encodeURIComponent(
-                    `${process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : ''}/${user.username}?section=Launch`,
+                    `${process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://growth-ny1y2765u-elemens-projects.vercel.app'}/${user.username}?section=Launch`,
                   )}`}
                 >
                   <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                    <title>分享</title>
                     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.80l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                   </svg>
                   Share
@@ -167,7 +178,7 @@ export const LaunchCard = ({ data, user }: LaunchCardProps) => {
             <div className="bg-white/50 rounded-xl p-4 sm:p-5 border border-blue-100">
               <div className="space-y-3 sm:space-y-4">
                 {data.suggestions.map((suggestion, index) => (
-                  <div key={index} className="flex items-start space-x-3">
+                  <div key={suggestion.title} className="flex items-start space-x-3">
                     <div className="w-6 h-6 sm:w-7 sm:h-7 bg-gradient-to-r from-blue-500 to-green-500 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0 mt-0.5">
                       {index + 1}
                     </div>

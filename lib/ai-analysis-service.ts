@@ -2,7 +2,7 @@ import type { TwitterPost, UserFieldResult } from '../types/index';
 import { UserInfo } from '../types/index';
 import { cleanMarkdownJson } from '../utils/markdown-utils';
 import { USER_FIELD_PROMPT } from './field-prompt';
-import { SOUL_MATCHMAKER_PROMPT } from './prompt';
+import { MAGIC_MIRROR_VERDICT_PROMPT } from './match-prompt';
 
 // 流式数据类型定义
 export interface StreamData {
@@ -579,7 +579,7 @@ export class AIAnalysisService {
   }
 
   private buildSoulMatchmakerPrompt(tweets: TwitterPost[], databases: Databases): string {
-    return `${SOUL_MATCHMAKER_PROMPT}
+    return `${MAGIC_MIRROR_VERDICT_PROMPT}
 
 # INPUT_USER_TWEETS
 ${JSON.stringify(tweets, null, 2)}

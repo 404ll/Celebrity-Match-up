@@ -95,8 +95,8 @@ export function TwitterAnalysisClient({ handle }: TwitterAnalysisClientProps) {
         )}
 
         {/* 人格分析区域 */}
-        {/* 保护类型，如果userDetails为空，则使用mockUser */}
         <RealtimeCard handle={handle} />
+        
         {/* YouMind 卡片 */}
         <div className="flex flex-col items-center justify-center rounded-2xl p-8 text-white text-center mb-8">
           <YoumindCard />

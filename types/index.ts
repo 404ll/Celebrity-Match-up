@@ -63,9 +63,17 @@ export interface TasteProfileData {
 }
 
 export interface AIAnalysisResult {
-  TasteProfile: TasteProfileData;
-  PersonalTasteDeepDive: PersonalTasteDeepDiveData;
-  LaunchCard: LaunchCardData;
+  TasteProfile?: TasteProfileData;
+  PersonalTasteDeepDive?: PersonalTasteDeepDiveData;
+  LaunchCard?: LaunchCardData;
+  // 新的mock数据结构
+  summary?: string;
+  title?: string;
+  matches?: Array<{
+    name: string;
+    match_percentage: number;
+    tags: string[];
+  }>;
 }
 
 export interface AIServiceResult {
@@ -120,3 +128,14 @@ export interface AnalysisStatus {
 
 // 联合类型，表示可能的响应
 export type TwitterAPIResult = TwitterAPIResponse | TwitterAPIErrorResponse;
+
+// 新的mock数据结构
+export interface NewAnalysisData {
+  summary: string;
+  title: string;
+  matches: Array<{
+    name: string;
+    match_percentage: number;
+    tags: string[];
+  }>;
+}

@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { AIAnalysisResult } from '@/types';
 import { getCachedAnalysisKV } from '@/cache/cache';
 import { TwitterAnalysisClient } from './TwitterAnalysisClient';
+import { mockAnalysisData, mockUser } from '@/mock';
 
 interface PageProps {
   params: Promise<{
@@ -14,14 +15,6 @@ export const dynamic = 'force-dynamic';
 
 export default async function CelebrityTasteMatchPage({ params }: PageProps) {
   const { handle } = await params;
-  console.log('Node_env', process.env.NODE_ENV);
-  // // 从Cloudflare KV获取缓存数据
-  // const user = await getCachedAnalysisKV(handle);
-
-  // if (!user) {
-  //   // 如果没有缓存数据，返回404
-  //   notFound();
-  // }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -32,47 +25,51 @@ export default async function CelebrityTasteMatchPage({ params }: PageProps) {
 
 export async function generateMetadata({
   params,
-  searchParams,
 }: {
   params: Promise<{ handle: string }>;
-  searchParams: Promise<{ section?: string }>;
 }) {
   const { handle } = await params;
-  const { section: sectionParam } = await searchParams;
 
-  // 从Cloudflare KV获取缓存数据
-  const user = await getCachedAnalysisKV(handle);
+  // // 从Cloudflare KV获取缓存数据
+  // const user = await getCachedAnalysisKV(handle);
 
-  if (!user) {
-    return {
-      title: 'User Not Found',
-      description: 'The requested user analysis could not be found.',
-    };
-  }
+  
+  // if (!user) {
+  //   return {
+  //     title: 'User Not Found',
+  //     description: 'The requested user analysis could not be found.',
+  //   };
+  // }
 
-  const name = user.userDetails.display_name || user.userDetails.username || handle;
-  const username = user.userDetails.username || handle;
-  const picture = user.userDetails.profile_image_url || '';
-  const section = (sectionParam || 'TasteProfile') as keyof AIAnalysisResult;
-  const content = user.analysis?.[section];
+  // const name = user.userDetails.display_name || user.userDetails.username || handle;
+  // const username = user.userDetails.username || handle;
+  // const picture = user.userDetails.profile_image_url || '';
+  // const content = '基于你的独特表达方式，我们的AI将为你匹配具有相似品味和个性的公众人物';
 
-  console.log('picture', picture);
+  const user = mockUser;
+  const name = user.display_name; // 使用 handle 作为默认名称
+  const username = user.username;
+  const picture = user.profile_image_url; // 暂时不设置头像
+  const content = mockAnalysisData.summary || '';
+ 
   const imageParams = new URLSearchParams();
   imageParams.set('name', name);
   imageParams.set('username', username);
   imageParams.set('picture', picture);
-  imageParams.set('section', String(section));
-  imageParams.set('content', typeof content === 'string' ? content : JSON.stringify(content ?? ''));
+  imageParams.set('content', content);
 
-  // 正常相对路径
+  console.log('imageParams', imageParams);
+  
+  const siteUrl =  'http://localhost:3000';
+  const ogImageUrl = `${siteUrl}/api/card?${imageParams.toString()}`;
+  
   const image = {
-    alt: `${name} — ${String(section)}`,
-    url: `/api/card?${imageParams.toString()}`,
+    alt: `${name} - YouMind Analysis`,
+    url: ogImageUrl,
     width: 1200,
     height: 630,
   };
 
-  console.log('image', image);
 
   return {
     title: `${name} - YouMind Analysis`,
@@ -81,7 +78,7 @@ export async function generateMetadata({
       title: `${name} - YouMind Analysis`,
       description: `Check out ${name}'s celebrity taste match analysis on YouMind.`,
       type: 'website',
-      url: section ? `/${handle}?section=${section}` : `/${handle}`,
+      url: `/${handle}`,
       images: [image],
     },
     twitter: {

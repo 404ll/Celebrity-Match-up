@@ -52,8 +52,15 @@ export const PersonalTasteDeepDiveCard = ({ data, user }: PersonalTasteDeepDiveC
                   target="_blank"
                   className="inline-flex items-center px-2 py-1.5 text-xs font-semibold text-white bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg shadow-lg hover:from-indigo-600 hover:to-purple-600 transition-all duration-200"
                   rel="noreferrer"
+                  href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
+                    `Check out ${user.display_name}'s analysis on @YouMind`,
+                  )}&url=${encodeURIComponent(
+                    `${process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://growth-ny1y2765u-elemens-projects.vercel.app'}/${user.username}?section=Growth`,
+                  )}`}
                 >
+                  <title>分享</title>
                   <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+                    <title>分享</title>
                     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.80l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                   </svg>
                 </a>
@@ -71,6 +78,7 @@ export const PersonalTasteDeepDiveCard = ({ data, user }: PersonalTasteDeepDiveC
                   strokeWidth="2"
                   viewBox="0 0 24 24"
                 >
+                  <title>品味深潜</title>
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -113,6 +121,7 @@ export const PersonalTasteDeepDiveCard = ({ data, user }: PersonalTasteDeepDiveC
                     strokeWidth="2"
                     viewBox="0 0 24 24"
                   >
+                    <title>品味深潜</title>
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -135,10 +144,11 @@ export const PersonalTasteDeepDiveCard = ({ data, user }: PersonalTasteDeepDiveC
                   href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
                     `Check out ${user.display_name}'s analysis on @YouMind`,
                   )}&url=${encodeURIComponent(
-                    `${process.env.NODE_ENV === 'test' ? 'https://em2025-preview.youmind.com/' : 'https://growth-f2yqtlcz5-elemens-projects.vercel.app'}/${user.username}?section=Growth`,
+                    `${process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://growth-ny1y2765u-elemens-projects.vercel.app'}/${user.username}?section=Growth`,
                   )}`}
                 >
                   <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                    <title>分享</title>
                     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.80l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                   </svg>
                   Share
@@ -166,7 +176,7 @@ export const PersonalTasteDeepDiveCard = ({ data, user }: PersonalTasteDeepDiveC
             <div className="bg-white/50 rounded-xl p-4 sm:p-5 border border-indigo-100">
               <div className="space-y-3 sm:space-y-4">
                 {data.points.map((point, index) => (
-                  <div key={index} className="flex items-start space-x-3">
+                  <div key={point.title} className="flex items-start space-x-3">
                     <div className="w-6 h-6 sm:w-7 sm:h-7 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0 mt-0.5">
                       {index + 1}
                     </div>

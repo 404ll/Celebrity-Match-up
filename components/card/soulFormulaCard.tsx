@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { useRef } from 'react';
 import type { TasteProfileData, TwitterUser } from '../../types/index';
@@ -8,20 +7,10 @@ import { getTwitterHighQualityAvatar } from '../../utils/twitterAvatar';
 import { YouMindLogo } from '../icon/logo';
 import { DownloadButton } from './downloadButton';
 
-// // 名人信息数据库
-// const celebrityInfo: Record<string, string> = {
-
-// };
-
-// 获取名人信息的函数
-function getCelebrityInfo(name: string): string {
-  if (!name) return '正在分析中...';
-  return `${name} - 知名人物，详细信息正在完善中...`;
-}
 
 interface TasteProfileCardProps {
   analysisData: TasteProfileData;
-  user: TwitterUser;
+  user: TwitterUser
 }
 
 export const TasteProfileCard = ({ analysisData, user }: TasteProfileCardProps) => {
@@ -62,10 +51,16 @@ export const TasteProfileCard = ({ analysisData, user }: TasteProfileCardProps) 
               <div className="flex space-x-2 flex-shrink-0">
                 <a
                   target="_blank"
-                  className="inline-flex items-center px-2 py-1.5 text-xs font-semibold text-white bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg shadow-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200"
                   rel="noreferrer"
+                  className="inline-flex items-center px-2 py-1.5 text-xs font-semibold text-white bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg shadow-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200"
+                  href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
+                    `Check out ${user.display_name}'s analysis on @YouMind`,
+                  )}&url=${encodeURIComponent(
+                    `${process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://growth-ny1y2765u-elemens-projects.vercel.app'}/${user.username}?section=SoulFormula`,
+                  )}`}
                 >
                   <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+                    <title>分享</title>
                     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.80l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                   </svg>
                 </a>
@@ -82,7 +77,9 @@ export const TasteProfileCard = ({ analysisData, user }: TasteProfileCardProps) 
                   stroke="currentColor"
                   strokeWidth="2"
                   viewBox="0 0 24 24"
+                  aria-label="品味画像"
                 >
+                  <title>品味画像</title>
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -124,7 +121,9 @@ export const TasteProfileCard = ({ analysisData, user }: TasteProfileCardProps) 
                     stroke="currentColor"
                     strokeWidth="2"
                     viewBox="0 0 24 24"
+                    aria-label="品味画像"
                   >
+                    <title>品味画像</title>
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -147,10 +146,11 @@ export const TasteProfileCard = ({ analysisData, user }: TasteProfileCardProps) 
                   href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
                     `Check out ${user.display_name}'s analysis on @YouMind`,
                   )}&url=${encodeURIComponent(
-                    `${process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : ''}/${user.username}?section=SoulFormula`,
+                    `${process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://growth-ny1y2765u-elemens-projects.vercel.app'}/${user.username}?section=SoulFormula`,
                   )}`}
                 >
                   <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                    <title>分享</title>
                     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.80l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                   </svg>
                   Share
@@ -177,9 +177,9 @@ export const TasteProfileCard = ({ analysisData, user }: TasteProfileCardProps) 
           <div className="mb-6">
             <div className="bg-white/50 rounded-xl p-4 sm:p-5 border border-purple-100">
               <div className="space-y-3">
-                {analysisData.matches.map((match, index) => (
+                {analysisData.matches.map((match) => (
                   <div
-                    key={index}
+                    key={match.name}
                     className="flex items-start space-x-4 p-4 border border-gray-200 rounded-xl shadow-sm bg-white hover:shadow-md transition-shadow duration-300"
                   >
                     {/* 百分比圆圈 */}
@@ -200,7 +200,9 @@ export const TasteProfileCard = ({ analysisData, user }: TasteProfileCardProps) 
                             className="w-4 h-4 text-gray-400 hover:text-purple-500 transition-colors duration-200 cursor-pointer"
                             fill="currentColor"
                             viewBox="0 0 24 24"
+                            aria-label="品味画像"
                           >
+                            <title>品味画像</title>
                             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
                           </svg>
 
